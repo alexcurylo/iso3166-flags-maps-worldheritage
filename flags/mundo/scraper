@@ -1,0 +1,69 @@
+#!/bin/bash
+#=============================================================================
+# Download flags from commons.wikimidia.org
+#
+# Author:  Seth Fischer
+#
+# This script was used to obtain the initial collection of images.
+#=============================================================================
+
+set -o nounset
+
+# directory in which to save flag images
+DOWNLOAD_DIR="./svg/"
+FLAG_DB="flags.csv"
+PLACEHOLDER_FILE="./placeholder.txt"
+
+# create download directory
+if [ ! -d "$DOWNLOAD_DIR" ]; then
+    mkdir "$DOWNLOAD_DIR"
+fi
+
+# delete contents of placeholder file
+cat /dev/null >| $PLACEHOLDER_FILE
+
+tail -n +2 $FLAG_DB | while read _LINE
+do
+    # split line on delimiter
+    ALPHA_2_CODE=$(echo $_LINE | cut -d';' -f1)
+    SUMMARY_PAGE_URL=$(echo $_LINE | cut -d';' -f2)
+    
+    # create svg basename
+    SVG_BASENAME=$(echo $ALPHA_2_CODE | tr '[A-Z]' '[a-z]').svg
+    
+    if [ -z "$SUMMARY_PAGE_URL" ]; then
+        
+        echo "$ALPHA_2_CODE" >> $PLACEHOLDER_FILE
+        
+cat << EOF > ${DOWNLOAD_DIR}${SVG_BASENAME}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="960" height="480" style="fill:gray;stroke-width:1;stroke:rgb(0,0,0)"/>
+    <text x="220" y="360" fill="rgb(0,0,0)" font-family="monospace" font-size="430">$ALPHA_2_CODE</text>
+</svg>
+EOF
+        
+    else
+        
+        # download summary/history page and extract svg URL
+        SVG_URL=$(wget \
+        --output-document="-" \
+        $SUMMARY_PAGE_URL | \
+        grep -o '<a href="//upload.wikimedia.org/wikipedia/commons/[a-z0-9]/[a-z0-9][a-z0-9]/Flag_of_[^"]*.svg"' | \
+        sed 's/<a href="//;s/"$//' | \
+        uniq)
+        
+        # prefix URL with protocol
+        SVG_URL="http:"$SVG_URL
+        
+        # download flag
+        wget -q \
+        --output-document="-" \
+        $SVG_URL > ${DOWNLOAD_DIR}${SVG_BASENAME}
+        
+    fi
+done
+
+exit
+

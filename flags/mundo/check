@@ -1,0 +1,30 @@
+#!/bin/bash
+#=============================================================================
+# Check directory of flags against the official ISO3166-1 country list
+#
+# Author:  Seth Fischer
+#=============================================================================
+
+SVG_DIRECTORY="svg/"
+ISO3166_1_DB="iso3166-1_en.csv"
+FLAG_DB="flags.csv"
+
+# compare the official ISO3166-1 alpha-2 codes with the flag alpha-2 codes
+
+diff --side-by-side \
+--suppress-common-lines \
+--strip-trailing-cr \
+<(tail -n +2 $ISO3166_1_DB | cut -d';' -f2 | sort) \
+<(tail -n +2 $FLAG_DB | cut -d';' -f1 | sort)
+
+
+# compare the flag file names with the directory listing
+
+diff --side-by-side \
+--suppress-common-lines \
+--strip-trailing-cr \
+<(tail -n +2 $ISO3166_1_DB | cut -d';' -f2 | sort) \
+<(ls -1 $SVG_DIRECTORY | cut -d'.' -f1 | tr '[a-z]' '[A-Z]' | sort)
+
+exit
+

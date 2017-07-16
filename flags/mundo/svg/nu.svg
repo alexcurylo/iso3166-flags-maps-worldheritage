@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="300" viewBox="0 0 120 60">
+<title>Flag of Niue</title>
+<rect fill="#fcd116" width="120" height="60"/>
+<svg width="60" height="30" viewBox="0 0 12 6">
+	<rect fill="#002868" width="12" height="6"/>
+	<clipPath id="t">
+		<path d="M6,3 h6 v3 z v3 h-6 z h-6 v-3 z v-3 h6 z"/>
+	</clipPath>
+	<g stroke="#cf142b" stroke-width="1.2">
+	<path d="M0,0 L12,6 M12,0 L0,6" stroke="#fff"/>
+	<path d="M0,0 L12,6 M12,0 L0,6" clip-path="url(#t)" stroke-width="0.8"/>
+	<path d="M6,0 v6 M0,3 h12" stroke="#fff" stroke-width="2"/>
+	<path d="M6,0 v6 M0,3 h12"/>
+</g>
+</svg>
+<g transform="translate(30,15)" fill="#fcd116">
+<g transform="scale(5.10390485)">
+<circle r="1" fill="#002868"/>
+<polygon id="s" points="0,-513674 301930,415571 -488533,-158734 488533,-158734 -301930,415571" transform="scale(0.00000194676)"/>
+</g>
+<use xlink:href="#s" transform="translate(-17.5,0.29) scale(3)"/>
+<use xlink:href="#s" transform="translate(17.5,0.29) scale(3)"/>
+<use xlink:href="#s" transform="translate(0,10.29) scale(3)"/>
+<use xlink:href="#s" transform="translate(0,-9.71) scale(3)"/>
+</g>
+</svg>
