@@ -1,0 +1,252 @@
+name,iso31661a3,iso31661a2,iso3166num,region
+Antarctica,ATA,AQ,10, 
+Afghanistan,AFG,AF,4,Asia
+Armenia,ARM,AM,51,Asia
+Azerbaijan,AZE,AZ,31,Asia
+Bangladesh,BGD,BD,50,Asia
+Brunei Darussalam,BRN,BN,96,Asia
+Bhutan,BTN,BT,64,Asia
+Coco Islands,CCK,CC,166,Asia
+China,CHN,CN,156,Asia
+Christmas Island,CXR,CX,162,Asia
+Georgia,GEO,GE,268,Asia
+Hong Kong,HKG,HK,344,Asia
+Indonesia,IDN,ID,360,Asia
+India,IND,IN,356,Asia
+Japan,JPN,JP,392,Asia
+Kazakhstan,KAZ,KZ,398,Asia
+Kyrgyzstan,KGZ,KG,417,Asia
+Cambodia,KHM,KH,116,Asia
+South Korea,KOR,KR,410,Asia
+Laos,LAO,LA,418,Asia
+Sri Lanka,LKA,LK,144,Asia
+Macao,MAC,MO,446,Asia
+Maldives,MDV,MV,462,Asia
+Myanmar,MMR,MM,104,Asia
+Mongolia,MNG,MN,496,Asia
+Malaysia,MYS,MY,458,Asia
+Nepal,NPL,NP,524,Asia
+Pakistan,PAK,PK,586,Asia
+Philippines,PHL,PH,608,Asia
+North Korea,PRK,KP,408,Asia
+Singapore,SGP,SG,702,Asia
+Thailand,THA,TH,764,Asia
+Tajikistan,TJK,TJ,762,Asia
+Turkmenistan,TKM,TM,795,Asia
+Timor-Leste,TLS,TL,626,Asia
+Turkey,TUR,TR,792,Asia
+Taiwan,TWN,TW,158,Asia
+Uzbekistan,UZB,UZ,860,Asia
+Vietnam,VNM,VN,704,Asia
+Aland,ALA,AX,248,Europe
+Albania,ALB,AL,8,Europe
+Andorra,AND,AD,20,Europe
+Austria,AUT,AT,40,Europe
+Belgium,BEL,BE,56,Europe
+Bulgaria,BGR,BG,100,Europe
+Bosnia and Herzegovina,BIH,BA,70,Europe
+Belarus,BLR,BY,112,Europe
+Switzerland,CHE,CH,756,Europe
+Cyprus,CYP,CY,196,Europe
+Czech Republic,CZE,CZ,203,Europe
+Germany,DEU,DE,276,Europe
+Denmark,DNK,DK,208,Europe
+Spain,ESP,ES,724,Europe
+Estonia,EST,EE,233,Europe
+Finland,FIN,FI,246,Europe
+France,FRA,FR,250,Europe
+Faeroe Islands,FRO,FO,234,Europe
+United Kingdom,GBR,GB,826,Europe
+Guernsey,GGY,GG,831,Europe
+Gibraltar,GIB,GI,292,Europe
+Greece,GRC,GR,300,Europe
+Croatia,HRV,HR,191,Europe
+Hungary,HUN,HU,348,Europe
+Isle of Man,IMN,IM,833,Europe
+Ireland,IRL,IE,372,Europe
+Iceland,ISL,IS,352,Europe
+Italy,ITA,IT,380,Europe
+Jersey,JEY,JE,832,Europe
+Liechtenstein,LIE,LI,438,Europe
+Lithuania,LTU,LT,440,Europe
+Luxembourg,LUX,LU,442,Europe
+Latvia,LVA,LV,428,Europe
+Monaco,MCO,MC,492,Europe
+Moldova,MDA,MD,498,Europe
+Macedonia,MKD,MK,807,Europe
+Malta,MLT,MT,470,Europe
+Montenegro,MNE,ME,499,Europe
+Netherlands,NLD,NL,528,Europe
+Norway,NOR,NO,578,Europe
+Poland,POL,PL,616,Europe
+Portugal,PRT,PT,620,Europe
+Romania,ROU,RO,642,Europe
+Russia,RUS,RU,643,Europe
+Svalbard and Jan Mayen,SJM,SJ,744,Europe
+San Marino,SMR,SM,674,Europe
+Serbia,SRB,RS,688,Europe
+Slovak Republic,SVK,SK,703,Europe
+Slovenia,SVN,SI,705,Europe
+Sweden,SWE,SE,752,Europe
+Ukraine,UKR,UA,804,Europe
+Vatican City,VAT,VA,336,Europe
+Kosovo,XKX,XK,0,Europe
+Aruba,ABW,AW,533,Latin America & Caribbean
+Anguilla,AIA,AI,660,Latin America & Caribbean
+Argentina,ARG,AR,32,Latin America & Caribbean
+Ascension Island,ASC,AC, ,Latin America & Caribbean
+Antigua and Barbuda,ATG,AG,28,Latin America & Caribbean
+Bonaire,BES,BQ,535,Latin America & Caribbean
+Bahamas,BHS,BS,44,Latin America & Caribbean
+St. Barthelemy,BLM,BL,652,Latin America & Caribbean
+Belize,BLZ,BZ,84,Latin America & Caribbean
+Bolivia,BOL,BO,68,Latin America & Caribbean
+Brazil,BRA,BR,76,Latin America & Caribbean
+Barbados,BRB,BB,52,Latin America & Caribbean
+Chile,CHL,CL,152,Latin America & Caribbean
+Colombia,COL,CO,170,Latin America & Caribbean
+Costa Rica,CRI,CR,188,Latin America & Caribbean
+Cuba,CUB,CU,192,Latin America & Caribbean
+Curacao,CUW,CW,531,Latin America & Caribbean
+Cayman Islands,CYM,KY,136,Latin America & Caribbean
+Dominica,DMA,DM,212,Latin America & Caribbean
+Dominican Republic,DOM,DO,214,Latin America & Caribbean
+Ecuador,ECU,EC,218,Latin America & Caribbean
+Falkland Islands,FLK,FK,238,Latin America & Caribbean
+Guadeloupe,GLP,GP,312,Latin America & Caribbean
+Grenada,GRD,GD,308,Latin America & Caribbean
+Guatemala,GTM,GT,320,Latin America & Caribbean
+French Guiana,GUF,GF,254,Latin America & Caribbean
+Guyana,GUY,GY,328,Latin America & Caribbean
+Honduras,HND,HN,340,Latin America & Caribbean
+Haiti,HTI,HT,332,Latin America & Caribbean
+Jamaica,JAM,JM,388,Latin America & Caribbean
+St. Kitts and Nevis,KNA,KN,659,Latin America & Caribbean
+St. Lucia,LCA,LC,662,Latin America & Caribbean
+St. Martin (French part),MAF,MF,663,Latin America & Caribbean
+Mexico,MEX,MX,484,Latin America & Caribbean
+Montserrat,MSR,MS,500,Latin America & Caribbean
+Martinique,MTQ,MQ,474,Latin America & Caribbean
+Nicaragua,NIC,NI,558,Latin America & Caribbean
+Panama,PAN,PA,591,Latin America & Caribbean
+Peru,PER,PE,604,Latin America & Caribbean
+Puerto Rico,PRI,PR,630,Latin America & Caribbean
+Paraguay,PRY,PY,600,Latin America & Caribbean
+South Georgia and the South Sandwich Islands,SGS,GS,239,Latin America & Caribbean
+El Salvador,SLV,SV,222,Latin America & Caribbean
+Suriname,SUR,SR,740,Latin America & Caribbean
+St. Martin (Dutch part),SXM,SX,534,Latin America & Caribbean
+Turks and Caicos Islands,TCA,TC,796,Latin America & Caribbean
+Trinidad and Tobago,TTO,TT,780,Latin America & Caribbean
+Uruguay,URY,UY,858,Latin America & Caribbean
+St. Vincent and the Grenadines,VCT,VC,670,Latin America & Caribbean
+Venezuela,VEN,VE,862,Latin America & Caribbean
+British Virgin Islands,VGB,VG,92,Latin America & Caribbean
+Virgin Islands (U.S.),VIR,VI,850,Latin America & Caribbean
+United Arab Emirates,ARE,AE,784,Middle East & North Africa
+Bahrain,BHR,BH,48,Middle East & North Africa
+Djibouti,DJI,DJ,262,Middle East & North Africa
+Algeria,DZA,DZ,12,Middle East & North Africa
+Egypt,EGY,EG,818,Middle East & North Africa
+Western Sahara,ESH,EH,732,Middle East & North Africa
+Iran,IRN,IR,364,Middle East & North Africa
+Iraq,IRQ,IQ,368,Middle East & North Africa
+Israel,ISR,IL,376,Middle East & North Africa
+Jordan,JOR,JO,400,Middle East & North Africa
+Kuwait,KWT,KW,414,Middle East & North Africa
+Lebanon,LBN,LB,422,Middle East & North Africa
+Libya,LBY,LY,434,Middle East & North Africa
+Morocco,MAR,MA,504,Middle East & North Africa
+Oman,OMN,OM,512,Middle East & North Africa
+West Bank and Gaza,PSE,PS,275,Middle East & North Africa
+Qatar,QAT,QA,634,Middle East & North Africa
+Saudi Arabia,SAU,SA,682,Middle East & North Africa
+Syrian Arab Republic,SYR,SY,760,Middle East & North Africa
+Tunisia,TUN,TN,788,Middle East & North Africa
+Yemen,YEM,YE,887,Middle East & North Africa
+Bermuda,BMU,BM,60,North America
+Canada,CAN,CA,124,North America
+Greenland,GRL,GL,304,North America
+St. Pierre and Miquelon,SPM,PM,666,North America
+United States,USA,US,840,North America
+American Samoa,ASM,AS,16,Oceania
+Australia,AUS,AU,36,Oceania
+Cook Islands,COK,CK,184,Oceania
+Fiji,FJI,FJ,242,Oceania
+Micronesia Fed. Sts.,FSM,FM,583,Oceania
+Guam,GUM,GU,316,Oceania
+Kiribati,KIR,KI,296,Oceania
+Marshall Islands,MHL,MH,584,Oceania
+Northern Mariana Islands,MNP,MP,580,Oceania
+New Caledonia,NCL,NC,540,Oceania
+Norfolk Island,NFK,NF,574,Oceania
+Niue,NIU,NU,570,Oceania
+Nauru,NRU,NR,520,Oceania
+New Zealand,NZL,NZ,554,Oceania
+Pitcairn Islands,PCN,PN,612,Oceania
+Palau,PLW,PW,585,Oceania
+Papua New Guinea,PNG,PG,598,Oceania
+French Polynesia,PYF,PF,258,Oceania
+Solomon Islands,SLB,SB,90,Oceania
+Tokelau,TKL,TK,772,Oceania
+Tonga,TON,TO,776,Oceania
+Tuvalu,TUV,TV,798,Oceania
+Vanuatu,VUT,VU,548,Oceania
+Wallis and Futuna,WLF,WF,876,Oceania
+Samoa,WSM,WS,882,Oceania
+U.S. Minor Outlying Islands,UMI,UM,581,Oceania
+Angola,AGO,AO,24,Sub-Saharan Africa
+French Southern Territories,ATF,TF,260,Sub-Saharan Africa
+Burundi,BDI,BI,108,Sub-Saharan Africa
+Benin,BEN,BJ,204,Sub-Saharan Africa
+Burkina Faso,BFA,BF,854,Sub-Saharan Africa
+Bouvet Island,BVT,BV,74,Sub-Saharan Africa
+Botswana,BWA,BW,72,Sub-Saharan Africa
+Central African Republic,CAF,CF,140,Sub-Saharan Africa
+Ivory Coast,CIV,CI,384,Sub-Saharan Africa
+Cameroon,CMR,CM,120,Sub-Saharan Africa
+Congo Dem. Rep.,COD,CD,180,Sub-Saharan Africa
+Congo Rep.,COG,CG,178,Sub-Saharan Africa
+Comoros,COM,KM,174,Sub-Saharan Africa
+Cape Verde,CPV,CV,132,Sub-Saharan Africa
+Eritrea,ERI,ER,232,Sub-Saharan Africa
+Ethiopia,ETH,ET,231,Sub-Saharan Africa
+Gabon,GAB,GA,266,Sub-Saharan Africa
+Ghana,GHA,GH,288,Sub-Saharan Africa
+Guinea,GIN,GN,324,Sub-Saharan Africa
+Gambia,GMB,GM,270,Sub-Saharan Africa
+Guinea-Bissau,GNB,GW,624,Sub-Saharan Africa
+Equatorial Guinea,GNQ,GQ,226,Sub-Saharan Africa
+Heard and McDonald Islands,HMD,HM,334,Sub-Saharan Africa
+British Indian Ocean Territory,IOT,IO,86,Sub-Saharan Africa
+Kenya,KEN,KE,404,Sub-Saharan Africa
+Liberia,LBR,LR,430,Sub-Saharan Africa
+Lesotho,LSO,LS,426,Sub-Saharan Africa
+Madagascar,MDG,MG,450,Sub-Saharan Africa
+Mali,MLI,ML,466,Sub-Saharan Africa
+Mozambique,MOZ,MZ,508,Sub-Saharan Africa
+Mauritania,MRT,MR,478,Sub-Saharan Africa
+Mauritius,MUS,MU,480,Sub-Saharan Africa
+Malawi,MWI,MW,454,Sub-Saharan Africa
+Mayotte,MYT,YT,175,Sub-Saharan Africa
+Namibia,NAM,NA,516,Sub-Saharan Africa
+Niger,NER,NE,562,Sub-Saharan Africa
+Nigeria,NGA,NG,566,Sub-Saharan Africa
+Reunion,REU,RE,638,Sub-Saharan Africa
+Rwanda,RWA,RW,646,Sub-Saharan Africa
+Sudan,SDN,SD,729,Sub-Saharan Africa
+Senegal,SEN,SN,686,Sub-Saharan Africa
+St. Helena,SHN,SH,654,Sub-Saharan Africa
+Sierra Leone,SLE,SL,694,Sub-Saharan Africa
+Somalia,SOM,SO,706,Sub-Saharan Africa
+South Sudan,SSD,SS,728,Sub-Saharan Africa
+Sao Tome and Principe,STP,ST,678,Sub-Saharan Africa
+Swaziland,SWZ,SZ,748,Sub-Saharan Africa
+Seychelles,SYC,SC,690,Sub-Saharan Africa
+Chad,TCD,TD,148,Sub-Saharan Africa
+Togo,TGO,TG,768,Sub-Saharan Africa
+Tanzania,TZA,TZ,834,Sub-Saharan Africa
+Uganda,UGA,UG,800,Sub-Saharan Africa
+South Africa,ZAF,ZA,710,Sub-Saharan Africa
+Zambia,ZMB,ZM,894,Sub-Saharan Africa
+Zimbabwe,ZWE,ZW,716,Sub-Saharan Africa
