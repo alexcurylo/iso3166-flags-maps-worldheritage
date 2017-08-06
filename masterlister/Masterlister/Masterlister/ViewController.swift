@@ -40,7 +40,6 @@ class ViewController: NSViewController {
         let array = Array(dict.values).sorted { (lhs, rhs) in
             lhs.name < rhs.name
         }
-        // TODO: Filter for UNESCO membership
         return array
     }()
     
@@ -118,10 +117,34 @@ class ViewController: NSViewController {
         output.textStorage?.append(textHeader)
     }
 
+    func pageExists(at url: URL) -> Bool {
+        // Disable online check for construction testing
+        return true
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "HEAD"
+        request.timeoutInterval = 10
+        var response: URLResponse?
+        try! NSURLConnection.sendSynchronousRequest(request,
+                                                    returning: &response)
+        let httpResponse = response as! HTTPURLResponse
+        if httpResponse.statusCode != 200 { return false }
+        if httpResponse.url != url { return false }
+        return true
+    }
+
     func writeCountries() {
         for country in countries {
+            let countryLink = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
+            
+            // TODO: Filter construction by http://www.unesco.org/eri/cp/ListeMS_Indicators.asp
+            guard pageExists(at: URL(string: countryLink)!) else {
+                //print("Should have filtered out " + country.name)
+                continue
+            }
+            
             let countryStart = NSAttributedString(string: """
-                <p dir='ltr'><strong>\(country.name)</strong><br />\n
+                <p dir='ltr'><strong><a href="\(countryLink)">\(country.name)</a></strong><br />\n
                 """)
             output.textStorage?.append(countryStart)
 
