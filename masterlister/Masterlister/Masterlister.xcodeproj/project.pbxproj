@@ -17,6 +17,7 @@
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE51F36CB7E002A543D /* whc-sites-2017.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE41F36C899002A543D /* whc-sites-2017.json */; };
 		FA309CE71F36F1C2002A543D /* whtl-20170806.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE61F36F1B7002A543D /* whtl-20170806.json */; };
+		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE41F36C899002A543D /* whc-sites-2017.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whc-sites-2017.json"; path = "../../../worldheritage/inscribed/whc-sites-2017.json"; sourceTree = "<group>"; };
 		FA309CE61F36F1B7002A543D /* whtl-20170806.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whtl-20170806.json"; path = "../../../worldheritage/tentative/whtl-20170806.json"; sourceTree = "<group>"; };
+		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				8C5C6BE61F205525003DB6A3 /* Masterlister.xcdatamodeld */,
 				FA309CE21F36A02A002A543D /* iso_3166-1.json */,
 				FA309CE41F36C899002A543D /* whc-sites-2017.json */,
+				FA309CE81F371A35002A543D /* unesco_members.json */,
 				FA309CE61F36F1B7002A543D /* whtl-20170806.json */,
 			);
 			path = Masterlister;
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA309CE91F371A38002A543D /* unesco_members.json in Resources */,
 				8C5C6BEA1F205525003DB6A3 /* Assets.xcassets in Resources */,
 				FA309CE51F36CB7E002A543D /* whc-sites-2017.json in Resources */,
 				8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */,

@@ -43,6 +43,21 @@ class ViewController: NSViewController {
         return array
     }()
     
+    struct Member: Codable {
+        let iso: String
+        let name: String
+        let joined: String
+        let region: String
+    }
+
+    let members: [Member] = {
+        let path = Bundle.main.path(forResource: "unesco_members", ofType: "json")
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
+        let array = try! JSONDecoder().decode([Member].self, from: data)
+        assert(array.count == 205, "Should be 195 states and 10 associates in 2017")
+        return array
+    }()
+
     // NB whc-en has other fields:
     // historical_description, long_description
     // "http_url": "http://whc.unesco.org/en/list/208",
@@ -135,9 +150,6 @@ class ViewController: NSViewController {
     }
 
     func pageExists(at url: URL) -> Bool {
-        // Disable online check for construction testing
-        return true
-        
         var request = URLRequest(url: url)
         request.httpMethod = "HEAD"
         request.timeoutInterval = 10
@@ -152,14 +164,12 @@ class ViewController: NSViewController {
 
     func writeCountries() {
         for country in countries {
-            let countryLink = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
-            
-            // TODO: Filter construction by http://www.unesco.org/eri/cp/ListeMS_Indicators.asp
-            guard pageExists(at: URL(string: countryLink)!) else {
-                //print("Should have filtered out " + country.name)
+            guard members.contains(where: { country.alpha2 == $0.iso } ) else {
+                //print("Filtering out " + country.name)
                 continue
             }
             
+            let countryLink = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
             let countryStart = NSAttributedString(string: """
                 <p dir='ltr'><strong><a href="\(countryLink)">\(country.name)</a></strong><br />\n
                 """)
