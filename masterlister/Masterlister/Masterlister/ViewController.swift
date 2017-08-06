@@ -10,6 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    enum Visited: String {
+        case yes = "✅"
+        case no = "🔲"
+    }
+
     enum Document {
         case html
         case wordpress
@@ -35,6 +40,7 @@ class ViewController: NSViewController {
         let array = Array(dict.values).sorted { (lhs, rhs) in
             lhs.name < rhs.name
         }
+        // TODO: Filter for UNESCO membership
         return array
     }()
     
@@ -66,7 +72,6 @@ class ViewController: NSViewController {
 
     @IBOutlet var output: NSTextView!
     
-    var whs = 0
     var whsVisited = 0
     var twhs = 0
     var twhsVisited = 0
@@ -131,7 +136,10 @@ class ViewController: NSViewController {
     }
 
     func writeSites(in country: Country) {
-        let whsSites = [String]()
+        let whsSites = sites.filter {
+            $0.iso_code.contains(country.alpha2.lowercased())
+        }
+
         let twhsSites = [String]()
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
@@ -141,16 +149,31 @@ class ViewController: NSViewController {
             output.textStorage?.append(countryStart)
             return
         }
+        
+        for whsSite in whsSites {
+            let whsLine = NSAttributedString(string: """
+                <a href="http://whc.unesco.org/en/list/\(whsSite.id_no)">\(whsSite.name_en)</a> (\(whsSite.date_inscribed))<br />\n
+                """)
+            output.textStorage?.append(whsLine)
+        }
     }
 
     func writeFooter(for type: Document) {
-        let total = whs + twhs
+        let total = sites.count + twhs
+
+        #if TODO_IMPLEMENT_VISITED
         let visited = whsVisited + twhsVisited
         let percent = total > 0 ? Double(visited / total) : 100
         let textFooter = NSAttributedString(string: """
             
-            <p dir="ltr">WHS visited: \(whsVisited)/\(whs) — TWHS visited: \(twhsVisited)/\(whs) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
+            <p dir="ltr">WHS visited: \(whsVisited)/\(sites.count) — TWHS visited: \(twhsVisited)/\(twhs) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
             """)
+        #else
+        let textFooter = NSAttributedString(string: """
+            
+            <p dir="ltr">WHS: \(sites.count) — TWHS: \(twhs) — TOTAL: \(total)</p>\n
+            """)
+        #endif
         output.textStorage?.append(textFooter)
 
         if type == .html {
