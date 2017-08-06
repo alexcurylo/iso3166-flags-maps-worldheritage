@@ -68,11 +68,28 @@ class ViewController: NSViewController {
         assert(array.count == 1073, "Should be 1073 WHS in 2017")
         return array
     }()
+    
+    struct Tentative: Codable {
+        let id_no: String
+        let iso: String
+        let submitted: String
+        let name: String
+    }
+
+    let tentatives: [Tentative] = {
+        let path = Bundle.main.path(forResource: "whtl-20170806", ofType: "json")
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
+        let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
+        let array = jsonArray.sorted { (lhs, rhs) in
+            lhs.id_no < rhs.id_no
+        }
+        //assert(array.count == 1669, "Should be 1669 TWHS on 2017.08.06")
+        return array
+    }()
 
     @IBOutlet var output: NSTextView!
     
     var whsVisited = 0
-    var twhs = 0
     var twhsVisited = 0
     
     override func viewDidLoad() {
@@ -163,7 +180,9 @@ class ViewController: NSViewController {
             $0.iso_code.contains(country.alpha2.lowercased())
         }
 
-        let twhsSites = [String]()
+        let twhsSites = tentatives.filter {
+            $0.iso.contains(country.alpha2.lowercased())
+        }
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
             let countryStart = NSAttributedString(string: """
@@ -173,28 +192,35 @@ class ViewController: NSViewController {
             return
         }
         
-        for whsSite in whsSites {
+        for whs in whsSites {
             let whsLine = NSAttributedString(string: """
-                <a href="http://whc.unesco.org/en/list/\(whsSite.id_no)">\(whsSite.name_en)</a> (\(whsSite.date_inscribed))<br />\n
+                <a href="http://whc.unesco.org/en/list/\(whs.id_no)">\(whs.name_en)</a> (\(whs.date_inscribed))<br />\n
                 """)
             output.textStorage?.append(whsLine)
+        }
+        
+        for twhs in twhsSites {
+            let twhsLine = NSAttributedString(string: """
+                <em><a href="http://whc.unesco.org/en/tentativelists/\(twhs.id_no)">\(twhs.name)</a> (\(twhs.submitted))</em><br />\n
+                """)
+            output.textStorage?.append(twhsLine)
         }
     }
 
     func writeFooter(for type: Document) {
-        let total = sites.count + twhs
+        let total = sites.count + tentatives.count
 
         #if TODO_IMPLEMENT_VISITED
         let visited = whsVisited + twhsVisited
         let percent = total > 0 ? Double(visited / total) : 100
         let textFooter = NSAttributedString(string: """
             
-            <p dir="ltr">WHS visited: \(whsVisited)/\(sites.count) — TWHS visited: \(twhsVisited)/\(twhs) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
+            <p dir="ltr">WHS visited: \(whsVisited)/\(sites.count) — TWHS visited: \(twhsVisited)/\(tentatives.count) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
             """)
         #else
         let textFooter = NSAttributedString(string: """
             
-            <p dir="ltr">WHS: \(sites.count) — TWHS: \(twhs) — TOTAL: \(total)</p>\n
+            <p dir="ltr">WHS: \(sites.count) — TWHS: \(tentatives.count) — TOTAL: \(total)</p>\n
             """)
         #endif
         output.textStorage?.append(textFooter)
