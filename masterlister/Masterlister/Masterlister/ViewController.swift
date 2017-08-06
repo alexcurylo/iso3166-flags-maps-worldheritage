@@ -90,7 +90,7 @@ class ViewController: NSViewController {
     func writeCountries() {
         for country in countries {
             let countryStart = NSAttributedString(string: """
-                <p dir='ltr'><strong>\(country.name)</strong><br />
+                <p dir='ltr'><strong>\(country.name)</strong><br />\n
                 """)
             output.textStorage?.append(countryStart)
 
@@ -105,7 +105,16 @@ class ViewController: NSViewController {
     }
 
     func writeSites(in country: Country) {
-        
+        let whsSites = [String]()
+        let twhsSites = [String]()
+
+        guard !whsSites.isEmpty || !twhsSites.isEmpty else {
+            let countryStart = NSAttributedString(string: """
+                <em>no inscribed or tentative sites yet!</em><br />\n
+                """)
+            output.textStorage?.append(countryStart)
+            return
+        }
     }
 
     func writeFooter(for type: Document) {
