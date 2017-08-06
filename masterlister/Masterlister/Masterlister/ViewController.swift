@@ -15,6 +15,29 @@ class ViewController: NSViewController {
         case wordpress
     }
     
+    struct Country: Codable {
+        var alpha2: String
+        var alpha3: String
+        var name: String
+        var officialName: String
+        var numeric: String
+        // all except Kosovo
+        var wikiUrl: URL?
+        // Kosovo only
+        var unofficial: Bool?
+        var wikiEntry: URL?
+    }
+
+    let countries: [Country] = {
+        let path = Bundle.main.path(forResource: "iso_3166-1", ofType: "json")
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
+        let dict = try! JSONDecoder().decode([String: Country].self, from: data)
+        let array = Array(dict.values).sorted { (lhs, rhs) in
+            lhs.name < rhs.name
+        }
+        return array
+    }()
+    
     @IBOutlet var output: NSTextView!
     
     var whs = 0

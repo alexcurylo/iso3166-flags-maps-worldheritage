@@ -14,6 +14,7 @@
 		8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C6BEB1F205525003DB6A3 /* Main.storyboard */; };
 		8C5C6BF91F205525003DB6A3 /* MasterlisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BF81F205525003DB6A3 /* MasterlisterTests.swift */; };
 		8C5C6C041F205525003DB6A3 /* MasterlisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */; };
+		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8C5C6BFF1F205525003DB6A3 /* MasterlisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterlisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterlisterUITests.swift; sourceTree = "<group>"; };
 		8C5C6C051F205525003DB6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				8C5C6BEE1F205525003DB6A3 /* Info.plist */,
 				8C5C6BEF1F205525003DB6A3 /* Masterlister.entitlements */,
 				8C5C6BE61F205525003DB6A3 /* Masterlister.xcdatamodeld */,
+				FA309CE21F36A02A002A543D /* iso_3166-1.json */,
 			);
 			path = Masterlister;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				8C5C6BEA1F205525003DB6A3 /* Assets.xcassets in Resources */,
 				8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */,
+				FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +529,7 @@
 				8C5C6C0A1F205525003DB6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C5C6C0B1F205525003DB6A3 /* Build configuration list for PBXNativeTarget "MasterlisterTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +538,7 @@
 				8C5C6C0D1F205525003DB6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C5C6C0E1F205525003DB6A3 /* Build configuration list for PBXNativeTarget "MasterlisterUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +547,7 @@
 				8C5C6C101F205525003DB6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
