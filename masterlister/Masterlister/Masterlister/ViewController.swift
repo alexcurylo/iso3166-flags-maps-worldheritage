@@ -16,16 +16,16 @@ class ViewController: NSViewController {
     }
     
     struct Country: Codable {
-        var alpha2: String
-        var alpha3: String
-        var name: String
-        var officialName: String
-        var numeric: String
+        let alpha2: String
+        let alpha3: String
+        let name: String
+        let officialName: String
+        let numeric: String
         // all except Kosovo
-        var wikiUrl: URL?
+        let wikiUrl: URL?
         // Kosovo only
-        var unofficial: Bool?
-        var wikiEntry: URL?
+        let unofficial: Bool?
+        let wikiEntry: URL?
     }
 
     let countries: [Country] = {
@@ -38,6 +38,32 @@ class ViewController: NSViewController {
         return array
     }()
     
+    // NB whc-en has other fields:
+    // historical_description, long_description
+    // "http_url": "http://whc.unesco.org/en/list/208",
+    // "image_url": "http://whc.unesco.org/uploads/sites/site_208.jpg",
+    struct Site: Codable {
+        let id_no: String
+        let iso_code: String
+        let category: String
+        let region_en: String
+        let date_inscribed: String
+        let name_en: String
+        let short_description_en: String
+        let justification_en: String
+    }
+    
+    let sites: [Site] = {
+        let path = Bundle.main.path(forResource: "whc-sites-2017", ofType: "json")
+        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
+        let jsonArray = try! JSONDecoder().decode([Site].self, from: data)
+        let array = jsonArray.sorted { (lhs, rhs) in
+            lhs.id_no < rhs.id_no
+        }
+        assert(array.count == 1073, "Should be 1073 WHS in 2017")
+        return array
+    }()
+
     @IBOutlet var output: NSTextView!
     
     var whs = 0
