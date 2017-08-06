@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet var output: NSTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
