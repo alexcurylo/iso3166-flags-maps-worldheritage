@@ -66,28 +66,45 @@ class ViewController: NSViewController {
     func writeHeader(for type: Document) {
         if type == .html {
             let htmlHeader = NSAttributedString(string: """
-            <!DOCTYPE html>
-            <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                        <title>Sitelist</title>
-                </head>
-                <body>
-            """)
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                            <title>Sitelist</title>
+                    </head>
+                    <body>\n
+                """)
             output.textStorage?.append(htmlHeader)
         }
         
         let textHeader = NSAttributedString(string: """
-        <p dir="ltr"><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
-        
-        <p>Inscribed properties are in plain text with (year of inscription)<br />
-        <i>Tentative properties are in italic text with (date of submission)</i></p>
-        
-        """)
+            <p dir="ltr"><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
+            
+            <p>Inscribed properties are in plain text with (year of inscription)<br />
+            <i>Tentative properties are in italic text with (date of submission)</i></p>
+            \n
+            """)
         output.textStorage?.append(textHeader)
     }
 
     func writeCountries() {
+        for country in countries {
+            let countryStart = NSAttributedString(string: """
+                <p dir='ltr'><strong>\(country.name)</strong><br />
+                """)
+            output.textStorage?.append(countryStart)
+
+            writeSites(in: country)
+
+            let countryEnd = NSAttributedString(string: """
+                </p>
+                \n
+                """)
+            output.textStorage?.append(countryEnd)
+        }
+    }
+
+    func writeSites(in country: Country) {
         
     }
 
@@ -96,17 +113,16 @@ class ViewController: NSViewController {
         let visited = whsVisited + twhsVisited
         let percent = total > 0 ? Double(visited / total) : 100
         let textFooter = NSAttributedString(string: """
-        
-        <p dir="ltr">WHS visited: \(whsVisited)/\(whs) — TWHS visited: \(twhsVisited)/\(whs) — TOTAL: \(visited)/\(total) (\(percent)%)</p>
-        """)
+            
+            <p dir="ltr">WHS visited: \(whsVisited)/\(whs) — TWHS visited: \(twhsVisited)/\(whs) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
+            """)
         output.textStorage?.append(textFooter)
 
         if type == .html {
             let htmlFooter = NSAttributedString(string: """
-            
-                </body>
-            </html>
-            """)
+                    </body>
+                </html>
+                """)
             output.textStorage?.append(htmlFooter)
         }
     }
