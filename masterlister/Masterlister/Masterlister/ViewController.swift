@@ -89,6 +89,7 @@ class ViewController: NSViewController {
         let iso: String
         let submitted: String
         let name: String
+        let category: String
     }
 
     let tentatives: [Tentative] = {
@@ -98,6 +99,8 @@ class ViewController: NSViewController {
         let array = jsonArray.sorted { (lhs, rhs) in
             lhs.id_no < rhs.id_no
         }
+        // Contrary to http://whc.unesco.org/en/tentativelists/
+        // there does, in fact, appear to be 1696
         //assert(array.count == 1669, "Should be 1669 TWHS on 2017.08.06")
         return array
     }()
@@ -191,7 +194,7 @@ class ViewController: NSViewController {
         }
 
         let twhsSites = tentatives.filter {
-            $0.iso.contains(country.alpha2.lowercased())
+            $0.iso.contains(country.alpha2)
         }
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
