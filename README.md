@@ -2,7 +2,7 @@
 
 ISO 3166-1 country lists with related flag, map, and UNESCO World Heritage Site resources
 
-from [introductory blog post](https://everyworldheritage.site/2017/06/17/repo-iso3166-flags-maps-worldheritage/) at [everyworldheritage.site](https://everyworldheritage.site/):
+from [introductory blog post](https://everywhs.com/2017/06/17/repo-iso3166-flags-maps-worldheritage/) at [everywhs.com](https://everywhs.com/):
 
 Trying to find some art and info for our next Country File here, it struck us that y’know, there’s pieces here and pieces there, but somebody really should pull all of it together into some handy formats for our blogging and apps and whatever...
 
