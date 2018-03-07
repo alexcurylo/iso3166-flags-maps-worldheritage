@@ -12,7 +12,7 @@ class ViewController: NSViewController {
 
     enum Visited: String {
         case yes = "✅"
-        case no = "🔲"
+        case no = "◻️"
     }
 
     enum Document {
