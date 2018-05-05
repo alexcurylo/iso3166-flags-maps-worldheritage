@@ -19,96 +19,47 @@ class WonderlistVC: NSViewController {
         case html
         case wordpress
     }
-    
-    struct Country: Codable {
-        let alpha2: String
-        let alpha3: String
-        let name: String
-        let officialName: String
-        let numeric: String
-        // all except Kosovo
-        let wikiUrl: URL?
-        // Kosovo only
-        let unofficial: Bool?
-        let wikiEntry: URL?
+
+    struct Wonder: Codable {
+        let id: Int // expect 1...7 for wonders, 8... for finalists
+        let title: String
+        let url: URL
+        let whs: Int
+
+        var isWonder: Bool { return id <= 7 }
+        var isFinalist: Bool { return !isWonder }
     }
 
-    let countries: [Country] = {
-        let path = Bundle.main.path(forResource: "iso_3166-1", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let dict = try! JSONDecoder().decode([String: Country].self, from: data)
-        let array = Array(dict.values).sorted { (lhs, rhs) in
-            lhs.name < rhs.name
+    struct Wonders: Codable {
+        let id: Int // expect [100, 200, 300, ...] to combine with wonder ID
+        let title: String
+        let url: URL
+        let wonders: [Wonder]
+        let finalists: [Wonder]
+
+        var total: Int {
+            return wonders.count + finalists.count
         }
-        return array
-    }()
-    
-    struct Member: Codable {
-        let iso: String
-        let name: String
-        let joined: String
-        let region: String
     }
 
-    let members: [Member] = {
-        let path = Bundle.main.path(forResource: "unesco_members", ofType: "json")
+    var wondersCount = 0
+    var finalistsCount = 0
+    lazy var wondersList: [Wonders] = {
+        let path = Bundle.main.path(forResource: "new7wonders", ofType: "json")
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let array = try! JSONDecoder().decode([Member].self, from: data)
-        assert(array.count == 205, "Should be 195 states and 10 associates in 2017")
-        return array
-    }()
-
-    // NB whc-en has other fields:
-    // historical_description, long_description
-    // "http_url": "http://whc.unesco.org/en/list/208",
-    // "image_url": "http://whc.unesco.org/uploads/sites/site_208.jpg",
-    struct Site: Codable {
-        let id_no: String
-        let iso_code: String
-        let category: String
-        let region_en: String
-        let date_inscribed: String
-        let name_en: String
-        let short_description_en: String
-        let justification_en: String
-    }
-    
-    let sites: [Site] = {
-        let path = Bundle.main.path(forResource: "whc-sites-2017", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let jsonArray = try! JSONDecoder().decode([Site].self, from: data)
-        let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.id_no < rhs.id_no
-        }
-        assert(array.count == 1073, "Should be 1073 WHS in 2017")
-        return array
-    }()
-    
-    struct Tentative: Codable {
-        let id_no: String
-        let iso: String
-        let submitted: String
-        let name: String
-        let category: String
-    }
-
-    let tentatives: [Tentative] = {
-        let path = Bundle.main.path(forResource: "whtl-20170806", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
-        let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.id_no < rhs.id_no
-        }
-        // Contrary to http://whc.unesco.org/en/tentativelists/
-        // there does, in fact, appear to be 1696
-        //assert(array.count == 1669, "Should be 1669 TWHS on 2017.08.06")
+        let array = try! JSONDecoder().decode([Wonders].self, from: data)
+        assert(array.count == 3, "Should be 3 collections in 2018")
+        wondersCount = array.reduce(0) { $0 + $1.wonders.count }
+        finalistsCount = array.reduce(0) { $0 + $1.finalists.count }
+        assert(wondersCount == 1, "Should be 21 wonders in 2018")
+        assert(finalistsCount == 1, "Should be 56 finalists in 2018")
         return array
     }()
 
     @IBOutlet var output: NSTextView!
     
-    var whsVisited = 0
-    var twhsVisited = 0
+    var wondersVisited = 0
+    var finalistsVisited = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,7 +75,7 @@ class WonderlistVC: NSViewController {
 
     func generate(for type: Document) {
         writeHeader(for: type)
-        writeCountries()
+        writeWondersList()
         writeFooter(for: type)
     }
     
@@ -143,97 +94,65 @@ class WonderlistVC: NSViewController {
         }
         
         let textHeader = NSAttributedString(string: """
-            <p dir="ltr"><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
+            <p dir="ltr"><strong>The <a href="https://new7wonders.com">New7Wonders</a> Master Wonderlist</strong></p>
             
-            <p>Inscribed properties are in plain text with (year of inscription)<br />
-            <i>Tentative properties are in italic text with (date of submission)</i></p>
+            <p>Wonders are in plain text<br />
+            <i>Finalists are in italic text</i></p>
             \n
             """)
         output.textStorage?.append(textHeader)
     }
 
-    func pageExists(at url: URL) -> Bool {
-        var request = URLRequest(url: url)
-        request.httpMethod = "HEAD"
-        request.timeoutInterval = 10
-        var response: URLResponse?
-        try! NSURLConnection.sendSynchronousRequest(request,
-                                                    returning: &response)
-        let httpResponse = response as! HTTPURLResponse
-        if httpResponse.statusCode != 200 { return false }
-        if httpResponse.url != url { return false }
-        return true
-    }
-
-    func writeCountries() {
-        for country in countries {
-            guard members.contains(where: { country.alpha2 == $0.iso } ) else {
-                //print("Filtering out " + country.name)
-                continue
-            }
-            
-            let countryLink = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
-            let countryStart = NSAttributedString(string: """
-                <p dir='ltr'><strong><a href="\(countryLink)">\(country.name)</a></strong><br />\n
+    func writeWondersList() {
+        for wonders in wondersList {
+            let listStart = NSAttributedString(string: """
+                <p dir="ltr"><strong><a href="\(wonders.url)">\(wonders.title)</a>:</strong></p>
                 """)
-            output.textStorage?.append(countryStart)
+            output.textStorage?.append(listStart)
 
-            writeSites(in: country)
+            writeWonders(in: wonders.wonders)
+            writeWonders(in: wonders.finalists)
 
-            let countryEnd = NSAttributedString(string: """
-                </p>
-                \n
+            let listEnd = NSAttributedString(string: """
+                \n\n
                 """)
-            output.textStorage?.append(countryEnd)
+            output.textStorage?.append(listEnd)
         }
     }
 
-    func writeSites(in country: Country) {
-        let whsSites = sites.filter {
-            $0.iso_code.contains(country.alpha2.lowercased())
+    func writeWonders(in wonders: [Wonder]) {
+        guard let inItalic = wonders.first?.isFinalist else { return }
+
+        let wondersStart = NSAttributedString(string: "<p dir=\"ltr\">" + (inItalic ? "<i>" : ""))
+        output.textStorage?.append(wondersStart)
+
+        #if TODO_IMPLEMENT_VISITED
+        //- prefix with mark
+        //- follow with Visit
+        #endif
+        for wonder in wonders {
+            let wonderLine = NSAttributedString(string: """
+                <a href="\(wonder.url)">\(wonder.title)</a><br />\n
+                """)
+            output.textStorage?.append(wonderLine)
         }
 
-        let twhsSites = tentatives.filter {
-            $0.iso.contains(country.alpha2)
-        }
-
-        guard !whsSites.isEmpty || !twhsSites.isEmpty else {
-            let countryStart = NSAttributedString(string: """
-                <em>no inscribed or tentative sites yet!</em><br />\n
-                """)
-            output.textStorage?.append(countryStart)
-            return
-        }
-        
-        for whs in whsSites {
-            let whsLine = NSAttributedString(string: """
-                <a href="http://whc.unesco.org/en/list/\(whs.id_no)">\(whs.name_en)</a> (\(whs.date_inscribed))<br />\n
-                """)
-            output.textStorage?.append(whsLine)
-        }
-        
-        for twhs in twhsSites {
-            let twhsLine = NSAttributedString(string: """
-                <em><a href="http://whc.unesco.org/en/tentativelists/\(twhs.id_no)">\(twhs.name)</a> (\(twhs.submitted))</em><br />\n
-                """)
-            output.textStorage?.append(twhsLine)
-        }
+        let wondersEnd = NSAttributedString(string: (inItalic ? "</i>" : "") + "</p>")
+        output.textStorage?.append(wondersEnd)
     }
 
     func writeFooter(for type: Document) {
-        let total = sites.count + tentatives.count
+        let total = wondersCount + finalistsCount
 
         #if TODO_IMPLEMENT_VISITED
-        let visited = whsVisited + twhsVisited
+        let visited = wondersVisited + finalistsVisited
         let percent = total > 0 ? Double(visited / total) : 100
         let textFooter = NSAttributedString(string: """
-            
-            <p dir="ltr">WHS visited: \(whsVisited)/\(sites.count) — TWHS visited: \(twhsVisited)/\(tentatives.count) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
+            <p dir="ltr">Wonders visited: \(wondersVisited)/\(wondersCount) — Finalists visited: \(finalistsVisited)/\(finalistsCount) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
             """)
         #else
         let textFooter = NSAttributedString(string: """
-            
-            <p dir="ltr">WHS: \(sites.count) — TWHS: \(tentatives.count) — TOTAL: \(total)</p>\n
+            <p dir="ltr">Wonders: \(wondersCount) — Finalists: \(finalistsCount) — TOTAL: \(total)</p>\n
             """)
         #endif
         output.textStorage?.append(textFooter)
