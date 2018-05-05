@@ -21,14 +21,14 @@ class WonderlistVC: NSViewController {
     }
 
     struct Wonder: Codable {
-        let id: Int // expect 1...7 for wonders, 8... for finalists
+        let id: Int // expect owner ID + 1...7 for wonders, 8... for finalists
         let title: String
         let url: URL
         let whs: Int?
         let twhs: Int?
         let link: URL?
 
-        var isWonder: Bool { return id <= 7 }
+        var isWonder: Bool { return (id % 100) <= 7 }
         var isFinalist: Bool { return !isWonder }
     }
 
