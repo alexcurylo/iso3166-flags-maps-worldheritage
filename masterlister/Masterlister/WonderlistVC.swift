@@ -63,6 +63,29 @@ class WonderlistVC: NSViewController {
         return array
     }()
 
+    struct Visit: Codable {
+        let wonder: Int?
+        let whs: Int?
+        let twhs: Int?
+        let visit: URL?
+        let stay: URL?
+        let eat: URL?
+    }
+    lazy var visits: [Visit] = {
+        let path = Bundle.main.path(forResource: "visits", ofType: "json")
+        var array: [Visit] = []
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            array = try JSONDecoder().decode([Visit].self, from: data)
+        } catch let jsonErr {
+            print("Error decoding visits", jsonErr)
+        }
+        let wonderVisits = array.compactMap({$0.wonder})
+        assert(wondersCount == 7 + 7 + 7, "Should be 21 wonders in 2018")
+        assert(finalistsCount == 14 + 21 + 21, "Should be 56 finalists in 2018")
+        return array
+    }()
+
     @IBOutlet var output: NSTextView!
     
     var wondersVisited = 0
@@ -133,14 +156,33 @@ class WonderlistVC: NSViewController {
         let wondersStart = NSAttributedString(string: "<p dir=\"ltr\">" + (inItalic ? "<i>" : ""))
         output.textStorage?.append(wondersStart)
 
-        #if TODO_IMPLEMENT_VISITED
-        //- prefix with mark
-        //- follow with Visit
-        #endif
         for wonder in wonders {
-            let wonderLine = NSAttributedString(string: """
-                <a href="\(wonder.url)">\(wonder.title)</a><br />\n
-                """)
+            let link = """
+                <a href="\(wonder.url)">\(wonder.title)</a>
+                """
+
+            var mark = Visited.no.rawValue
+            var visitLink = ""
+            var stayLink = ""
+            var eatLink = ""
+            if let visited = visits.first(where: { $0.wonder == wonder.id }) {
+                if wonder.isWonder {
+                    wondersVisited = wondersVisited + 1
+                } else {
+                    finalistsVisited = finalistsVisited + 1
+                }
+                mark = Visited.yes.rawValue
+                if let visitURL = visited.visit {
+                    visitLink = " — <a href=\"\(visitURL)\">Visit</a>"
+                }
+                if let stayURL = visited.stay {
+                    stayLink = " — <a href=\"\(stayURL)\">Stay</a>"
+                }
+                if let eatURL = visited.eat {
+                    eatLink = " — <a href=\"\(eatURL)\">Eat</a>"
+                }
+            }
+            let wonderLine = NSAttributedString(string: "\(mark) \(link)\(visitLink)\(stayLink)\(eatLink)<br />\n")
             output.textStorage?.append(wonderLine)
         }
 
@@ -149,19 +191,18 @@ class WonderlistVC: NSViewController {
     }
 
     func writeFooter(for type: Document) {
-        let total = wondersCount + finalistsCount
+        assert(wondersVisited == 16, "Should be 16 wonders visited (2018.05.05)")
+        assert(finalistsVisited == 40, "Should be 40 finalists visited (2018.05.05)")
 
-        #if TODO_IMPLEMENT_VISITED
-        let visited = wondersVisited + finalistsVisited
-        let percent = total > 0 ? Double(visited / total) : 100
+        let wondersPercent = String(format: "%.1f", Float(wondersVisited) / Float(wondersCount) * 100)
+        let finalistsPercent = String(format: "%.1f", Float(finalistsVisited) / Float(finalistsCount) * 100)
+
+        let total = wondersCount + finalistsCount
+        let totalVisits = wondersVisited + finalistsVisited
+        let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(total) * 100)
         let textFooter = NSAttributedString(string: """
-            <p dir="ltr">Wonders visited: \(wondersVisited)/\(wondersCount) — Finalists visited: \(finalistsVisited)/\(finalistsCount) — TOTAL: \(visited)/\(total) (\(percent)%)</p>\n
+            <p dir="ltr">Wonders: \(wondersVisited)/\(wondersCount) (\(wondersPercent)%) — Finalists: \(finalistsVisited)/\(finalistsCount) (\(finalistsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</p>\n
             """)
-        #else
-        let textFooter = NSAttributedString(string: """
-            <p dir="ltr">Wonders: \(wondersCount) — Finalists: \(finalistsCount) — TOTAL: \(total)</p>\n
-            """)
-        #endif
         output.textStorage?.append(textFooter)
 
         if type == .html {
