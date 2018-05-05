@@ -1,0 +1,39 @@
+[  
+    {  
+      "title":"New 7 Wonders of the World",
+      "url":"https://world.new7wonders.com/",
+      "wonders":[  
+        {
+          "id":101,
+          "title":"Chichén Itzá, Mexico",
+          "url":"https://world.new7wonders.com/wonders/pyramid-at-chichen-itza-before-800-a-d-yucatan-peninsula-mexico/",
+          "whs":483
+        }
+      ],
+      "finalists":[  
+        {  
+          "id":108,
+          "title":"Angkor Wat, Cambodia",
+          "url":"https://world.new7wonders.com/wonders/angkor-12th-century-cambodia/",
+          "whs":668
+        }
+      ]
+    },
+    {  
+        "title":"New 7 Wonders of Nature",
+        "url":"https://nature.new7wonders.com/",
+        "wonders":[  
+        ],
+        "finalists":[  
+        ]
+      },
+      {  
+        "title":"New 7 Wonders Cities",
+        "url":"https://cities.new7wonders.com/",
+        "wonders":[  
+        ],
+        "finalists":[  
+        ]
+      }
+  ]
+   
