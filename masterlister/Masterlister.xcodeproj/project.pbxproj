@@ -19,6 +19,7 @@
 		FA309CE71F36F1C2002A543D /* whtl-20170806.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE61F36F1B7002A543D /* whtl-20170806.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 		FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */; };
+		FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31BE209D8E2D006E55ED /* new7wonders.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		FA309CE61F36F1B7002A543D /* whtl-20170806.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whtl-20170806.json"; path = "../../worldheritage/tentative/whtl-20170806.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 		FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonderlistVC.swift; sourceTree = "<group>"; };
+		FACF31BE209D8E2D006E55ED /* new7wonders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = new7wonders.json; path = ../../wonders/new7wonders.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				FA309CE41F36C899002A543D /* whc-sites-2017.json */,
 				FA309CE81F371A35002A543D /* unesco_members.json */,
 				FA309CE61F36F1B7002A543D /* whtl-20170806.json */,
+				FACF31BE209D8E2D006E55ED /* new7wonders.json */,
 			);
 			path = Masterlister;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */,
 				FA309CE71F36F1C2002A543D /* whtl-20170806.json in Resources */,
 				FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */,
+				FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
