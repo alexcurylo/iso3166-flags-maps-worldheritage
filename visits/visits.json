@@ -1,0 +1,240 @@
+[
+    {
+        "wonder": 101,
+        "whs": 483
+    },
+    {
+        "wonder": 103,
+        "whs": 91
+    },
+    {
+        "wonder": 104,
+        "whs": 438,
+        "visit": "https://everywhs.com/2018/04/07/whs-the-great-wall-china/"
+    },
+    {
+        "wonder": 105,
+        "whs": 274
+    },
+    {
+        "wonder": 106,
+        "whs": 326
+    },
+    {
+        "wonder": 107,
+        "whs": 252
+    },
+    {
+        "wonder": 108,
+        "whs": 668,
+        "visit": "https://everywhs.com/2017/12/16/whs-angkor-wat-cambodia/",
+        "stay": "https://everywhs.com/2017/12/25/hotel-sawasdee-angkor-villa-siem-reap-cambodia/",
+        "eat": "https://everywhs.com/2017/12/19/dining-bugs-cafe-siem-reap/"
+    },
+    {
+        "wonder": 109,
+        "whs": 404
+    },
+    {
+        "wonder": 110,
+        "whs": 314
+    },
+    {
+        "wonder": 111,
+        "whs": 600
+    },
+    {
+        "wonder": 112,
+        "whs": 86
+    },
+    {
+        "wonder": 113,
+        "whs": 356
+    },
+    {
+        "wonder": 114,
+        "whs": 688
+    },
+    {
+        "wonder": 115,
+        "whs": 545
+    },
+    {
+        "wonder": 118,
+        "whs": 307
+    },
+    {
+        "wonder": 119,
+        "whs": 373
+    },
+    {
+        "wonder": 201,
+        "whs": 998
+    },
+    {
+        "wonder": 202,
+        "whs": 672,
+        "visit": "https://everywhs.com/2017/06/09/whs-ha-long-bay-vietnam/"
+    },
+    {
+        "wonder": 203,
+        "whs": 355
+    },
+    {
+        "wonder": 204,
+        "whs": 1264,
+        "visit": "https://everywhs.com/2018/03/01/whs-jeju-volcanic-island-and-lava-tubes-south-korea/"
+    },
+    {
+        "wonder": 206,
+        "whs": 652
+    },
+    {
+        "wonder": 207,
+        "whs": 1007
+    },
+    {
+        "wonder": 209,
+        "whs": 1285
+    },
+    {
+        "wonder": 210,
+        "whs": 546
+    },
+    {
+        "wonder": 213,
+        "twhs": 5158
+    },
+    {
+        "wonder": 214,
+        "whs": 266
+    },
+    {
+        "wonder": 215,
+        "whs": 1
+    },
+    {
+        "wonder": 217,
+        "whs": 75
+    },
+    {
+        "wonder": 220,
+        "whs": 403
+    },
+    {
+        "wonder": 221,
+        "twhs": 5812
+    },
+    {
+        "wonder": 223,
+        "whs": 1037
+    },
+    {
+        "wonder": 225,
+        "whs": 798
+    },
+    {
+        "wonder": 227,
+        "whs": 829
+    },
+    {
+        "wonder": 303,
+        "whs": 914
+    },
+    {
+        "wonder": 305,
+        "twhs": 6175,
+        "visit": "https://everywhs.com/2017/11/26/twhs-gombak-selangor-quartz-ridge-malaysia/",
+        "stay": "https://everywhs.com/2017/11/28/hotel-jw-marriott-kuala-lumpur/"
+    },
+    {
+        "wonder": 306,
+        "whs": 567
+    },
+    {
+        "wonder": 307,
+        "whs": 502
+    },
+    {
+        "wonder": 308,
+        "whs": 404
+    },
+    {
+        "wonder": 309,
+        "stay": "https://everywhs.com/2017/09/18/airbnb-pathumwan-resort-bangkok/",
+        "whs": 576
+    },
+    {
+        "wonder": 310,
+        "whs": 320
+    },
+    {
+        "wonder": 311,
+        "twhs": 5848
+    },
+    {
+        "wonder": 312,
+        "twhs": 5249
+    },
+    {
+        "wonder": 314,
+        "whs": 356
+    },
+    {
+        "wonder": 315,
+        "whs": 688
+    },
+    {
+        "wonder": 316,
+        "whs": 488
+    },
+    {
+        "wonder": 317,
+        "twhs": 2021
+    },
+    {
+        "wonder": 318,
+        "whs": 412
+    },
+    {
+        "wonder": 319,
+        "whs": 945
+    },
+    {
+        "wonder": 321,
+        "twhs": 65,
+        "visit": "https://everywhs.com/2017/12/04/twhs-site-doudong-cambodia/",
+        "stay": "https://everywhs.com/2018/01/01/you-eng-hotel-phnom-penh-cambodia/",
+        "eat": "https://everywhs.com/2017/12/30/skuon-spiderville-spider-market-cambodia/"
+    },
+    {
+        "wonder": 322,
+        "whs": 616
+    },
+    {
+        "wonder": 323,
+        "whs": 2
+    },
+    {
+        "wonder": 324,
+        "twhs": 5589
+    },
+    {
+        "wonder": 325,
+        "whs": 540
+    },
+    {
+        "wonder": 326,
+        "whs": 816,
+        "visit": "https://everywhs.com/2018/02/27/whs-changdeokgung-palace-complex-korea/",
+    },
+    {
+        "wonder": 327,
+        "whs": 1110,
+        "visit": "https://everywhs.com/2018/01/29/whs-historic-centre-of-macao/"
+    },
+    {
+        "wonder": 328,
+        "whs": 151
+    }
+]
