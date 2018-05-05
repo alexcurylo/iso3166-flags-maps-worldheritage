@@ -24,7 +24,9 @@ class WonderlistVC: NSViewController {
         let id: Int // expect 1...7 for wonders, 8... for finalists
         let title: String
         let url: URL
-        let whs: Int
+        let whs: Int?
+        let twhs: Int?
+        let link: URL?
 
         var isWonder: Bool { return id <= 7 }
         var isFinalist: Bool { return !isWonder }
@@ -46,13 +48,18 @@ class WonderlistVC: NSViewController {
     var finalistsCount = 0
     lazy var wondersList: [Wonders] = {
         let path = Bundle.main.path(forResource: "new7wonders", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let array = try! JSONDecoder().decode([Wonders].self, from: data)
+        var array: [Wonders] = []
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            array = try JSONDecoder().decode([Wonders].self, from: data)
+        } catch let jsonErr {
+            print("Error decoding new7wonders.json", jsonErr)
+        }
         assert(array.count == 3, "Should be 3 collections in 2018")
         wondersCount = array.reduce(0) { $0 + $1.wonders.count }
         finalistsCount = array.reduce(0) { $0 + $1.finalists.count }
-        assert(wondersCount == 1, "Should be 21 wonders in 2018")
-        assert(finalistsCount == 1, "Should be 56 finalists in 2018")
+        assert(wondersCount == 7 + 7 + 7, "Should be 21 wonders in 2018")
+        assert(finalistsCount == 14 + 21 + 21, "Should be 56 finalists in 2018")
         return array
     }()
 
