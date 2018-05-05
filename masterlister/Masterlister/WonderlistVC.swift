@@ -71,6 +71,7 @@ class WonderlistVC: NSViewController {
         let stay: URL?
         let eat: URL?
     }
+
     lazy var visits: [Visit] = {
         let path = Bundle.main.path(forResource: "visits", ofType: "json")
         var array: [Visit] = []
@@ -81,8 +82,7 @@ class WonderlistVC: NSViewController {
             print("Error decoding visits", jsonErr)
         }
         let wonderVisits = array.compactMap({$0.wonder})
-        assert(wondersCount == 7 + 7 + 7, "Should be 21 wonders in 2018")
-        assert(finalistsCount == 14 + 21 + 21, "Should be 56 finalists in 2018")
+        assert(Set(wonderVisits).count == wonderVisits.count, "Should not have duplicate visits")
         return array
     }()
 
