@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class SitelistVC: NSViewController {
 
     enum Visited: String {
         case yes = "✅"

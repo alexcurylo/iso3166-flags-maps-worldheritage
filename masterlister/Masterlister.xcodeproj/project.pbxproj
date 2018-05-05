@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C5C6BE31F205525003DB6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE21F205525003DB6A3 /* AppDelegate.swift */; };
-		8C5C6BE51F205525003DB6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE41F205525003DB6A3 /* ViewController.swift */; };
+		8C5C6BE51F205525003DB6A3 /* SitelistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE41F205525003DB6A3 /* SitelistVC.swift */; };
 		8C5C6BE81F205525003DB6A3 /* Masterlister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE61F205525003DB6A3 /* Masterlister.xcdatamodeld */; };
 		8C5C6BEA1F205525003DB6A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE91F205525003DB6A3 /* Assets.xcassets */; };
 		8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C6BEB1F205525003DB6A3 /* Main.storyboard */; };
@@ -18,6 +18,7 @@
 		FA309CE51F36CB7E002A543D /* whc-sites-2017.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE41F36C899002A543D /* whc-sites-2017.json */; };
 		FA309CE71F36F1C2002A543D /* whtl-20170806.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE61F36F1B7002A543D /* whtl-20170806.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
+		FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 /* Begin PBXFileReference section */
 		8C5C6BDF1F205525003DB6A3 /* Masterlister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterlister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5C6BE21F205525003DB6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C5C6BE41F205525003DB6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C5C6BE41F205525003DB6A3 /* SitelistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitelistVC.swift; sourceTree = "<group>"; };
 		8C5C6BE71F205525003DB6A3 /* Masterlister.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Masterlister.xcdatamodel; sourceTree = "<group>"; };
 		8C5C6BE91F205525003DB6A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5C6BEC1F205525003DB6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		FA309CE41F36C899002A543D /* whc-sites-2017.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whc-sites-2017.json"; path = "../../worldheritage/inscribed/whc-sites-2017.json"; sourceTree = "<group>"; };
 		FA309CE61F36F1B7002A543D /* whtl-20170806.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whtl-20170806.json"; path = "../../worldheritage/tentative/whtl-20170806.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
+		FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonderlistVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				8C5C6BE21F205525003DB6A3 /* AppDelegate.swift */,
-				8C5C6BE41F205525003DB6A3 /* ViewController.swift */,
+				8C5C6BE41F205525003DB6A3 /* SitelistVC.swift */,
+				FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */,
 				8C5C6BE91F205525003DB6A3 /* Assets.xcassets */,
 				8C5C6BEB1F205525003DB6A3 /* Main.storyboard */,
 				8C5C6BEE1F205525003DB6A3 /* Info.plist */,
@@ -273,7 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C5C6BE51F205525003DB6A3 /* ViewController.swift in Sources */,
+				8C5C6BE51F205525003DB6A3 /* SitelistVC.swift in Sources */,
+				FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */,
 				8C5C6BE31F205525003DB6A3 /* AppDelegate.swift in Sources */,
 				8C5C6BE81F205525003DB6A3 /* Masterlister.xcdatamodeld in Sources */,
 			);
