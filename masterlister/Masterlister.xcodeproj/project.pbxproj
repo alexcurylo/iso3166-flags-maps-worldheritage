@@ -52,10 +52,10 @@
 		8C5C6BFF1F205525003DB6A3 /* MasterlisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterlisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterlisterUITests.swift; sourceTree = "<group>"; };
 		8C5C6C051F205525003DB6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
-		FA309CE41F36C899002A543D /* whc-sites-2017.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whc-sites-2017.json"; path = "../../../worldheritage/inscribed/whc-sites-2017.json"; sourceTree = "<group>"; };
-		FA309CE61F36F1B7002A543D /* whtl-20170806.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whtl-20170806.json"; path = "../../../worldheritage/tentative/whtl-20170806.json"; sourceTree = "<group>"; };
-		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
+		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
+		FA309CE41F36C899002A543D /* whc-sites-2017.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whc-sites-2017.json"; path = "../../worldheritage/inscribed/whc-sites-2017.json"; sourceTree = "<group>"; };
+		FA309CE61F36F1B7002A543D /* whtl-20170806.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "whtl-20170806.json"; path = "../../worldheritage/tentative/whtl-20170806.json"; sourceTree = "<group>"; };
+		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Trollwerks Inc.";
 				TargetAttributes = {
 					8C5C6BDE1F205525003DB6A3 = {
@@ -336,6 +336,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -343,6 +344,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -393,6 +395,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -400,6 +403,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
