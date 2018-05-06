@@ -319,8 +319,7 @@
             {
                 "id": 301,
                 "title": "Beirut, Lebanon",
-                "url": "https://cities.new7wonders.com/wonders/beirut-lebanon/",
-                "twhs": 405
+                "url": "https://cities.new7wonders.com/wonders/beirut-lebanon/"
             },
             {
                 "id": 302,
@@ -363,8 +362,7 @@
             {
                 "id": 308,
                 "title": "Athens, Greece",
-                "url": "https://cities.new7wonders.com/wonders/athens/",
-                "whs": 404
+                "url": "https://cities.new7wonders.com/wonders/athens/"
             },
             {
                 "id": 309,
@@ -400,13 +398,11 @@
                 "id": 314,
                 "title": "Istanbul, Turkey",
                 "url": "https://cities.new7wonders.com/wonders/istanbul/",
-                "whs": 356
             },
             {
                 "id": 315,
                 "title": "Kyoto, Japan",
                 "url": "https://cities.new7wonders.com/wonders/kyoto/",
-                "whs": 688
             },
             {
                 "id": 316,
