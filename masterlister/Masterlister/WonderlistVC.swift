@@ -140,8 +140,8 @@ class WonderlistVC: NSViewController {
         let textHeader = NSAttributedString(string: """
             <p dir="ltr"><strong>The <a href="https://new7wonders.com">New7Wonders</a> Master Wonderlist</strong></p>
             
-            <p>Wonders are in plain text<br />
-            <i>Finalists are in italic text</i></p>
+            <p><small>Wonders are in plain text<br />
+            <i>Finalists are in italic text</i></small></p>
             \n
             """)
         output.textStorage?.append(textHeader)
@@ -176,16 +176,19 @@ class WonderlistVC: NSViewController {
                 """
 
             var mark = Visited.no.rawValue
-            var visitLink = ""
-            var stayLink = ""
-            var eatLink = ""
+            var blogLinks = ""
             if let visited = visits.first(where: { $0.wonder == wonder.id }) {
                 if wonder.isWonder {
                     wondersVisited = wondersVisited + 1
                 } else {
                     finalistsVisited = finalistsVisited + 1
                 }
+
                 mark = Visited.yes.rawValue
+
+                var visitLink = ""
+                var stayLink = ""
+                var eatLink = ""
                 if let visitURL = visited.visit {
                     visitLink = " — <a href=\"\(visitURL)\">Visit</a>"
                 }
@@ -195,8 +198,11 @@ class WonderlistVC: NSViewController {
                 if let eatURL = visited.eat {
                     eatLink = " — <a href=\"\(eatURL)\">Eat</a>"
                 }
+                if !visitLink.isEmpty || !stayLink.isEmpty || !eatLink.isEmpty {
+                    blogLinks = "<small>\(visitLink)\(stayLink)\(eatLink)</small>"
+                }
             }
-            let wonderLine = NSAttributedString(string: "\(mark) \(link)\(visitLink)\(stayLink)\(eatLink)<br />\n")
+            let wonderLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br />\n")
             output.textStorage?.append(wonderLine)
         }
 
@@ -215,7 +221,7 @@ class WonderlistVC: NSViewController {
         let totalVisits = wondersVisited + finalistsVisited
         let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(total) * 100)
         let textFooter = NSAttributedString(string: """
-            <p dir="ltr">Wonders: \(wondersVisited)/\(wondersCount) (\(wondersPercent)%) — Finalists: \(finalistsVisited)/\(finalistsCount) (\(finalistsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</p>\n
+            <p dir="ltr"><small>Wonders: \(wondersVisited)/\(wondersCount) (\(wondersPercent)%) — Finalists: \(finalistsVisited)/\(finalistsCount) (\(finalistsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</small></p>\n
             """)
         output.textStorage?.append(textFooter)
 

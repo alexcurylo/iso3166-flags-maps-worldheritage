@@ -54,7 +54,7 @@ class SitelistVC: NSViewController {
         let path = Bundle.main.path(forResource: "unesco_members", ofType: "json")
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let array = try! JSONDecoder().decode([Member].self, from: data)
-        assert(array.count == 205, "Should be 195 states and 10 associates in 2017")
+        assert(array.count == 206, "Should be 195 states and 10 associates and 1 observer (VA) in 2017")
         return array
     }()
 
@@ -172,8 +172,8 @@ class SitelistVC: NSViewController {
 
     @IBOutlet var output: NSTextView!
     
-    var whsVisited = 0
-    var twhsVisited = 0
+    var whsVisited = Set<Int>()
+    var twhsVisited = Set<Int>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -210,8 +210,8 @@ class SitelistVC: NSViewController {
         let textHeader = NSAttributedString(string: """
             <p dir="ltr"><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
             
-            <p>Inscribed properties are in plain text<br />
-            <i>Tentative properties are in italic text</i></p>
+            <p><small>Inscribed properties are in plain text<br />
+            <i>Tentative properties are in italic text</i></small></p>
             \n
             """)
         output.textStorage?.append(textHeader)
@@ -236,8 +236,14 @@ class SitelistVC: NSViewController {
                 continue
             }
 
-            let whsSites = sites.filter {
+            var whsSites = sites.filter {
                 $0.iso_code.contains(country.alpha2.lowercased())
+            }
+            // Special Jerusalem handling, put it in Israel
+            if country.alpha2 == "IL" {
+                let countryless = sites.filter() { $0.iso_code.isEmpty }
+                assert(countryless.count == 1, "Not exactly Jerusalem without a country?")
+                whsSites.append(countryless.first!)
             }
 
             let twhsSites = tentatives.filter {
@@ -252,7 +258,7 @@ class SitelistVC: NSViewController {
             if let file = countryFiles.first(where: { country.alpha2 == $0.iso })?.file {
                 fileLink = " — <a href=\"\(file)\">Country File</a>"
             }
-            let countryStart = NSAttributedString(string: "<p dir='ltr'><strong>\(unescoLink)</strong> (\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)<br />\n")
+            let countryStart = NSAttributedString(string: "<p dir='ltr'><strong>\(unescoLink)</strong> <small>(\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)</small><br />\n")
             output.textStorage?.append(countryStart)
 
             writeSites(in: country, whs: whsSites, twhs: twhsSites)
@@ -271,7 +277,7 @@ class SitelistVC: NSViewController {
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
             let countryStart = NSAttributedString(string: """
-                <i>no inscribed or tentative sites yet!</i><br />\n
+                <i><small>no inscribed or tentative sites yet!</small></i><br />\n
                 """)
             output.textStorage?.append(countryStart)
             return
@@ -283,12 +289,15 @@ class SitelistVC: NSViewController {
                 """
 
             var mark = Visited.no.rawValue
-            var visitLink = ""
-            var stayLink = ""
-            var eatLink = ""
+            var blogLinks = ""
             if let visited = whsVisits.first(where: { $0.whs == whs.id }) {
-                whsVisited = whsVisited + 1
+                whsVisited.insert(whs.id)
+                
                 mark = Visited.yes.rawValue
+                
+                var visitLink = ""
+                var stayLink = ""
+                var eatLink = ""
                 if let visitURL = visited.visit {
                     visitLink = " — <a href=\"\(visitURL)\">Visit</a>"
                 }
@@ -298,9 +307,12 @@ class SitelistVC: NSViewController {
                 if let eatURL = visited.eat {
                     eatLink = " — <a href=\"\(eatURL)\">Eat</a>"
                 }
+                if !visitLink.isEmpty || !stayLink.isEmpty || !eatLink.isEmpty {
+                    blogLinks = "<small>\(visitLink)\(stayLink)\(eatLink)</small>"
+                }
             }
 
-            let whsLine = NSAttributedString(string: "\(mark) \(link)\(visitLink)\(stayLink)\(eatLink)<br />\n")
+            let whsLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br />\n")
             output.textStorage?.append(whsLine)
         }
 
@@ -313,12 +325,15 @@ class SitelistVC: NSViewController {
                     """
 
                 var mark = Visited.no.rawValue
-                var visitLink = ""
-                var stayLink = ""
-                var eatLink = ""
+                var blogLinks = ""
                 if let visited = twhsVisits.first(where: { $0.twhs == twhs.id }) {
-                    twhsVisited = twhsVisited + 1
+                    twhsVisited.insert(twhs.id)
+
                     mark = Visited.yes.rawValue
+
+                    var visitLink = ""
+                    var stayLink = ""
+                    var eatLink = ""
                     if let visitURL = visited.visit {
                         visitLink = " — <a href=\"\(visitURL)\">Visit</a>"
                     }
@@ -328,9 +343,12 @@ class SitelistVC: NSViewController {
                     if let eatURL = visited.eat {
                         eatLink = " — <a href=\"\(eatURL)\">Eat</a>"
                     }
+                    if !visitLink.isEmpty || !stayLink.isEmpty || !eatLink.isEmpty {
+                        blogLinks = "<small>\(visitLink)\(stayLink)\(eatLink)</small>"
+                    }
                 }
 
-                let twhsLine = NSAttributedString(string: "\(mark) \(link)\(visitLink)\(stayLink)\(eatLink)<br />\n")
+                let twhsLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br />\n")
                 output.textStorage?.append(twhsLine)
             }
 
@@ -339,17 +357,17 @@ class SitelistVC: NSViewController {
     }
 
     func writeFooter(for type: Document) {
-        //assert(whsVisited == 16, "Should be 16 wonders visited (2018.05.05)")
-        //assert(twhsVisited == 40, "Should be 40 finalists visited (2018.05.05)")
+        assert(whsVisited.count == 482, "Should be 482 WHS visited not \(whsVisited.count) (2018.05.05)")
+        //assert(twhsVisited.count == 40, "Should be 40 TWHS visited not \(twhsVisited.count) (2018.05.05)")
 
-        let whsPercent = String(format: "%.1f", Float(whsVisited) / Float(sites.count) * 100)
-        let twhsPercent = String(format: "%.1f", Float(twhsVisited) / Float(tentatives.count) * 100)
+        let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
+        let twhsPercent = String(format: "%.1f", Float(twhsVisited.count) / Float(tentatives.count) * 100)
 
         let total = sites.count + tentatives.count
-        let totalVisits = whsVisited + twhsVisited
+        let totalVisits = whsVisited.count + twhsVisited.count
         let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(tentatives.count) * 100)
         let textFooter = NSAttributedString(string: """
-            <p dir="ltr">WHS: \(whsVisited)/\(sites.count) (\(whsPercent)%) — TWHS: \(twhsVisited)/\(tentatives.count) (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</p>\n
+            <p dir="ltr"><small>WHS: \(whsVisited.count)/\(sites.count) (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</small></p>\n
             """)
         output.textStorage?.append(textFooter)
 
