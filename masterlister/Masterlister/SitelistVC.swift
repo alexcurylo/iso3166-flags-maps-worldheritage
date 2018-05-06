@@ -138,6 +138,8 @@ class SitelistVC: NSViewController {
         let ids = array.compactMap { $0.whs }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate WHS visits \(duplicates)")
+        let wrong = Set(ids).subtracting(Set(sites.map( { $0.id } )))
+        assert(wrong.isEmpty, "Should not have wrong WHS visits \(wrong)")
         return array
     }()
     lazy var twhsVisits: [Visit] = {
@@ -145,6 +147,8 @@ class SitelistVC: NSViewController {
         let ids = visits.compactMap { $0.twhs }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate TWHS visits \(duplicates)")
+        let wrong = Set(ids).subtracting(Set(tentatives.map( { $0.id } )))
+        assert(wrong.isEmpty, "Should not have wrong TWHS visits \(wrong)")
         return array
     }()
 
