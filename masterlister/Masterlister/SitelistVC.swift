@@ -147,7 +147,25 @@ class SitelistVC: NSViewController {
         assert(duplicates.isEmpty, "Should not have duplicate TWHS visits \(duplicates)")
         return array
     }()
-    
+
+    struct CountryFile: Codable {
+        let iso: String
+        let file: URL?
+        let name: String? // for easily locating unfiled countries
+    }
+
+    lazy var countryFiles: [CountryFile] = {
+        let path = Bundle.main.path(forResource: "country-files", ofType: "json")
+        var array: [CountryFile] = []
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            array = try JSONDecoder().decode([CountryFile].self, from: data)
+        } catch let jsonErr {
+            print("Error decoding country files", jsonErr)
+        }
+        return array
+    }()
+
     @IBOutlet var output: NSTextView!
     
     var whsVisited = 0
@@ -211,17 +229,29 @@ class SitelistVC: NSViewController {
     func writeCountries() {
         for country in countries {
             guard members.contains(where: { country.alpha2 == $0.iso } ) else {
-                //print("Filtering out " + country.name)
                 continue
             }
-            
-            let countryLink = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
-            let countryStart = NSAttributedString(string: """
-                <p dir='ltr'><strong><a href="\(countryLink)">\(country.name)</a></strong><br />\n
-                """)
+
+            let whsSites = sites.filter {
+                $0.iso_code.contains(country.alpha2.lowercased())
+            }
+
+            let twhsSites = tentatives.filter {
+                $0.iso.contains(country.alpha2)
+            }
+
+            let unescoURL = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
+            let unescoLink = """
+                <a href="\(unescoURL)">\(country.name)</a>
+                """
+            var fileLink = ""
+            if let file = countryFiles.first(where: { country.alpha2 == $0.iso })?.file {
+                fileLink = " — <a href=\"\(file)\">Country File</a>"
+            }
+            let countryStart = NSAttributedString(string: "<p dir='ltr'><strong>\(unescoLink)</strong> (\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)<br />\n")
             output.textStorage?.append(countryStart)
 
-            writeSites(in: country)
+            writeSites(in: country, whs: whsSites, twhs: twhsSites)
 
             let countryEnd = NSAttributedString(string: """
                 </p>
@@ -231,14 +261,9 @@ class SitelistVC: NSViewController {
         }
     }
 
-    func writeSites(in country: Country) {
-        let whsSites = sites.filter {
-            $0.iso_code.contains(country.alpha2.lowercased())
-        }
-
-        let twhsSites = tentatives.filter {
-            $0.iso.contains(country.alpha2)
-        }
+    func writeSites(in country: Country,
+                    whs whsSites: [Site],
+                    twhs twhsSites: [Tentative]) {
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
             let countryStart = NSAttributedString(string: """
