@@ -66,12 +66,6 @@ class WonderlistVC: NSViewController {
         let wonderList: [Wonder] = array.reduce([]) { $0 + $1.wonders + $1.finalists }
         let wonderIDs = wonderList.map { $0.id }
         assert(Set(wonderIDs).count == wonderList.count, "Should not have duplicate Wonder IDs")
-        let whsIDs = wonderList.compactMap { $0.whs }
-        let whsDuplicates = Array(Set(whsIDs.filter({ (i: Int) in whsIDs.filter({ $0 == i }).count > 1})))
-        assert(whsDuplicates.isEmpty, "Should not have duplicate WHS IDs \(whsDuplicates)")
-        let twhsIDs = wonderList.compactMap { $0.twhs }
-        let twhsDuplicates = Array(Set(twhsIDs.filter({ (i: Int) in twhsIDs.filter({ $0 == i }).count > 1})))
-        assert(twhsDuplicates.isEmpty, "Should not have duplicate TWHS IDs \(twhsDuplicates)")
 
         return array
     }()
@@ -98,6 +92,10 @@ class WonderlistVC: NSViewController {
         let ids = array.compactMap { $0.wonder }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate Wonder visits \(duplicates)")
+        let wonderList: [Wonder] = wondersList.reduce([]) { $0 + $1.wonders + $1.finalists }
+        let wonderIDs = wonderList.map { $0.id }
+        let wrong = Set(ids).subtracting(wonderIDs)
+        assert(wrong.isEmpty, "Should not have wrong Wonder visits \(wrong)")
 
         return array
     }()
