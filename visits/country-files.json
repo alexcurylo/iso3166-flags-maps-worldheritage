@@ -1,0 +1,822 @@
+[
+    {
+        "iso": "AF",
+        "file": "https://everywhs.com/2017/08/15/country-file-afghanistan/"
+    }, 
+    {
+        "name": "Albania", 
+        "iso": "AL"
+    }, 
+    {
+        "name": "Algeria", 
+        "iso": "DZ"
+    }, 
+    {
+        "name": "Andorra", 
+        "iso": "AD"
+    }, 
+    {
+        "name": "Angola", 
+        "iso": "AO"
+    }, 
+    {
+        "name": "Antigua and Barbuda", 
+        "iso": "AG"
+    }, 
+    {
+        "name": "Argentina", 
+        "iso": "AR"
+    }, 
+    {
+        "name": "Armenia", 
+        "iso": "AM"
+    }, 
+    {
+        "iso": "AU", 
+        "file": "https://everywhs.com/2018/01/13/country-file-australia/"
+    }, 
+    {
+        "name": "Austria",
+        "iso": "AT"
+    }, 
+    {
+        "name": "Azerbaijan",
+        "iso": "AZ"
+    }, 
+    {
+        "name": "Bahamas", 
+        "iso": "BS"
+    }, 
+    {
+        "name": "Bahrain", 
+        "iso": "BH"
+    }, 
+    {
+        "name": "Bangladesh",
+        "iso": "BD"
+    }, 
+    {
+        "name": "Barbados",
+        "iso": "BB"
+    }, 
+    {
+        "name": "Belarus",
+        "iso": "BY"
+    }, 
+    {
+        "name": "Belgium", 
+        "iso": "BE"
+    }, 
+    {
+        "name": "Belize", 
+        "iso": "BZ"
+    }, 
+    {
+        "name": "Benin", 
+        "iso": "BJ"
+    }, 
+    {
+        "iso": "BT", 
+        "file": "https://everywhs.com/2017/08/21/country-file-bhutan/"
+    }, 
+    {
+        "name": "Bolivia (Plurinational State of) (1)",
+        "iso": "BO"
+    }, 
+    {
+        "name": "Bosnia and Herzegovina",
+        "iso": "BA"
+    }, 
+    {
+        "name": "Botswana", 
+        "iso": "BW"
+    }, 
+    {
+        "name": "Brazil",
+        "iso": "BR"
+    }, 
+    {
+        "iso": "BN", 
+        "file": "https://everywhs.com/2017/08/13/country-file-brunei/"
+    }, 
+    {
+        "name": "Bulgaria", 
+        "iso": "BG"
+    }, 
+    {
+        "name": "Burkina Faso", 
+        "iso": "BF"
+    }, 
+    {
+        "name": "Burundi", 
+        "iso": "BI"
+    }, 
+    {
+        "name": "Cabo Verde (2)",
+        "iso": "CV"
+    }, 
+    {
+        "iso": "KH", 
+        "file": "https://everywhs.com/2017/12/01/country-file-cambodia/"
+    }, 
+    {
+        "name": "Cameroon",
+        "iso": "CM"
+    }, 
+    {
+        "name": "Canada", 
+        "iso": "CA"
+    }, 
+    {
+        "name": "Central African Republic",
+        "iso": "CF"
+    }, 
+    {
+        "name": "Chad", 
+        "iso": "TD"
+    }, 
+    {
+        "name": "Chile", 
+        "iso": "CL"
+    }, 
+    {
+        "iso": "CN", 
+        "file": "https://everywhs.com/2018/01/21/country-file-china/"
+    }, 
+    {
+        "name": "Colombia",
+        "iso": "CO"
+    }, 
+    {
+        "name": "Comoros",
+        "iso": "KM"
+    }, 
+    {
+        "name": "Congo",
+        "iso": "CG"
+    }, 
+    {
+        "iso": "CK", 
+        "file": "https://everywhs.com/2018/01/16/country-file-cook-islands/"
+    }, 
+    {
+        "name": "Costa Rica",
+        "iso": "CR"
+    }, 
+    {
+        "name": "C\u00f4te d'Ivoire", 
+        "iso": "CI"
+    }, 
+    {
+        "name": "Croatia", 
+        "iso": "HR"
+    }, 
+    {
+        "name": "Cuba",
+        "iso": "CU"
+    }, 
+    {
+        "name": "Cyprus",
+        "iso": "CY"
+    }, 
+    {
+        "name": "Czechia (3)",
+        "iso": "CZ"
+    }, 
+    {
+        "iso": "KP", 
+        "file": "https://everywhs.com/2018/02/17/country-file-north-korea/"
+    }, 
+    {
+        "name": "Democratic Republic of the Congo",
+        "iso": "CD"
+    }, 
+    {
+        "name": "Denmark",
+        "iso": "DK"
+    }, 
+    {
+        "name": "Djibouti", 
+        "iso": "DJ"
+    }, 
+    {
+        "name": "Dominica", 
+        "iso": "DM"
+    }, 
+    {
+        "name": "Dominican Republic",
+        "iso": "DO"
+    }, 
+    {
+        "name": "Ecuador",
+        "iso": "EC"
+    }, 
+    {
+        "name": "Egypt",
+        "iso": "EG"
+    }, 
+    {
+        "name": "El Salvador",
+        "iso": "SV"
+    }, 
+    {
+        "name": "Equatorial Guinea",
+        "iso": "GQ"
+    }, 
+    {
+        "name": "Eritrea",
+        "iso": "ER"
+    }, 
+    {
+        "name": "Estonia",
+        "iso": "EE"
+    }, 
+    {
+        "name": "Ethiopia",
+        "iso": "ET"
+    }, 
+    {
+        "name": "Fiji",
+        "iso": "FJ"
+    }, 
+    {
+        "name": "Finland",
+        "iso": "FI"
+    }, 
+    {
+        "iso": "FR", 
+        "file": "https://everywhs.com/2018/01/15/country-file-france/"
+    }, 
+    {
+        "name": "Gabon",
+        "iso": "GA"
+    }, 
+    {
+        "name": "Gambia",
+        "iso": "GM"
+    }, 
+    {
+        "name": "Georgia",
+        "iso": "GE"
+    }, 
+    {
+        "name": "Germany", 
+        "iso": "DE"
+    }, 
+    {
+        "name": "Ghana", 
+        "iso": "GH"
+    }, 
+    {
+        "name": "Greece", 
+        "iso": "GR"
+    }, 
+    {
+        "name": "Grenada", 
+        "iso": "GD"
+    }, 
+    {
+        "name": "Guatemala",
+        "iso": "GT"
+    }, 
+    {
+        "name": "Guinea", 
+        "iso": "GN"
+    }, 
+    {
+        "name": "Guinea-Bissau", 
+        "iso": "GW"
+    }, 
+    {
+        "name": "Guyana", 
+        "iso": "GY"
+    }, 
+    {
+        "iso": "HT", 
+        "file": "https://everywhs.com/2018/01/27/country-file-haiti/"
+    }, 
+    {
+        "name": "Honduras", 
+        "iso": "HN"
+    }, 
+    {
+        "name": "Hungary (4)", 
+        "iso": "HU"
+    }, 
+    {
+        "name": "Iceland", 
+        "iso": "IS"
+    }, 
+    {
+        "name": "India", 
+        "iso": "IN"
+    }, 
+    {
+        "iso": "ID", 
+        "file": "https://everywhs.com/2017/08/01/country-file-indonesia/"
+    }, 
+    {
+        "name": "Iran (Islamic Republic of)", 
+        "iso": "IR"
+    }, 
+    {
+        "name": "Iraq", 
+        "iso": "IQ"
+    }, 
+    {
+        "name": "Ireland", 
+        "iso": "IE"
+    }, 
+    {
+        "name": "Israel", 
+        "iso": "IL"
+    }, 
+    {
+        "name": "Italy", 
+        "iso": "IT"
+    }, 
+    {
+        "name": "Jamaica", 
+        "iso": "JM"
+    }, 
+    {
+        "name": "Japan", 
+        "iso": "JP"
+    }, 
+    {
+        "name": "Jordan", 
+        "iso": "JO"
+    }, 
+    {
+        "iso": "KZ", 
+        "file": "https://everywhs.com/2017/09/17/country-file-kazakhstan/"
+    }, 
+    {
+        "name": "Kenya", 
+        "iso": "KE"
+    }, 
+    {
+        "name": "Kiribati", 
+        "iso": "KI"
+    }, 
+    {
+        "name": "Kuwait", 
+        "iso": "KW"
+    }, 
+    {
+        "iso": "KG", 
+        "file": "https://everywhs.com/2017/09/21/country-file-kyrgyzstan/"
+    }, 
+    {
+        "iso": "LA", 
+        "file": "https://everywhs.com/2018/01/02/country-file-laos/"
+    }, 
+    {
+        "name": "Latvia", 
+        "iso": "LV"
+    }, 
+    {
+        "name": "Lebanon", 
+        "iso": "LB"
+    }, 
+    {
+        "name": "Lesotho", 
+        "iso": "LS"
+    }, 
+    {
+        "name": "Liberia", 
+        "iso": "LR"
+    }, 
+    {
+        "name": "Libya (5)", 
+        "iso": "LY"
+    }, 
+    {
+        "name": "Lithuania", 
+        "iso": "LT"
+    }, 
+    {
+        "name": "Luxembourg", 
+        "iso": "LU"
+    }, 
+    {
+        "name": "Madagascar", 
+        "iso": "MG"
+    }, 
+    {
+        "name": "Malawi", 
+        "iso": "MW"
+    }, 
+    {
+        "iso": "MY", 
+        "file": "https://everywhs.com/2017/05/19/country-file-malaysia/"
+    }, 
+    {
+        "name": "Maldives", 
+        "iso": "MV"
+    }, 
+    {
+        "name": "Mali", 
+        "iso": "ML"
+    }, 
+    {
+        "name": "Malta", 
+        "iso": "MT"
+    }, 
+    {
+        "name": "Marshall Islands", 
+        "iso": "MH"
+    }, 
+    {
+        "name": "Mauritania",
+        "iso": "MR"
+    }, 
+    {
+        "name": "Mauritius", 
+        "iso": "MU"
+    }, 
+    {
+        "name": "Mexico", 
+        "iso": "MX"
+    }, 
+    {
+        "name": "Micronesia (Federated States of)", 
+        "iso": "FM"
+    }, 
+    {
+        "name": "Monaco", 
+        "iso": "MC"
+    }, 
+    {
+        "name": "Mongolia", 
+        "iso": "MN"
+    }, 
+    {
+        "name": "Montenegro (6)", 
+        "iso": "ME"
+    }, 
+    {
+        "name": "Morocco", 
+        "iso": "MA"
+    }, 
+    {
+        "name": "Mozambique", 
+        "iso": "MZ"
+    }, 
+    {
+        "iso": "MM", 
+        "file": "https://everywhs.com/2018/01/05/country-file-myanmar/"
+    }, 
+    {
+        "name": "Namibia", 
+        "iso": "NA"
+    }, 
+    {
+        "name": "Nauru", 
+        "iso": "NR"
+    }, 
+    {
+        "name": "Nepal (7)", 
+        "iso": "NP"
+    }, 
+    {
+        "name": "Netherlands", 
+        "iso": "NL"
+    }, 
+    {
+        "iso": "NZ", 
+        "file": "https://everywhs.com/2018/01/14/country-file-new-zealand/"
+    }, 
+    {
+        "name": "Nicaragua", 
+        "iso": "NI"
+    }, 
+    {
+        "name": "Niger",
+        "iso": "NE"
+    }, 
+    {
+        "name": "Nigeria", 
+        "iso": "NG"
+    }, 
+    {
+        "iso": "NU", 
+        "file": "https://everywhs.com/2018/01/17/country-file-niue/"
+    }, 
+    {
+        "name": "Norway", 
+        "iso": "NO"
+    }, 
+    {
+        "name": "Oman", 
+        "iso": "OM"
+    }, 
+    {
+        "iso": "PK", 
+        "file": "https://everywhs.com/2017/10/08/country-file-pakistan/"
+    }, 
+    {
+        "iso": "PW", 
+        "file": "https://everywhs.com/2018/03/05/country-file-palau/"
+    }, 
+    {
+        "name": "Palestine", 
+        "iso": "PS"
+    }, 
+    {
+        "name": "Panama", 
+        "iso": "PA"
+    }, 
+    {
+        "name": "Papua New Guinea (8)", 
+        "iso": "PG"
+    }, 
+    {
+        "name": "Paraguay", 
+        "iso": "PY"
+    }, 
+    {
+        "name": "Peru", 
+        "iso": "PE"
+    }, 
+    {
+        "iso": "PH", 
+        "file": "https://everywhs.com/2018/03/16/country-file-philippines/"
+    }, 
+    {
+        "name": "Poland", 
+        "iso": "PL"
+    }, 
+    {
+        "name": "Portugal (9)", 
+        "iso": "PT"
+    }, 
+    {
+        "name": "Qatar", 
+        "iso": "QA"
+    }, 
+    {
+        "iso": "KR", 
+        "file": "https://everywhs.com/2018/02/15/country-file-south-korea/"
+    }, 
+    {
+        "name": "Republic of Moldova", 
+        "iso": "MD"
+    }, 
+    {
+        "name": "Romania", 
+        "iso": "RO"
+    }, 
+    {
+        "iso": "RU", 
+        "file": "https://everywhs.com/2017/09/11/country-file-russia/"
+    }, 
+    {
+        "name": "Rwanda", 
+        "iso": "RW",
+    }, 
+    {
+        "name": "Saint Kitts and Nevis", 
+        "iso": "KN"
+    }, 
+    {
+        "name": "Saint Lucia", 
+        "iso": "LC"
+    }, 
+    {
+        "name": "Saint Vincent and the Grenadines", 
+        "iso": "VC"
+    }, 
+    {
+        "name": "Samoa", 
+        "iso": "WS"
+    }, 
+    {
+        "name": "San Marino", 
+        "iso": "SM"
+    }, 
+    {
+        "name": "Sao Tome and Principe", 
+        "iso": "ST"
+    }, 
+    {
+        "name": "Saudi Arabia", 
+        "iso": "SA"
+    }, 
+    {
+        "name": "Senegal", 
+        "iso": "SN"
+    }, 
+    {
+        "name": "Serbia (10)", 
+        "iso": "RS"
+    }, 
+    {
+        "name": "Seychelles", 
+        "iso": "SC"
+    }, 
+    {
+        "name": "Sierra Leone", 
+        "iso": "SL"
+    }, 
+    {
+        "iso": "SG", 
+        "file": "https://everywhs.com/2018/01/12/country-file-singapore/"
+    }, 
+    {
+        "name": "Slovakia", 
+        "iso": "SK"
+    }, 
+    {
+        "name": "Slovenia", 
+        "iso": "SI"
+    }, 
+    {
+        "name": "Solomon Islands", 
+        "iso": "SB"
+    }, 
+    {
+        "name": "Somalia", 
+        "iso": "SO"
+    }, 
+    {
+        "name": "South Africa (11)", 
+        "iso": "ZA"
+    }, 
+    {
+        "name": "South Sudan", 
+        "iso": "SS"
+    }, 
+    {
+        "name": "Spain", 
+        "iso": "ES"
+    }, 
+    {
+        "name": "Sri Lanka", 
+        "iso": "LK"
+    }, 
+    {
+        "name": "Sudan", 
+        "iso": "SD"
+    }, 
+    {
+        "name": "Suriname", 
+        "iso": "SR"
+    }, 
+    {
+        "name": "Swaziland", 
+        "iso": "SZ"
+    }, 
+    {
+        "name": "Sweden", 
+        "iso": "SE"
+    }, 
+    {
+        "name": "Switzerland", 
+        "iso": "CH"
+    }, 
+    {
+        "name": "Syrian Arab Republic", 
+        "iso": "SY"
+    }, 
+    {
+        "iso": "TJ", 
+        "file": "https://everywhs.com/2017/10/06/country-file-tajikistan/"
+    }, 
+    {
+        "name": "Thailand", 
+        "iso": "TH"
+    }, 
+    {
+        "name": "The former Yugoslav Republic of Macedonia", 
+        "iso": "MK"
+    }, 
+    {
+        "name": "Timor-Leste", 
+        "iso": "TL"
+    }, 
+    {
+        "name": "Togo", 
+        "iso": "TG"
+    }, 
+    {
+        "name": "Tonga", 
+        "iso": "TO"
+    }, 
+    {
+        "name": "Trinidad and Tobago", 
+        "iso": "TT"
+    }, 
+    {
+        "name": "Tunisia", 
+        "iso": "TN"
+    }, 
+    {
+        "name": "Turkey", 
+        "iso": "TR"
+    }, 
+    {
+        "iso": "TM", 
+        "file": "https://everywhs.com/2017/09/30/country-file-turkmenistan/"
+    }, 
+    {
+        "name": "Tuvalu", 
+        "iso": "TV"
+    }, 
+    {
+        "name": "Uganda", 
+        "iso": "UG"
+    }, 
+    {
+        "name": "Ukraine", 
+        "iso": "UA"
+    }, 
+    {
+        "name": "United Arab Emirates", 
+        "iso": "AE"
+    }, 
+    {
+        "name": "United Kingdom of Great Britain and Northern Ireland (12)", 
+        "iso": "GB"
+    }, 
+    {
+        "name": "United Republic of Tanzania", 
+        "iso": "TZ"
+    }, 
+    {
+        "name": "United States of America (13)", 
+        "iso": "US"
+    }, 
+    {
+        "name": "Uruguay", 
+        "iso": "UY"
+    }, 
+    {
+        "iso": "UZ", 
+        "file": "https://everywhs.com/2017/09/27/country-file-uzbekistan/"
+    }, 
+    {
+        "name": "Vanuatu", 
+        "iso": "VU"
+    }, 
+    {
+        "name": "Venezuela (Bolivarian Republic of)", 
+        "iso": "VE"
+    }, 
+    {
+        "iso": "VN", 
+        "file": "https://everywhs.com/2017/06/04/country-file-vietnam/"
+    }, 
+    {
+        "name": "Yemen", 
+        "iso": "YE"
+    }, 
+    {
+        "name": "Zambia", 
+        "iso": "ZM"
+    }, 
+    {
+        "name": "Zimbabwe", 
+        "iso": "ZW"
+    }, 
+    {
+        "name": "Anguilla", 
+        "iso": "AI"
+    }, 
+    {
+        "name": "Aruba", 
+        "iso": "AW", 
+    }, 
+    {
+        "name": "British Virgin Islands", 
+        "iso": "VG"
+    }, 
+    {
+        "name": "Cayman Islands", 
+        "iso": "KY"
+    }, 
+    {
+        "name": "Cura\u00e7ao", 
+        "iso": "CW"
+    }, 
+    {
+        "name": "Faroes", 
+        "iso": "FO"
+    }, 
+    {
+        "name": "MacaoChina", 
+        "iso": "MO"
+    }, 
+    {
+        "name": "Montserrat", 
+        "iso": "MS"
+    }, 
+    {
+        "name": "Sint Maarten", 
+        "iso": "SX"
+    }, 
+    {
+        "name": "Tokelau", 
+        "iso": "TK"
+    }
+]

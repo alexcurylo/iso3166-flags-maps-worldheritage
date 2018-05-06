@@ -21,6 +21,7 @@
 		FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */; };
 		FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31BE209D8E2D006E55ED /* new7wonders.json */; };
 		FACF31C1209DDA37006E55ED /* visits.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31C0209DDA36006E55ED /* visits.json */; };
+		FACF31C5209E89B1006E55ED /* country-files.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31C4209E89B1006E55ED /* country-files.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonderlistVC.swift; sourceTree = "<group>"; };
 		FACF31BE209D8E2D006E55ED /* new7wonders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = new7wonders.json; path = ../../wonders/new7wonders.json; sourceTree = "<group>"; };
 		FACF31C0209DDA36006E55ED /* visits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = visits.json; path = ../../visits/visits.json; sourceTree = "<group>"; };
+		FACF31C4209E89B1006E55ED /* country-files.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "country-files.json"; path = "../../visits/country-files.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				FA309CE61F36F1B7002A543D /* whtl-20170806.json */,
 				FACF31BE209D8E2D006E55ED /* new7wonders.json */,
 				FACF31C0209DDA36006E55ED /* visits.json */,
+				FACF31C4209E89B1006E55ED /* country-files.json */,
 			);
 			path = Masterlister;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				FA309CE71F36F1C2002A543D /* whtl-20170806.json in Resources */,
 				FACF31C1209DDA37006E55ED /* visits.json in Resources */,
 				FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */,
+				FACF31C5209E89B1006E55ED /* country-files.json in Resources */,
 				FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
