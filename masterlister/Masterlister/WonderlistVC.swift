@@ -55,11 +55,24 @@ class WonderlistVC: NSViewController {
         } catch let jsonErr {
             print("Error decoding new7wonders.json", jsonErr)
         }
+
         assert(array.count == 3, "Should be 3 collections in 2018")
         wondersCount = array.reduce(0) { $0 + $1.wonders.count }
         finalistsCount = array.reduce(0) { $0 + $1.finalists.count }
         assert(wondersCount == 7 + 7 + 7, "Should be 21 wonders in 2018")
         assert(finalistsCount == 14 + 21 + 21, "Should be 56 finalists in 2018")
+        let wondersIDs = array.map { $0.id }
+        assert(Set(wondersIDs).count == array.count, "Should not have duplicate Wonders IDs")
+        let wonderList: [Wonder] = array.reduce([]) { $0 + $1.wonders + $1.finalists }
+        let wonderIDs = wonderList.map { $0.id }
+        assert(Set(wonderIDs).count == wonderList.count, "Should not have duplicate Wonder IDs")
+        let whsIDs = wonderList.compactMap { $0.whs }
+        let whsDuplicates = Array(Set(whsIDs.filter({ (i: Int) in whsIDs.filter({ $0 == i }).count > 1})))
+        assert(whsDuplicates.isEmpty, "Should not have duplicate WHS IDs \(whsDuplicates)")
+        let twhsIDs = wonderList.compactMap { $0.twhs }
+        let twhsDuplicates = Array(Set(twhsIDs.filter({ (i: Int) in twhsIDs.filter({ $0 == i }).count > 1})))
+        assert(twhsDuplicates.isEmpty, "Should not have duplicate TWHS IDs \(twhsDuplicates)")
+
         return array
     }()
 
@@ -81,8 +94,11 @@ class WonderlistVC: NSViewController {
         } catch let jsonErr {
             print("Error decoding visits", jsonErr)
         }
-        let wonderVisits = array.compactMap({$0.wonder})
-        assert(Set(wonderVisits).count == wonderVisits.count, "Should not have duplicate visits")
+
+        let ids = array.compactMap { $0.wonder }
+        let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
+        assert(duplicates.isEmpty, "Should not have duplicate Wonder visits \(duplicates)")
+
         return array
     }()
 
