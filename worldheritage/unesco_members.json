@@ -1843,5 +1843,14 @@
         "sites": "0", 
         "iso": "TK", 
         "exec_board_grouping": ""
+    }, 
+    {
+        "name": "Holy See", 
+        "region": "Europe", 
+        "exec_board": "", 
+        "joined": "1982-10-7", 
+        "sites": "0", 
+        "iso": "VA", 
+        "exec_board_grouping": ""
     }
 ]
