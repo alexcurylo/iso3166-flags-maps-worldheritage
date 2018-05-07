@@ -107,9 +107,8 @@ class SitelistVC: NSViewController {
         let array = jsonArray.sorted { (lhs, rhs) in
             lhs.id_no < rhs.id_no
         }
-        // Contrary to http://whc.unesco.org/en/tentativelists/
-        // there appears to be 1707
-        //assert(array.count == 1706, "Should be 1706 TWHS on 2018.06.05")
+        // Should match http://whc.unesco.org/en/tentativelists/
+        assert(array.count == 1706, "Should be 1706 TWHS on 2018.05.07")
 
         return array
     }()
@@ -358,8 +357,8 @@ class SitelistVC: NSViewController {
     }
 
     func writeFooter(for type: Document) {
-        assert(whsVisited.count == 482, "Should be 482 WHS visited not \(whsVisited.count) (2018.05.05)")
-        //assert(twhsVisited.count == 40, "Should be 40 TWHS visited not \(twhsVisited.count) (2018.05.05)")
+        assert(whsVisited.count == 482, "Should be 482 WHS visited not \(whsVisited.count) (2018.05.07)")
+        assert(twhsVisited.count == 339, "Should be 339 TWHS visited not \(twhsVisited.count) (2018.05.07)")
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
         let twhsPercent = String(format: "%.1f", Float(twhsVisited.count) / Float(tentatives.count) * 100)
