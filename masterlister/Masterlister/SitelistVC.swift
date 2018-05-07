@@ -365,7 +365,7 @@ class SitelistVC: NSViewController {
 
         let total = sites.count + tentatives.count
         let totalVisits = whsVisited.count + twhsVisited.count
-        let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(tentatives.count) * 100)
+        let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(total) * 100)
         let textFooter = NSAttributedString(string: """
             <p dir="ltr"><small>WHS: \(whsVisited.count)/\(sites.count) (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</small></p>\n
             """)
