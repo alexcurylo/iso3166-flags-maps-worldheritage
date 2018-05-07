@@ -89,27 +89,28 @@ class SitelistVC: NSViewController {
     }()
     
     struct Tentative: Codable {
-        let id_no: String
+        let id_no: Int
         let iso: String
         let submitted: String
         let name: String
         let category: String
 
         var id: Int {
-            return Int(id_no) ?? 0
+            return id_no
         }
     }
 
     let tentatives: [Tentative] = {
-        let path = Bundle.main.path(forResource: "whtl-20170806", ofType: "json")
+        let path = Bundle.main.path(forResource: "whtl-20180507", ofType: "json")
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
         let array = jsonArray.sorted { (lhs, rhs) in
             lhs.id_no < rhs.id_no
         }
         // Contrary to http://whc.unesco.org/en/tentativelists/
-        // there does, in fact, appear to be 1696
-        //assert(array.count == 1669, "Should be 1669 TWHS on 2017.08.06")
+        // there appears to be 1707
+        //assert(array.count == 1706, "Should be 1706 TWHS on 2018.06.05")
+
         return array
     }()
 
