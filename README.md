@@ -4,32 +4,38 @@
 
 from [introductory blog post](https://everywhs.com/2017/06/17/repo-iso3166-flags-maps-worldheritage/):
 
-Trying to find some art and info for our next Country File here, it struck us that y’know, there’s pieces here and pieces there, but somebody really should pull all of it together into some handy formats for our blogging and apps and whatever...
+>Trying to find some art and info for our next Country File here, it struck us that y’know, there’s pieces here and pieces there, but somebody really should pull all of it together into some handy formats for our blogging and apps and whatever...
+>
+>… and since nobody else appears inclined to, well fine we’ll go ahead with that then, shall we?
 
-… and since nobody else appears inclined to, well fine we’ll go ahead with that then, shall we? If you have any use for it, or would like to contribute, you’ll find that repository created on Github now at
-
-[alexcurylo/iso3166-flags-maps-worldheritage](https://github.com/alexcurylo/iso3166-flags-maps-worldheritage)
-
-For starters, it’ll contain
-
-**iso3166/**
-
-List of all 249 "countries, territories, or areas of geographical interest” that have an ISO-3166-1 code assigned, with associated data points such as the date of their UNESCO membership, for those 206 that are UNESCO members
+## Contents
 
 **flags/**
 
 Flag art in SVG and PNG formats for countries, UNESCO itself, and anything else that might be useful
 
+**iso3166/**
+
+List of all 249 "countries, territories, or areas of geographical interest” that have an ISO-3166-1 code assigned, with associated data points such as the date of their UNESCO membership, for those 206 that are UNESCO members
+
 **maps/**
 
 SVG maps, shapefiles, GeoJSON, KML, whatever handy resources show up
 
+**masterlister/**
+
+macOS app for generating [everywhs.com](https://everywhs.com/)'s [Sitelist](https://everywhs.com/sitelist) and [Wonderlist](https://everywhs.com/wonderlist)
+
+**visits/**
+
+Cross-reference of WHS and Wonders with blog posts and personal visits, used to generate the Masterlister's personalized output
+
+**wonders/**
+
+JSON lists of the 77 Wonders and finalists found at [New 7 Wonders](http://new7wonders.com)
+
 **worldheritage/**
 
-The current list of inscribed World Heritage Sites, and the current Tentative Lists from all countries providing one
+JSON lists of inscribed and tentative World Heritage Sites from [UNESCO](http://whc.unesco.org/en/list/)
 
-We’ll be adding more data, scripts, code, and whatnot to be pulled together in a handier fashion than the manual grubbing we’ve been doing so far, but that much will take us a little while no doubt.
 
-In the meantime, if you’d like that data everyone will be welcome to it, everything will be under a MIT or Sharealike or similar license...
-
-... and if you have any collected data that you’d think would be a handy addition, pull requests are welcome!
