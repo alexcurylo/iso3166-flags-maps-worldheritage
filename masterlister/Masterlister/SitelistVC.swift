@@ -120,6 +120,14 @@ class SitelistVC: NSViewController {
         let visit: URL?
         let stay: URL?
         let eat: URL?
+
+        //var validVisit: Bool {
+            //guard let visit = visit else { return true }
+            //guard URL(string: visit) != nil else {
+                //return false
+            //}
+            //return true
+        //}
     }
     
     lazy var visits: [Visit] = {
@@ -131,6 +139,9 @@ class SitelistVC: NSViewController {
         } catch let jsonErr {
             print("Error decoding visits", jsonErr)
         }
+        
+        //array.forEach { _ = $0.validVisit }
+
         return array
     }()
     lazy var whsVisits: [Visit] = {
