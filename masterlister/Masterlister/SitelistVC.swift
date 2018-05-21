@@ -82,7 +82,7 @@ class SitelistVC: NSViewController {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let jsonArray = try! JSONDecoder().decode([Site].self, from: data)
         let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.id_no < rhs.id_no
+            lhs.name_en < rhs.name_en
         }
         assert(array.count == 1073, "Should be 1073 WHS in 2017")
         return array
@@ -105,7 +105,7 @@ class SitelistVC: NSViewController {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
         let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.id_no < rhs.id_no
+            lhs.name < rhs.name
         }
         // Should match http://whc.unesco.org/en/tentativelists/
         assert(array.count == 1706, "Should be 1706 TWHS on 2018.05.07")
@@ -120,6 +120,14 @@ class SitelistVC: NSViewController {
         let visit: URL?
         let stay: URL?
         let eat: URL?
+
+        //var validVisit: Bool {
+            //guard let visit = visit else { return true }
+            //guard URL(string: visit) != nil else {
+                //return false
+            //}
+            //return true
+        //}
     }
     
     lazy var visits: [Visit] = {
@@ -131,6 +139,9 @@ class SitelistVC: NSViewController {
         } catch let jsonErr {
             print("Error decoding visits", jsonErr)
         }
+        
+        //array.forEach { _ = $0.validVisit }
+
         return array
     }()
     lazy var whsVisits: [Visit] = {
@@ -358,7 +369,7 @@ class SitelistVC: NSViewController {
 
     func writeFooter(for type: Document) {
         assert(whsVisited.count == 482, "Should be 482 WHS visited not \(whsVisited.count) (2018.05.07)")
-        assert(twhsVisited.count == 339, "Should be 339 TWHS visited not \(twhsVisited.count) (2018.05.07)")
+        assert(twhsVisited.count == 340, "Should be 340 TWHS visited not \(twhsVisited.count) (2018.05.07)")
         let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=7%2F05%2F2018&date_end=&order=year"
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
