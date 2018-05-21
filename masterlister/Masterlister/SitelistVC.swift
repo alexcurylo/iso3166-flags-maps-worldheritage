@@ -82,7 +82,7 @@ class SitelistVC: NSViewController {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let jsonArray = try! JSONDecoder().decode([Site].self, from: data)
         let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.id_no < rhs.id_no
+            lhs.name_en < rhs.name_en
         }
         assert(array.count == 1073, "Should be 1073 WHS in 2017")
         return array
@@ -105,7 +105,7 @@ class SitelistVC: NSViewController {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
         let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.id_no < rhs.id_no
+            lhs.name < rhs.name
         }
         // Should match http://whc.unesco.org/en/tentativelists/
         assert(array.count == 1706, "Should be 1706 TWHS on 2018.05.07")
