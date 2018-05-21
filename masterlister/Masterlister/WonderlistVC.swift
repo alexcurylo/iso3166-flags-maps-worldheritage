@@ -170,7 +170,8 @@ class WonderlistVC: NSViewController {
         let wondersStart = NSAttributedString(string: "<p dir=\"ltr\">" + (inItalic ? "<i>" : ""))
         output.textStorage?.append(wondersStart)
 
-        for wonder in wonders {
+        let sortedWonders = wonders.sorted { $0.title < $1.title }
+        for wonder in sortedWonders {
             let link = """
                 <a href="\(wonder.url)">\(wonder.title)</a>
                 """
