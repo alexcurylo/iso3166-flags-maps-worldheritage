@@ -370,7 +370,7 @@ class SitelistVC: NSViewController {
     func writeFooter(for type: Document) {
         assert(whsVisited.count == 482, "Should be 482 WHS visited not \(whsVisited.count) (2018.05.07)")
         assert(twhsVisited.count == 340, "Should be 340 TWHS visited not \(twhsVisited.count) (2018.05.07)")
-        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=7%2F05%2F2018&date_end=&order=year"
+        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=21%2F05%2F2018&date_end=&order=year"
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
         let twhsPercent = String(format: "%.1f", Float(twhsVisited.count) / Float(tentatives.count) * 100)
@@ -382,7 +382,7 @@ class SitelistVC: NSViewController {
             <p dir="ltr"><small>WHS: \(whsVisited.count)/\(sites.count) \
             (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) \
             (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)<br />\
-            <i>Last compiled 2018.05.07  — <a href=\"\(updatesURL)\">Check for updates</a></i>\
+            <i>Last compiled 2018.05.21  — <a href=\"\(updatesURL)\">Check for updates</a></i>\
             </small></p>\n
             """)
         output.textStorage?.append(textFooter)
