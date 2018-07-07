@@ -1,10 +1,4 @@
-//
-//  MasterlisterTests.swift
-//  MasterlisterTests
-//
-//  Created by Curylo, Alex (Agoda) on 7/20/17.
-//  Copyright © 2017 Trollwerks Inc. All rights reserved.
-//
+// @copyright Trollwerks Inc.
 
 import XCTest
 @testable import Masterlister
