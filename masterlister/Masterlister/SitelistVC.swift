@@ -115,7 +115,7 @@ class SitelistVC: NSViewController {
         let ids = array.compactMap { $0.whs }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate WHS visits \(duplicates)")
-        let wrong = Set(ids).subtracting(Set(sites.map( { $0.id } )))
+        let wrong = Set(ids).subtracting(Set(sites.map( { $0.siteID } )))
         assert(wrong.isEmpty, "Should not have wrong WHS visits \(wrong)")
         return array
     }()
@@ -214,11 +214,11 @@ class SitelistVC: NSViewController {
             }
 
             var whsSites = sites.filter {
-                $0.iso_code.contains(country.alpha2.lowercased())
+                $0.countries.contains(country.alpha2.lowercased())
             }
             // Special Jerusalem handling, put it in Israel
             if country.alpha2 == "IL" {
-                let countryless = sites.filter() { $0.iso_code.isEmpty }
+                let countryless = sites.filter() { $0.countries.isEmpty }
                 assert(countryless.count == 1, "Not exactly Jerusalem without a country?")
                 whsSites.append(countryless.first!)
             }
@@ -262,14 +262,14 @@ class SitelistVC: NSViewController {
 
         for whs in whsSites {
             let link = """
-                <a href="http://whc.unesco.org/en/list/\(whs.id_no)">\(whs.name_en)</a>
+                <a href="http://whc.unesco.org/en/list/\(whs.siteID)">\(whs.name)</a>
                 """
 
             var mark = Visited.no.rawValue
             var blogLinks = ""
-            if let visited = whsVisits.first(where: { $0.whs == whs.id }) {
-                whsVisited.insert(whs.id)
-                
+            if let visited = whsVisits.first(where: { $0.whs == whs.siteID }) {
+                whsVisited.insert(whs.siteID)
+
                 mark = Visited.yes.rawValue
                 
                 var visitLink = ""

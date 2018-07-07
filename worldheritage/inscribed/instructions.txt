@@ -1,0 +1,11 @@
+INSTRUCTIONS
+============
+
+On World Heritage List page http://whc.unesco.org/en/list
+download XML -> whc-en.xml
+
+(This appears to be updated before the XLS format originally used.)
+
+xml2json whc-en.xml --pretty --out whc-en.json
+
+In Masterlister, update count assert for current year and export
