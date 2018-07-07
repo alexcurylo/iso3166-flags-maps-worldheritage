@@ -54,30 +54,7 @@ class SitelistVC: NSViewController {
 
     let sites = WHS.sitelist
 
-    struct Tentative: Codable {
-        let id_no: Int
-        let iso: String
-        let submitted: String
-        let name: String
-        let category: String
-
-        var id: Int {
-            return id_no
-        }
-    }
-
-    let tentatives: [Tentative] = {
-        let path = Bundle.main.path(forResource: "whtl-20180507", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
-        let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.name < rhs.name
-        }
-        // Should match http://whc.unesco.org/en/tentativelists/
-        assert(array.count == 1706, "Should be 1706 TWHS on 2018.05.07")
-
-        return array
-    }()
+    let tentatives = TWHS.sitelist
 
     struct Visit: Codable {
         let wonder: Int?
@@ -124,7 +101,7 @@ class SitelistVC: NSViewController {
         let ids = visits.compactMap { $0.twhs }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate TWHS visits \(duplicates)")
-        let wrong = Set(ids).subtracting(Set(tentatives.map( { $0.id } )))
+        let wrong = Set(ids).subtracting(Set(tentatives.map( { $0.siteID } )))
         assert(wrong.isEmpty, "Should not have wrong TWHS visits \(wrong)")
         return array
     }()
@@ -224,7 +201,7 @@ class SitelistVC: NSViewController {
             }
 
             let twhsSites = tentatives.filter {
-                $0.iso.contains(country.alpha2)
+                $0.countries.contains(country.alpha2)
             }
 
             let unescoURL = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
@@ -250,7 +227,7 @@ class SitelistVC: NSViewController {
 
     func writeSites(in country: Country,
                     whs whsSites: [WHS],
-                    twhs twhsSites: [Tentative]) {
+                    twhs twhsSites: [TWHS]) {
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
             let countryStart = NSAttributedString(string: """
@@ -298,13 +275,13 @@ class SitelistVC: NSViewController {
     
             for twhs in twhsSites {
                 let link = """
-                    <a href="http://whc.unesco.org/en/tentativelists/\(twhs.id_no)">\(twhs.name)</a>
+                    <a href="http://whc.unesco.org/en/tentativelists/\(twhs.siteID)">\(twhs.name)</a>
                     """
 
                 var mark = Visited.no.rawValue
                 var blogLinks = ""
-                if let visited = twhsVisits.first(where: { $0.twhs == twhs.id }) {
-                    twhsVisited.insert(twhs.id)
+                if let visited = twhsVisits.first(where: { $0.twhs == twhs.siteID }) {
+                    twhsVisited.insert(twhs.siteID)
 
                     mark = Visited.yes.rawValue
 

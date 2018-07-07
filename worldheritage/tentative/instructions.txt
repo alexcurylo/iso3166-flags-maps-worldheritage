@@ -1,0 +1,12 @@
+INSTRUCTIONS
+============
+
+
+On Tentative Lists By Country page
+http://whc.unesco.org/en/tentativelists/?action=listtentative&order=states
+
+manually match up with lines in tentative.csv
+
+csv2json -d tentative.csv tentative.json
+
+In Masterlister, update count assert and writeFooter last checked date and export

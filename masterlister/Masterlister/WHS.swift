@@ -4,14 +4,22 @@ import Foundation
 
 struct WHS: Codable {
 
-    let iso_code: String?
+    private let iso_code: String?
     // XLS fields
-    let id_no: String?
-    let name_en: String?
+    private let id_no: String?
+    private let name_en: String?
     // XML fields
-    let id_number: String?
-    let site: String?
+    private let id_number: String?
+    private let site: String?
 
+    var name: String {
+        guard let name = site ?? name_en  else {
+            assertionFailure("no valid WHS name field")
+            return "<unknown>"
+        }
+        return name
+    }
+    
     var siteID: Int {
         guard let idString = id_number ?? id_no,
               let id = Int(idString) else {
@@ -20,17 +28,11 @@ struct WHS: Codable {
         }
         return id
     }
-    var name: String {
-        guard let name = site ?? name_en  else {
-            assertionFailure("no valid WHS name field")
-            return "<unknown>"
-        }
-        return name
-    }
+
     var countries: String {
         guard let iso_code = iso_code, !iso_code.isEmpty else {
             // expected for 148: Old City of Jerusalem and its Walls
-            //print("no countries for \(siteID): \(name)")
+            //print("no countries for WHS \(siteID): \(name)")
             return ""
         }
         return iso_code
@@ -39,10 +41,10 @@ struct WHS: Codable {
     static var sitelist: [WHS] {
         return sitesFromJSON(file: "whc-en") ??
                sitesFromXLS(file: "whc-sites-2017") ??
-               { assertionFailure("No sites!"); return [] }()
+               { assertionFailure("No WHS sites!"); return [] }()
     }
 
-    static func sitesFromJSON(file: String) -> [WHS]? {
+    private static func sitesFromJSON(file: String) -> [WHS]? {
         guard let path = Bundle.main.path(forResource: file, ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
                 return nil
@@ -71,7 +73,7 @@ struct WHS: Codable {
         return nil
     }
 
-    static func sitesFromXLS(file: String) -> [WHS]? {
+    private static func sitesFromXLS(file: String) -> [WHS]? {
         guard let path = Bundle.main.path(forResource: file, ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
               let jsonArray = try? JSONDecoder().decode([WHS].self, from: data) else {
@@ -81,7 +83,7 @@ struct WHS: Codable {
         return sorted(array: jsonArray)
     }
 
-    static func sorted(array jsonArray: [WHS]) -> [WHS] {
+    private static func sorted(array jsonArray: [WHS]) -> [WHS] {
         let array = jsonArray.sorted { (lhs, rhs) in
             lhs.name < rhs.name
         }
@@ -90,7 +92,7 @@ struct WHS: Codable {
     }
 }
 
-struct WHSFile: Codable {
+private struct WHSFile: Codable {
     
     struct Query: Codable {
 
