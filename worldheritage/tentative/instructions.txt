@@ -1,0 +1,41 @@
+INSTRUCTIONS
+============
+
+
+On Tentative Lists By Country page
+http://whc.unesco.org/en/tentativelists/?action=listtentative&order=states
+
+manually match up with lines in tentative.csv, reverse filing order should match
+(while doing that, in visits.json switch twhs->whs numbers or remove if an extension)
+
+csv2json -d tentative.csv tentative.json
+
+In Masterlister, update count assert and writeFooter last checked date and export
+
+
+Last Addition:
+
++ United Arab Emirates Abu Dhabi Sabkha (20/06/2018)
+
+2018 Inscriptions:
+
+- Canada - Pimachiowin Aki
+- China - Fanjingshan
+- Colombia - Chiribiquete National Park – “The Maloca of the Jaguar”
+*- Denmark - Aasivissuit – Nipisat. Inuit Hunting Ground between Ice and Sea
+- France - Chaîne des Puys - Limagne fault tectonic arena
+- Germany - Archaeological Border complex of Hedeby and the Danevirke
+- Naumburg Cathedral
+*- India - Victorian Gothic and Art Deco Ensembles of Mumbai
+- Iran (Islamic Republic of) Sassanid Archaeological Landscape of Fars Region
+- Italy - Ivrea, industrial city of the 20th century
+*- Japan - Hidden Christian Sites in the Nagasaki Region
+- Kenya - Thimlich Ohinga Archaeological Site
+- Mexico - Tehuacán-Cuicatlán Valley: originary habitat of Mesoamerica
+- Oman - Ancient City of Qalhat
+- Republic of Korea - Sansa, Buddhist Mountain Monasteries in Korea
+(-) Russian Federation - Bikin River Valley (Extension of the "Central Sikhote-Alin")
+- Saudi Arabia - Al-Ahsa Oasis, an Evolving Cultural Landscape
+- South Africa - Barberton Makhonjwa Mountains
+- Spain - Caliphate City of Medina Azahara
+- Turkey - Göbekli Tepe

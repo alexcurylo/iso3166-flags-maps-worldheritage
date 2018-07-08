@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  Masterlister
-//
-//  Created by Curylo, Alex (Agoda) on 7/20/17.
-//  Copyright © 2017 Trollwerks Inc. All rights reserved.
-//
+// @copyright Trollwerks Inc.
 
 import Cocoa
 
@@ -58,60 +52,9 @@ class SitelistVC: NSViewController {
         return array
     }()
 
-    // NB whc-en has other fields:
-    // historical_description, long_description
-    // "http_url": "http://whc.unesco.org/en/list/208",
-    // "image_url": "http://whc.unesco.org/uploads/sites/site_208.jpg",
-    struct Site: Codable {
-        let id_no: String
-        let iso_code: String
-        let category: String
-        let region_en: String
-        let date_inscribed: String
-        let name_en: String
-        let short_description_en: String
-        let justification_en: String
+    let sites = WHS.sitelist
 
-        var id: Int {
-            return Int(id_no) ?? 0
-        }
-    }
-    
-    let sites: [Site] = {
-        let path = Bundle.main.path(forResource: "whc-sites-2017", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let jsonArray = try! JSONDecoder().decode([Site].self, from: data)
-        let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.name_en < rhs.name_en
-        }
-        assert(array.count == 1073, "Should be 1073 WHS in 2017")
-        return array
-    }()
-    
-    struct Tentative: Codable {
-        let id_no: Int
-        let iso: String
-        let submitted: String
-        let name: String
-        let category: String
-
-        var id: Int {
-            return id_no
-        }
-    }
-
-    let tentatives: [Tentative] = {
-        let path = Bundle.main.path(forResource: "whtl-20180507", ofType: "json")
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        let jsonArray = try! JSONDecoder().decode([Tentative].self, from: data)
-        let array = jsonArray.sorted { (lhs, rhs) in
-            lhs.name < rhs.name
-        }
-        // Should match http://whc.unesco.org/en/tentativelists/
-        assert(array.count == 1706, "Should be 1706 TWHS on 2018.05.07")
-
-        return array
-    }()
+    let tentatives = TWHS.sitelist
 
     struct Visit: Codable {
         let wonder: Int?
@@ -149,7 +92,7 @@ class SitelistVC: NSViewController {
         let ids = array.compactMap { $0.whs }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate WHS visits \(duplicates)")
-        let wrong = Set(ids).subtracting(Set(sites.map( { $0.id } )))
+        let wrong = Set(ids).subtracting(Set(sites.map( { $0.siteID } )))
         assert(wrong.isEmpty, "Should not have wrong WHS visits \(wrong)")
         return array
     }()
@@ -158,7 +101,7 @@ class SitelistVC: NSViewController {
         let ids = visits.compactMap { $0.twhs }
         let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
         assert(duplicates.isEmpty, "Should not have duplicate TWHS visits \(duplicates)")
-        let wrong = Set(ids).subtracting(Set(tentatives.map( { $0.id } )))
+        let wrong = Set(ids).subtracting(Set(tentatives.map( { $0.siteID } )))
         assert(wrong.isEmpty, "Should not have wrong TWHS visits \(wrong)")
         return array
     }()
@@ -248,17 +191,17 @@ class SitelistVC: NSViewController {
             }
 
             var whsSites = sites.filter {
-                $0.iso_code.contains(country.alpha2.lowercased())
+                $0.countries.contains(country.alpha2.lowercased())
             }
             // Special Jerusalem handling, put it in Israel
             if country.alpha2 == "IL" {
-                let countryless = sites.filter() { $0.iso_code.isEmpty }
+                let countryless = sites.filter() { $0.countries.isEmpty }
                 assert(countryless.count == 1, "Not exactly Jerusalem without a country?")
                 whsSites.append(countryless.first!)
             }
 
             let twhsSites = tentatives.filter {
-                $0.iso.contains(country.alpha2)
+                $0.countries.contains(country.alpha2)
             }
 
             let unescoURL = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
@@ -283,8 +226,8 @@ class SitelistVC: NSViewController {
     }
 
     func writeSites(in country: Country,
-                    whs whsSites: [Site],
-                    twhs twhsSites: [Tentative]) {
+                    whs whsSites: [WHS],
+                    twhs twhsSites: [TWHS]) {
 
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
             let countryStart = NSAttributedString(string: """
@@ -296,14 +239,14 @@ class SitelistVC: NSViewController {
 
         for whs in whsSites {
             let link = """
-                <a href="http://whc.unesco.org/en/list/\(whs.id_no)">\(whs.name_en)</a>
+                <a href="http://whc.unesco.org/en/list/\(whs.siteID)">\(whs.name)</a>
                 """
 
             var mark = Visited.no.rawValue
             var blogLinks = ""
-            if let visited = whsVisits.first(where: { $0.whs == whs.id }) {
-                whsVisited.insert(whs.id)
-                
+            if let visited = whsVisits.first(where: { $0.whs == whs.siteID }) {
+                whsVisited.insert(whs.siteID)
+
                 mark = Visited.yes.rawValue
                 
                 var visitLink = ""
@@ -332,13 +275,13 @@ class SitelistVC: NSViewController {
     
             for twhs in twhsSites {
                 let link = """
-                    <a href="http://whc.unesco.org/en/tentativelists/\(twhs.id_no)">\(twhs.name)</a>
+                    <a href="http://whc.unesco.org/en/tentativelists/\(twhs.siteID)">\(twhs.name)</a>
                     """
 
                 var mark = Visited.no.rawValue
                 var blogLinks = ""
-                if let visited = twhsVisits.first(where: { $0.twhs == twhs.id }) {
-                    twhsVisited.insert(twhs.id)
+                if let visited = twhsVisits.first(where: { $0.twhs == twhs.siteID }) {
+                    twhsVisited.insert(twhs.siteID)
 
                     mark = Visited.yes.rawValue
 
@@ -368,9 +311,9 @@ class SitelistVC: NSViewController {
     }
 
     func writeFooter(for type: Document) {
-        assert(whsVisited.count == 482, "Should be 482 WHS visited not \(whsVisited.count) (2018.05.07)")
-        assert(twhsVisited.count == 340, "Should be 340 TWHS visited not \(twhsVisited.count) (2018.05.07)")
-        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=21%2F05%2F2018&date_end=&order=year"
+        assert(whsVisited.count == 485, "Should be 485 WHS visited not \(whsVisited.count) (2018.07.08)")
+        assert(twhsVisited.count == 337, "Should be 337 TWHS visited not \(twhsVisited.count) (2018.07.08)")
+        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=07%2F07%2F2018&date_end=&order=year"
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
         let twhsPercent = String(format: "%.1f", Float(twhsVisited.count) / Float(tentatives.count) * 100)
@@ -382,7 +325,7 @@ class SitelistVC: NSViewController {
             <p dir="ltr"><small>WHS: \(whsVisited.count)/\(sites.count) \
             (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) \
             (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)<br />\
-            <i>Last compiled 2018.05.21  — <a href=\"\(updatesURL)\">Check for updates</a></i>\
+            <i>Last compiled 2018.07.08  — <a href=\"\(updatesURL)\">Check for updates</a></i>\
             </small></p>\n
             """)
         output.textStorage?.append(textFooter)

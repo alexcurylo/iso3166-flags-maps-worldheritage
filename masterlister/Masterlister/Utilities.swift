@@ -1,10 +1,4 @@
-//
-//  Utilities.swift
-//  Masterlister
-//
-//  Created by Curylo, Alex (Agoda) on 7/5/18.
-//  Copyright © 2018 Trollwerks Inc. All rights reserved.
-//
+// @copyright Trollwerks Inc.
 
 import Foundation
 
