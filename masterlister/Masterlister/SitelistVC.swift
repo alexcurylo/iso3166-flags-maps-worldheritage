@@ -312,7 +312,7 @@ class SitelistVC: NSViewController {
 
     func writeFooter(for type: Document) {
         assert(whsVisited.count == 485, "Should be 485 WHS visited not \(whsVisited.count) (2018.07.08)")
-        assert(twhsVisited.count == 337, "Should be 337 TWHS visited not \(twhsVisited.count) (2018.07.08)")
+        assert(twhsVisited.count == 338, "Should be 338 TWHS visited not \(twhsVisited.count) (2018.07.21)")
         let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=07%2F07%2F2018&date_end=&order=year"
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
