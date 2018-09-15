@@ -2,7 +2,7 @@
 
 import Cocoa
 
-class WonderlistVC: NSViewController {
+final class WonderlistVC: NSViewController {
 
     enum Visited: String {
         case yes = "✅"
