@@ -14,7 +14,7 @@
 		8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C6BEB1F205525003DB6A3 /* Main.storyboard */; };
 		8C5C6BF91F205525003DB6A3 /* MasterlisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BF81F205525003DB6A3 /* MasterlisterTests.swift */; };
 		8C5C6C041F205525003DB6A3 /* MasterlisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */; };
-		8CA9DDEB209FE92D00DA86FA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9DDEA209FE92D00DA86FA /* Utilities.swift */; };
+		8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9DDEA209FE92D00DA86FA /* Document.swift */; };
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 		FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217920F0D82400DFCD55 /* WHS.swift */; };
@@ -59,7 +59,7 @@
 		8C5C6BFF1F205525003DB6A3 /* MasterlisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterlisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterlisterUITests.swift; sourceTree = "<group>"; };
 		8C5C6C051F205525003DB6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8CA9DDEA209FE92D00DA86FA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8CA9DDEA209FE92D00DA86FA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 		FA3864FC214CA1EE00773554 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				FA91217920F0D82400DFCD55 /* WHS.swift */,
 				FA91217F20F0FD6C00DFCD55 /* TWHS.swift */,
 				FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */,
-				8CA9DDEA209FE92D00DA86FA /* Utilities.swift */,
+				8CA9DDEA209FE92D00DA86FA /* Document.swift */,
 				8C5C6BE91F205525003DB6A3 /* Assets.xcassets */,
 				8C5C6BEB1F205525003DB6A3 /* Main.storyboard */,
 				8C5C6BEE1F205525003DB6A3 /* Info.plist */,
@@ -360,7 +360,7 @@
 				FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */,
 				FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */,
 				8C5C6BE31F205525003DB6A3 /* AppDelegate.swift in Sources */,
-				8CA9DDEB209FE92D00DA86FA /* Utilities.swift in Sources */,
+				8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */,
 				8C5C6BE81F205525003DB6A3 /* Masterlister.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,15 +22,15 @@ struct TWHS: Codable {
         return iso
     }
 
-    static var sitelist: [TWHS] {
-        return sitesFromJSON(file: "tentative") ??
-            { assertionFailure("No TWHS sites!"); return [] }()
-    }
+    static var sitelist: [TWHS] = {
+        sitesFromJSON(file: "tentative")
+    }()
 
-    private static func sitesFromJSON(file: String) -> [TWHS]? {
+    private static func sitesFromJSON(file: String) -> [TWHS] {
         guard let path = Bundle.main.path(forResource: file, ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
-                return nil
+                assertionFailure("missing TWHS file: \(file).json")
+                return []
         }
 
         do {
@@ -44,24 +44,24 @@ struct TWHS: Codable {
         } catch DecodingError.valueNotFound(let value, let context) {
             print("Value '\(value)' not Found")
             print("Debug Description:", context.debugDescription)
-        } catch DecodingError.typeMismatch(let type, let context)  {
+        } catch DecodingError.typeMismatch(let type, let context) {
             print("Type '\(type)' mismatch")
             print("Debug Description:", context.debugDescription)
         } catch {
             print("error: ", error)
         }
-        
-        return nil
+
+        return []
     }
 
     private static func sorted(array jsonArray: [TWHS]) -> [TWHS] {
-        let array = jsonArray.sorted { (lhs, rhs) in
+        let array = jsonArray.sorted { lhs, rhs in
             lhs.name < rhs.name
         }
 
         // Should match http://whc.unesco.org/en/tentativelists/
-        assert(array.count == 1695, "Should be 1695 TWHS on 2018.07.08")
-        
+        assert(array.count == 1_695, "Should be 1695 TWHS on 2018.07.08")
+
         return array
     }
 }
