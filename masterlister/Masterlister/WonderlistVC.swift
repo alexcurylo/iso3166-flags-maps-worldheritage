@@ -2,17 +2,7 @@
 
 import Cocoa
 
-class WonderlistVC: NSViewController {
-
-    enum Visited: String {
-        case yes = "✅"
-        case no = "◻️"
-    }
-
-    enum Document {
-        case html
-        case wordpress
-    }
+final class WonderlistVC: NSViewController {
 
     struct Wonder: Codable {
         let id: Int // expect owner ID + 1...7 for wonders, 8... for finalists
@@ -44,10 +34,11 @@ class WonderlistVC: NSViewController {
         let path = Bundle.main.path(forResource: "new7wonders", ofType: "json")
         var array: [Wonders] = []
         do {
+            // swiftlint:disable:next force_unwrapping
             let data = try Data(contentsOf: URL(fileURLWithPath: path!))
             array = try JSONDecoder().decode([Wonders].self, from: data)
-        } catch let jsonErr {
-            print("Error decoding new7wonders.json", jsonErr)
+        } catch {
+            print("Error decoding new7wonders.json", error)
         }
 
         assert(array.count == 3, "Should be 3 collections in 2018")
@@ -77,14 +68,15 @@ class WonderlistVC: NSViewController {
         let path = Bundle.main.path(forResource: "visits", ofType: "json")
         var array: [Visit] = []
         do {
+            // swiftlint:disable:next force_unwrapping
             let data = try Data(contentsOf: URL(fileURLWithPath: path!))
             array = try JSONDecoder().decode([Visit].self, from: data)
-        } catch let jsonErr {
-            print("Error decoding visits", jsonErr)
+        } catch {
+            print("Error decoding visits", error)
         }
 
         let ids = array.compactMap { $0.wonder }
-        let duplicates = Array(Set(ids.filter({ (i: Int) in ids.filter({ $0 == i }).count > 1})))
+        let duplicates = Array(Set(ids.filter { (i: Int) in ids.filter { $0 == i }.count > 1 }))
         assert(duplicates.isEmpty, "Should not have duplicate Wonder visits \(duplicates)")
         let wonderList: [Wonder] = wondersList.reduce([]) { $0 + $1.wonders + $1.finalists }
         let wonderIDs = wonderList.map { $0.id }
@@ -94,11 +86,11 @@ class WonderlistVC: NSViewController {
         return array
     }()
 
-    @IBOutlet var output: NSTextView!
-    
+    @IBOutlet private var output: NSTextView!
+
     var wondersVisited = 0
     var finalistsVisited = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -107,7 +99,7 @@ class WonderlistVC: NSViewController {
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
 
@@ -116,7 +108,7 @@ class WonderlistVC: NSViewController {
         writeWondersList()
         writeFooter(for: type)
     }
-    
+
     func writeHeader(for type: Document) {
         if type == .html {
             let htmlHeader = NSAttributedString(string: """
@@ -130,10 +122,10 @@ class WonderlistVC: NSViewController {
                 """)
             output.textStorage?.append(htmlHeader)
         }
-        
+
         let textHeader = NSAttributedString(string: """
             <p dir="ltr"><strong>The <a href="https://new7wonders.com">New7Wonders</a> Master Wonderlist</strong></p>
-            
+
             <p><small>Wonders are in plain text<br />
             <i>Finalists are in italic text</i></small></p>
             \n
@@ -167,16 +159,16 @@ class WonderlistVC: NSViewController {
         let sortedWonders = wonders.sorted { $0.title < $1.title }
         for wonder in sortedWonders {
             let link = """
-                <a href="\(wonder.url)">\(wonder.title)</a>
-                """
+            <a href="\(wonder.url)">\(wonder.title)</a>
+            """
 
             var mark = Visited.no.rawValue
             var blogLinks = ""
             if let visited = visits.first(where: { $0.wonder == wonder.id }) {
                 if wonder.isWonder {
-                    wondersVisited = wondersVisited + 1
+                    wondersVisited += 1
                 } else {
-                    finalistsVisited = finalistsVisited + 1
+                    finalistsVisited += 1
                 }
 
                 mark = Visited.yes.rawValue
@@ -215,9 +207,11 @@ class WonderlistVC: NSViewController {
         let total = wondersCount + finalistsCount
         let totalVisits = wondersVisited + finalistsVisited
         let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(total) * 100)
+        // swiftlint:disable line_length
         let textFooter = NSAttributedString(string: """
             <p dir="ltr"><small>Wonders: \(wondersVisited)/\(wondersCount) (\(wondersPercent)%) — Finalists: \(finalistsVisited)/\(finalistsCount) (\(finalistsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</small></p>\n
             """)
+        // swiftlint:enable line_length
         output.textStorage?.append(textFooter)
 
         if type == .html {
@@ -229,4 +223,3 @@ class WonderlistVC: NSViewController {
         }
     }
 }
-

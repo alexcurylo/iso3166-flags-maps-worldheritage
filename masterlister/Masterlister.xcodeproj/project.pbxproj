@@ -14,7 +14,7 @@
 		8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C6BEB1F205525003DB6A3 /* Main.storyboard */; };
 		8C5C6BF91F205525003DB6A3 /* MasterlisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BF81F205525003DB6A3 /* MasterlisterTests.swift */; };
 		8C5C6C041F205525003DB6A3 /* MasterlisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */; };
-		8CA9DDEB209FE92D00DA86FA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9DDEA209FE92D00DA86FA /* Utilities.swift */; };
+		8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9DDEA209FE92D00DA86FA /* Document.swift */; };
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 		FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217920F0D82400DFCD55 /* WHS.swift */; };
@@ -59,9 +59,12 @@
 		8C5C6BFF1F205525003DB6A3 /* MasterlisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterlisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterlisterUITests.swift; sourceTree = "<group>"; };
 		8C5C6C051F205525003DB6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8CA9DDEA209FE92D00DA86FA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8CA9DDEA209FE92D00DA86FA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
+		FA3864FC214CA1EE00773554 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FA3864FD214CA1F600773554 /* script_build_begin.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = script_build_begin.sh; sourceTree = "<group>"; };
+		FA3864FE214CA1FE00773554 /* script_build_end.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = script_build_end.sh; sourceTree = "<group>"; };
 		FA91217920F0D82400DFCD55 /* WHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHS.swift; sourceTree = "<group>"; };
 		FA91217D20F0FCEC00DFCD55 /* tentative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tentative.json; path = ../../worldheritage/tentative/tentative.json; sourceTree = "<group>"; };
 		FA91217F20F0FD6C00DFCD55 /* TWHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWHS.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 				8C5C6BE11F205525003DB6A3 /* Masterlister */,
 				8C5C6BF71F205525003DB6A3 /* MasterlisterTests */,
 				8C5C6C021F205525003DB6A3 /* MasterlisterUITests */,
+				FA3864FB214CA1D200773554 /* metadata */,
 				8C5C6BE01F205525003DB6A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,7 +129,7 @@
 				FA91217920F0D82400DFCD55 /* WHS.swift */,
 				FA91217F20F0FD6C00DFCD55 /* TWHS.swift */,
 				FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */,
-				8CA9DDEA209FE92D00DA86FA /* Utilities.swift */,
+				8CA9DDEA209FE92D00DA86FA /* Document.swift */,
 				8C5C6BE91F205525003DB6A3 /* Assets.xcassets */,
 				8C5C6BEB1F205525003DB6A3 /* Main.storyboard */,
 				8C5C6BEE1F205525003DB6A3 /* Info.plist */,
@@ -160,6 +164,16 @@
 			path = MasterlisterUITests;
 			sourceTree = "<group>";
 		};
+		FA3864FB214CA1D200773554 /* metadata */ = {
+			isa = PBXGroup;
+			children = (
+				FA3864FC214CA1EE00773554 /* .swiftlint.yml */,
+				FA3864FD214CA1F600773554 /* script_build_begin.sh */,
+				FA3864FE214CA1FE00773554 /* script_build_end.sh */,
+			);
+			name = metadata;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C5C6C081F205525003DB6A3 /* Build configuration list for PBXNativeTarget "Masterlister" */;
 			buildPhases = (
+				FA3864FF214CA2DE00773554 /* Run script_build_begin.sh */,
 				8C5C6BDB1F205525003DB6A3 /* Sources */,
 				8C5C6BDC1F205525003DB6A3 /* Frameworks */,
 				8C5C6BDD1F205525003DB6A3 /* Resources */,
+				FA386500214CA31E00773554 /* Run script_build_end.sh */,
 			);
 			buildRules = (
 			);
@@ -228,13 +244,16 @@
 				TargetAttributes = {
 					8C5C6BDE1F205525003DB6A3 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
 					};
 					8C5C6BF31F205525003DB6A3 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8C5C6BDE1F205525003DB6A3;
 					};
 					8C5C6BFE1F205525003DB6A3 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = 8C5C6BDE1F205525003DB6A3;
 					};
 				};
@@ -292,6 +311,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FA3864FF214CA2DE00773554 /* Run script_build_begin.sh */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run script_build_begin.sh";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "script_file=\"script_build_begin.sh\"\n\necho \"Running a custom build phase script: $script_file\"\n. \"${PROJECT_DIR}/${script_file}\"\nscriptExitStatus=$?\n\necho \"DONE with script: ${script_file} (exitStatus=${scriptExitStatus})\"\n\nexit \"${scriptExitStatus}\"\n";
+		};
+		FA386500214CA31E00773554 /* Run script_build_end.sh */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run script_build_end.sh";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "script_file=\"script_build_end.sh\"\n\necho \"Running a custom build phase script: $script_file\"\n. \"${PROJECT_DIR}/${script_file}\"\nscriptExitStatus=$?\n\necho \"DONE with script: ${script_file} (exitStatus=${scriptExitStatus})\"\n\nexit \"${scriptExitStatus}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C5C6BDB1F205525003DB6A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,7 +360,7 @@
 				FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */,
 				FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */,
 				8C5C6BE31F205525003DB6A3 /* AppDelegate.swift in Sources */,
-				8CA9DDEB209FE92D00DA86FA /* Utilities.swift in Sources */,
+				8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */,
 				8C5C6BE81F205525003DB6A3 /* Masterlister.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +529,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.Masterlister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -486,7 +544,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.Masterlister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -501,7 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Masterlister.app/Contents/MacOS/Masterlister";
 			};
 			name = Debug;
@@ -517,7 +575,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Masterlister.app/Contents/MacOS/Masterlister";
 			};
 			name = Release;
@@ -532,7 +590,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Masterlister;
 			};
 			name = Debug;
@@ -547,7 +605,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Masterlister;
 			};
 			name = Release;
