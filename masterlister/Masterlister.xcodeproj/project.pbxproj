@@ -63,7 +63,6 @@
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 		FA3864FC214CA1EE00773554 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		FA3864FD214CA1F600773554 /* script_build_begin.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = script_build_begin.sh; sourceTree = "<group>"; };
 		FA3864FE214CA1FE00773554 /* script_build_end.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = script_build_end.sh; sourceTree = "<group>"; };
 		FA91217920F0D82400DFCD55 /* WHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHS.swift; sourceTree = "<group>"; };
 		FA91217D20F0FCEC00DFCD55 /* tentative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tentative.json; path = ../../worldheritage/tentative/tentative.json; sourceTree = "<group>"; };
@@ -168,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				FA3864FC214CA1EE00773554 /* .swiftlint.yml */,
-				FA3864FD214CA1F600773554 /* script_build_begin.sh */,
 				FA3864FE214CA1FE00773554 /* script_build_end.sh */,
 			);
 			name = metadata;
@@ -181,7 +179,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C5C6C081F205525003DB6A3 /* Build configuration list for PBXNativeTarget "Masterlister" */;
 			buildPhases = (
-				FA3864FF214CA2DE00773554 /* Run script_build_begin.sh */,
 				8C5C6BDB1F205525003DB6A3 /* Sources */,
 				8C5C6BDC1F205525003DB6A3 /* Frameworks */,
 				8C5C6BDD1F205525003DB6A3 /* Resources */,
@@ -312,24 +309,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FA3864FF214CA2DE00773554 /* Run script_build_begin.sh */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run script_build_begin.sh";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "script_file=\"script_build_begin.sh\"\n\necho \"Running a custom build phase script: $script_file\"\n. \"${PROJECT_DIR}/${script_file}\"\nscriptExitStatus=$?\n\necho \"DONE with script: ${script_file} (exitStatus=${scriptExitStatus})\"\n\nexit \"${scriptExitStatus}\"\n";
-		};
 		FA386500214CA31E00773554 /* Run script_build_end.sh */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
