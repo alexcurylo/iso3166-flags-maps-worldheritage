@@ -84,8 +84,8 @@
         "iso": "BO"
     }, 
     {
-        "name": "Bosnia and Herzegovina",
-        "iso": "BA"
+        "iso": "BA",
+        "file": "https://www.everywhs.com/2018/10/05/country-file-bosnia-and-herzegovina/"
     }, 
     {
         "name": "Botswana", 
@@ -452,8 +452,8 @@
         "iso": "MN"
     }, 
     {
-        "name": "Montenegro (6)", 
-        "iso": "ME"
+        "iso": "ME",
+        "file": "https://www.everywhs.com/2018/10/01/country-file-montenegro/"
     }, 
     {
         "name": "Morocco", 
