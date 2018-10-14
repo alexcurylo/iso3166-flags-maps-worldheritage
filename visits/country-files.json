@@ -168,9 +168,9 @@
         "iso": "CI"
     }, 
     {
-        "name": "Croatia", 
         "iso": "HR"
-    }, 
+        "file": "https://www.everywhs.com/2018/10/14/country-file-croatia/"
+    },
     {
         "name": "Cuba",
         "iso": "CU"
