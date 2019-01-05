@@ -168,7 +168,7 @@
         "iso": "CI"
     }, 
     {
-        "iso": "HR"
+        "iso": "HR",
         "file": "https://www.everywhs.com/2018/10/14/country-file-croatia/"
     },
     {
@@ -332,8 +332,8 @@
         "iso": "IL"
     }, 
     {
-        "name": "Italy", 
-        "iso": "IT"
+        "iso": "IT",
+        "file":"https://www.everywhs.com/info/country-file-italy/"
     }, 
     {
         "name": "Jamaica", 
@@ -420,8 +420,8 @@
         "iso": "ML"
     }, 
     {
-        "name": "Malta", 
-        "iso": "MT"
+        "iso": "MT",
+        "file": "https://www.everywhs.com/info/country-file-malta/"
     }, 
     {
         "name": "Marshall Islands", 
@@ -592,8 +592,8 @@
         "iso": "WS"
     }, 
     {
-        "name": "San Marino", 
-        "iso": "SM"
+        "iso": "SM",
+        "file":"https://www.everywhs.com/info/country-file-san-marino/"
     }, 
     {
         "name": "Sao Tome and Principe", 
@@ -818,5 +818,9 @@
     {
         "name": "Tokelau", 
         "iso": "TK"
+    },
+    {
+        "iso": "VA",
+        "file": "https://www.everywhs.com/info/country-file-holy-see-vatican-city/"
     }
 ]
