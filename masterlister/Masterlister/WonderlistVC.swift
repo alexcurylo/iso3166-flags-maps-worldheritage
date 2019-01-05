@@ -124,7 +124,7 @@ final class WonderlistVC: NSViewController {
         }
 
         let textHeader = NSAttributedString(string: """
-            <p dir="ltr"><strong>The <a href="https://new7wonders.com">New7Wonders</a> Master Wonderlist</strong></p>
+            <p><strong>The <a href="https://new7wonders.com">New7Wonders</a> Master Wonderlist</strong></p>
 
             <p><small>Wonders are in plain text<br />
             <i>Finalists are in italic text</i></small></p>
@@ -136,7 +136,7 @@ final class WonderlistVC: NSViewController {
     func writeWondersList() {
         for wonders in wondersList {
             let listStart = NSAttributedString(string: """
-                <p dir="ltr"><strong><a href="\(wonders.url)">\(wonders.title)</a>:</strong></p>
+                <p><strong><a href="\(wonders.url)">\(wonders.title)</a>:</strong></p>
                 """)
             output.textStorage?.append(listStart)
 
@@ -153,7 +153,7 @@ final class WonderlistVC: NSViewController {
     func writeWonders(in wonders: [Wonder]) {
         guard let inItalic = wonders.first?.isFinalist else { return }
 
-        let wondersStart = NSAttributedString(string: "<p dir=\"ltr\">" + (inItalic ? "<i>" : ""))
+        let wondersStart = NSAttributedString(string: "<p>" + (inItalic ? "<i>" : ""))
         output.textStorage?.append(wondersStart)
 
         let sortedWonders = wonders.sorted { $0.title < $1.title }
@@ -209,7 +209,7 @@ final class WonderlistVC: NSViewController {
         let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(total) * 100)
         // swiftlint:disable line_length
         let textFooter = NSAttributedString(string: """
-            <p dir="ltr"><small>Wonders: \(wondersVisited)/\(wondersCount) (\(wondersPercent)%) — Finalists: \(finalistsVisited)/\(finalistsCount) (\(finalistsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</small></p>\n
+            <p><small>Wonders: \(wondersVisited)/\(wondersCount) (\(wondersPercent)%) — Finalists: \(finalistsVisited)/\(finalistsCount) (\(finalistsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)</small></p>\n
             """)
         // swiftlint:enable line_length
         output.textStorage?.append(textFooter)

@@ -114,7 +114,7 @@ final class SitelistVC: NSViewController {
         }
 
         let textHeader = NSAttributedString(string: """
-            <p dir="ltr"><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
+            <p><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
 
             <p><small>Inscribed properties are in plain text<br />
             <i>Tentative properties are in italic text</i></small></p>
@@ -166,7 +166,7 @@ final class SitelistVC: NSViewController {
                 fileLink = " — <a href=\"\(file)\">Country File</a>"
             }
             // swiftlint:disable:next line_length
-            let countryStart = NSAttributedString(string: "<p dir='ltr'><strong>\(unescoLink)</strong> <small>(\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)</small><br />\n")
+            let countryStart = NSAttributedString(string: "<p><strong>\(unescoLink)</strong> <small>(\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)</small><br />\n")
             output.textStorage?.append(countryStart)
 
             writeSites(in: country, whs: whsSites, twhs: twhsSites)
@@ -284,7 +284,7 @@ final class SitelistVC: NSViewController {
         let totalVisits = whsVisited.count + twhsVisited.count
         let totalPercent = String(format: "%.1f", Float(totalVisits) / Float(total) * 100)
         let textFooter = NSAttributedString(string: """
-            <p dir="ltr"><small>WHS: \(whsVisited.count)/\(sites.count) \
+            <p><small>WHS: \(whsVisited.count)/\(sites.count) \
             (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) \
             (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)<br />\
             <i>Last compiled 2018.07.08  — <a href=\"\(updatesURL)\">Check for updates</a></i>\
