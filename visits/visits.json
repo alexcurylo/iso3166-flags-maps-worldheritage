@@ -10,7 +10,7 @@
     {  
       "wonder":104,
       "whs":438,
-      "visit":"https://everywhs.com/2018/04/07/whs-the-great-wall-china/"
+      "visit":"https://everywhs.com/visits/whs-the-great-wall-china/"
     },
     {  
       "wonder":105,
@@ -27,9 +27,9 @@
     {  
       "wonder":108,
       "whs":668,
-      "visit":"https://everywhs.com/2017/12/16/whs-angkor-wat-cambodia/",
-      "stay":"https://everywhs.com/2017/12/25/hotel-sawasdee-angkor-villa-siem-reap-cambodia/",
-      "eat":"https://everywhs.com/2017/12/19/dining-bugs-cafe-siem-reap/"
+      "visit":"https://everywhs.com/visits/whs-angkor-wat-cambodia/",
+      "stay":"https://everywhs.com/hotels/hotel-sawasdee-angkor-villa-siem-reap-cambodia/",
+      "eat":"https://everywhs.com/visits/dining-bugs-cafe-siem-reap/"
     },
     {  
       "wonder":109,
@@ -74,7 +74,7 @@
     {  
       "wonder":202,
       "whs":672,
-      "visit":"https://everywhs.com/2017/06/09/whs-ha-long-bay-vietnam/"
+      "visit":"https://everywhs.com/visits/whs-ha-long-bay-vietnam/"
     },
     {  
       "wonder":203,
@@ -83,12 +83,12 @@
     {  
       "wonder":204,
       "whs":1264,
-      "visit":"https://everywhs.com/2018/03/01/whs-jeju-volcanic-island-and-lava-tubes-south-korea/"
+      "visit":"https://everywhs.com/visits/whs-jeju-volcanic-island-and-lava-tubes-south-korea/"
     },
     {  
       "wonder":206,
       "whs":652,
-      "visit":"https://everywhs.com/2018/07/09/whs-puerto-princesa-subterranean-river-philippines/"
+      "visit":"https://everywhs.com/visits/whs-puerto-princesa-subterranean-river-philippines/"
     },
     {  
       "wonder":207,
@@ -144,8 +144,8 @@
     {  
       "wonder":305,
       "twhs":6175,
-      "visit":"https://everywhs.com/2017/11/26/twhs-gombak-selangor-quartz-ridge-malaysia/",
-      "stay":"https://everywhs.com/2017/11/28/hotel-jw-marriott-kuala-lumpur/"
+      "visit":"https://everywhs.com/visits/twhs-gombak-selangor-quartz-ridge-malaysia/",
+      "stay":"https://everywhs.com/hotels/hotel-jw-marriott-kuala-lumpur/"
     },
     {  
       "wonder":306,
@@ -154,14 +154,14 @@
     {  
       "wonder":307,
       "whs":502,
-      "visit":"https://everywhs.com/2018/07/26/whs-historic-city-of-vigan-philippines/"
+      "visit":"https://everywhs.com/visits/whs-historic-city-of-vigan-philippines/"
     },
     {  
       "wonder":308
     },
     {  
       "wonder":309,
-      "stay":"https://everywhs.com/2017/09/18/airbnb-pathumwan-resort-bangkok/",
+      "stay":"https://everywhs.com/hotels/airbnb-pathumwan-resort-bangkok/",
       "whs":576
     },
     {  
@@ -201,9 +201,9 @@
     {  
       "wonder":321,
       "twhs":65,
-      "visit":"https://everywhs.com/2017/12/04/twhs-site-doudong-cambodia/",
-      "stay":"https://everywhs.com/2018/01/01/you-eng-hotel-phnom-penh-cambodia/",
-      "eat":"https://everywhs.com/2017/12/30/skuon-spiderville-spider-market-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-site-doudong-cambodia/",
+      "stay":"https://everywhs.com/hotels/you-eng-hotel-phnom-penh-cambodia/",
+      "eat":"https://everywhs.com/visits/skuon-spiderville-spider-market-cambodia/"
     },
     {  
       "wonder":322,
@@ -224,12 +224,12 @@
     {  
       "wonder":326,
       "whs":816,
-      "visit":"https://everywhs.com/2018/02/27/whs-changdeokgung-palace-complex-korea/"
+      "visit":"https://everywhs.com/visits/whs-changdeokgung-palace-complex-korea/"
     },
     {  
       "wonder":327,
       "whs":1110,
-      "visit":"https://everywhs.com/2018/01/29/whs-historic-centre-of-macao/"
+      "visit":"https://everywhs.com/visits/whs-historic-centre-of-macao/"
     },
     {  
       "wonder":328,
@@ -237,11 +237,11 @@
     },
     {  
       "whs":569,
-      "visit":"https://everywhs.com/2018/09/11/whs-historic-centres-of-berat-and-gjirokastra-albania/"
+      "visit":"https://everywhs.com/visits/whs-historic-centres-of-berat-and-gjirokastra-albania/"
     },
     {  
       "whs":570,
-      "visit":"https://everywhs.com/2018/09/08/whs-butrint-albania/"
+      "visit":"https://everywhs.com/visits/whs-butrint-albania/"
     },
     {  
       "whs":1295
@@ -266,12 +266,12 @@
     },
     {  
       "whs":1532,
-      "visit":"https://everywhs.com/2017/12/08/whs-temple-zone-of-sambor-prei-kuk/",
-      "stay":"https://everywhs.com/2017/12/10/kampong-thom-village-hotel-cambodia/"
+      "visit":"https://everywhs.com/visits/whs-temple-zone-of-sambor-prei-kuk/",
+      "stay":"https://everywhs.com/hotels/kampong-thom-village-hotel-cambodia/"
     },
     {  
       "whs":1224,
-      "visit":"https://everywhs.com/2017/12/24/whs-temple-of-preah-vihear-cambodia/"
+      "visit":"https://everywhs.com/visits/whs-temple-of-preah-vihear-cambodia/"
     },
     {  
       "whs":304
@@ -314,84 +314,84 @@
     },
     {  
       "whs":1388,
-      "visit":"https://everywhs.com/2018/02/12/whs-chengjiang-fossil-site/"
+      "visit":"https://everywhs.com/visits/whs-chengjiang-fossil-site/"
     },
     {  
       "whs":1111,
-      "visit":"https://everywhs.com/2018/03/17/whs-honghe-hani-rice-terraces-yunnan-china/"
+      "visit":"https://everywhs.com/visits/whs-honghe-hani-rice-terraces-yunnan-china/"
     },
     {  
       "whs":912,
-      "visit":"https://everywhs.com/2018/01/22/whs-dazu-rock-carvings-china/"
+      "visit":"https://everywhs.com/visits/whs-dazu-rock-carvings-china/"
     },
     {  
       "whs":707,
-      "visit":"https://everywhs.com/2018/02/04/historic-ensemble-of-the-potala-palace-lhasa-tibet/"
+      "visit":"https://everywhs.com/visits/historic-ensemble-of-the-potala-palace-lhasa-tibet/"
     },
     {  
       "whs":439,
-      "visit":"https://everywhs.com/2018/04/16/whs-imperial-palaces-of-the-ming-and-qing-dynasties-china/"
+      "visit":"https://everywhs.com/visits/whs-imperial-palaces-of-the-ming-and-qing-dynasties-china/"
     },
     {  
       "whs":1004,
-      "visit":"https://everywhs.com/2018/04/05/whs-imperial-tombs-of-the-ming-and-qing-dynasties-china/"
+      "visit":"https://everywhs.com/visits/whs-imperial-tombs-of-the-ming-and-qing-dynasties-china/"
     },
     {  
       "whs":441,
-      "visit":"https://everywhs.com/2018/03/03/whs-mausoleum-of-the-first-qin-emperor-xian-china/"
+      "visit":"https://everywhs.com/visits/whs-mausoleum-of-the-first-qin-emperor-xian-china/"
     },
     {  
       "whs":437,
-      "visit":"https://everywhs.com/2018/05/08/whs-mount-taishan-china/"
+      "visit":"https://everywhs.com/visits/whs-mount-taishan-china/"
     },
     {  
       "whs":703,
-      "visit":"https://everywhs.com/2018/05/01/whs-mountain-resort-chengde-china/"
+      "visit":"https://everywhs.com/visits/whs-mountain-resort-chengde-china/"
     },
     {  
       "whs":811,
-      "visit":"https://everywhs.com/2018/02/01/whs-old-town-of-lijiang-china/"
+      "visit":"https://everywhs.com/visits/whs-old-town-of-lijiang-china/"
     },
     {  
       "whs":449,
-      "visit":"https://everywhs.com/2018/04/13/whs-peking-man-site-at-zhoukoudian-china/"
+      "visit":"https://everywhs.com/visits/whs-peking-man-site-at-zhoukoudian-china/"
     },
     {  
       "whs":1540,
-      "visit":"https://everywhs.com/2018/02/06/whs-qinghai-hoh-xil-china/"
+      "visit":"https://everywhs.com/visits/whs-qinghai-hoh-xil-china/"
     },
     {  
       "whs":1442,
-      "visit":"https://everywhs.com/2018/03/06/whs-silk-roads-changan-tianshan-corridor-china-kazakhstan-kyrgyzstan/"
+      "visit":"https://everywhs.com/visits/whs-silk-roads-changan-tianshan-corridor-china-kazakhstan-kyrgyzstan/"
     },
     {  
       "whs":1248,
-      "visit":"https://everywhs.com/2018/03/20/whs-south-china-karst-yunnan-china/",
-      "stay":"https://everywhs.com/2018/03/25/kunming-green-lakeshore-hotel-kunming-china/"
+      "visit":"https://everywhs.com/visits/whs-south-china-karst-yunnan-china/",
+      "stay":"https://everywhs.com/hotels/kunming-green-lakeshore-hotel-kunming-china/"
     },
     {  
       "whs":880,
-      "visit":"https://everywhs.com/2018/04/03/whs-summer-palace-imperial-garden-beijing-china/"
+      "visit":"https://everywhs.com/visits/whs-summer-palace-imperial-garden-beijing-china/"
     },
     {  
       "whs":704,
-      "visit":"https://everywhs.com/2018/05/04/whs-temple-of-confucius-qufu-china/"
+      "visit":"https://everywhs.com/visits/whs-temple-of-confucius-qufu-china/"
     },
     {  
       "whs":881,
-      "visit":"https://everywhs.com/2018/04/11/whs-temple-of-heaven-beijing/"
+      "visit":"https://everywhs.com/visits/whs-temple-of-heaven-beijing/"
     },
     {  
       "whs":1443,
-      "visit":"https://everywhs.com/2018/04/09/whs-the-grand-canal-china/"
+      "visit":"https://everywhs.com/visits/whs-the-grand-canal-china/"
     },
     {  
       "whs":1083,
-      "visit":"https://everywhs.com/2018/02/02/whs-three-parallel-rivers-of-yunnan-china/"
+      "visit":"https://everywhs.com/visits/whs-three-parallel-rivers-of-yunnan-china/"
     },
     {  
       "whs":1474,
-      "visit":"https://everywhs.com/2018/02/08/whs-tusi-sites-china/"
+      "visit":"https://everywhs.com/visits/whs-tusi-sites-china/"
     },
     {  
       "whs":863
@@ -830,30 +830,30 @@
     },
     {  
       "whs":677,
-      "visit":"https://everywhs.com/2018/06/15/whs-baroque-churches-of-the-philippines/"
+      "visit":"https://everywhs.com/visits/whs-baroque-churches-of-the-philippines/"
     },
     {  
       "whs":1403,
-      "visit":"https://everywhs.com/2018/07/12/whs-mount-hamiguitan-range-wildlife-sanctuary-philippines/"
+      "visit":"https://everywhs.com/visits/whs-mount-hamiguitan-range-wildlife-sanctuary-philippines/"
     },
     {  
       "whs":722,
-      "visit":"https://everywhs.com/2018/08/14/whs-rice-terraces-of-the-philippine-cordilleras/"
+      "visit":"https://everywhs.com/visits/whs-rice-terraces-of-the-philippine-cordilleras/"
     },
     {  
       "whs":657,
-      "visit":"https://everywhs.com/2017/11/12/whs-trinity-sergius-lavra-sergiev-posad/"
+      "visit":"https://everywhs.com/visits/whs-trinity-sergius-lavra-sergiev-posad/"
     },
     {  
       "whs":634,
-      "visit":"https://everywhs.com/2017/11/10/whs-church-of-the-ascension-kolomenskoye/"
+      "visit":"https://everywhs.com/visits/whs-church-of-the-ascension-kolomenskoye/"
     },
     {  
       "whs":1097
     },
     {  
       "whs":1170,
-      "visit":"https://everywhs.com/2017/11/16/whs-city-of-yaroslavl/"
+      "visit":"https://everywhs.com/visits/whs-city-of-yaroslavl/"
     },
     {  
       "whs":985
@@ -1121,18 +1121,18 @@
     },
     {  
       "whs":1328,
-      "visit":"https://everywhs.com/2017/06/05/whs-imperial-citadel-of-thang-long-vietnam/",
-      "stay":"https://everywhs.com/2017/06/06/hotel-rendezvous-boutique-hotel-hanoi/",
-      "eat":"https://everywhs.com/2017/06/08/snake-on-a-plate-quan-dong-que-tran-ban-le-mat-vietnam/"
+      "visit":"https://everywhs.com/visits/whs-imperial-citadel-of-thang-long-vietnam/",
+      "stay":"https://everywhs.com/hotels/hotel-rendezvous-boutique-hotel-hanoi/",
+      "eat":"https://everywhs.com/visits/snake-on-a-plate-quan-dong-que-tran-ban-le-mat-vietnam/"
     },
     {  
       "whs":1358,
-      "visit":"https://everywhs.com/2017/06/13/whs-citadel-of-the-ho-dynasty-vietnam/"
+      "visit":"https://everywhs.com/visits/whs-citadel-of-the-ho-dynasty-vietnam/"
     },
     {  
       "whs":1438,
-      "visit":"https://everywhs.com/2017/06/10/whs-trang-an-landscape-complex-vietnam/",
-      "stay":"https://everywhs.com/2017/06/12/hotel-vietnamese-ancient-village-ninh-binh-vietnam/"
+      "visit":"https://everywhs.com/visits/whs-trang-an-landscape-complex-vietnam/",
+      "stay":"https://everywhs.com/hotels/hotel-vietnamese-ancient-village-ninh-binh-vietnam/"
     },
     {  
       "whs":1257
@@ -1175,7 +1175,7 @@
     },
     {  
       "whs":1321,
-      "visit":"https://everywhs.com/2017/12/05/whs-the-architectural-work-of-le-corbusier/"
+      "visit":"https://everywhs.com/visits/whs-the-architectural-work-of-le-corbusier/"
     },
     {  
       "whs":1376
@@ -1245,75 +1245,75 @@
     },
     {  
       "whs":592,
-      "visit":"https://everywhs.com/2017/10/28/whs-borobudur-temple-compounds/"
+      "visit":"https://everywhs.com/visits/whs-borobudur-temple-compounds/"
     },
     {  
       "whs":642,
-      "visit":"https://everywhs.com/2017/11/03/whs-prambanan-temple-compounds/"
+      "visit":"https://everywhs.com/visits/whs-prambanan-temple-compounds/"
     },
     {  
       "whs":593,
-      "visit":"https://everywhs.com/2017/11/01/whs-sangiran-early-man-site/"
+      "visit":"https://everywhs.com/visits/whs-sangiran-early-man-site/"
     },
     {  
       "whs":1167,
-      "visit":"https://everywhs.com/2017/10/10/whs-tropical-rainforest-heritage-of-sumatra/"
+      "visit":"https://everywhs.com/visits/whs-tropical-rainforest-heritage-of-sumatra/"
     },
     {  
       "whs":608,
-      "visit":"https://everywhs.com/2017/08/04/whs-ujung-kulon-national-park-indonesia/",
-      "stay":"https://everywhs.com/2017/08/05/hotel-bali-de-anyer-carita-indonesia/"
+      "visit":"https://everywhs.com/visits/whs-ujung-kulon-national-park-indonesia/",
+      "stay":"https://everywhs.com/hotels/hotel-bali-de-anyer-carita-indonesia/"
     },
     {  
       "whs":1145,
-      "visit":"https://everywhs.com/2017/11/22/whs-petroglyphs-within-the-archaeological-landscape-of-tamgaly/"
+      "visit":"https://everywhs.com/visits/whs-petroglyphs-within-the-archaeological-landscape-of-tamgaly/"
     },
     {  
       "whs":1102,
-      "visit":"https://everywhs.com/2017/11/18/whs-saryarka-steppe-and-lakes-of-northern-kazakhstan/",
-      "stay":"https://everywhs.com/2017/11/20/strange-places-astana-kazakhstan/"
+      "visit":"https://everywhs.com/visits/whs-saryarka-steppe-and-lakes-of-northern-kazakhstan/",
+      "stay":"https://everywhs.com/hotels/strange-places-astana-kazakhstan/"
     },
     {  
       "whs":1091,
-      "visit":"https://everywhs.com/2018/02/20/whs-complex-of-koguryo-tombs-dprk/"
+      "visit":"https://everywhs.com/visits/whs-complex-of-koguryo-tombs-dprk/"
     },
     {  
       "whs":1278,
-      "visit":"https://everywhs.com/2018/02/18/whs-historic-monuments-and-sites-in-kaesong-drpk/"
+      "visit":"https://everywhs.com/visits/whs-historic-monuments-and-sites-in-kaesong-drpk/"
     },
     {  
       "whs":481,
-      "visit":"https://everywhs.com/2018/01/03/whs-vat-phou-laos/"
+      "visit":"https://everywhs.com/visits/whs-vat-phou-laos/"
     },
     {  
       "whs":1396,
-      "visit":"https://everywhs.com/2017/05/26/whs-lenggong-valley-malaysia/"
+      "visit":"https://everywhs.com/visits/whs-lenggong-valley-malaysia/"
     },
     {  
       "whs":1013,
-      "visit":"https://everywhs.com/2017/08/17/whs-gunung-mulu-national-park-malaysia/",
-      "stay":"https://everywhs.com/2017/08/19/hotel-mulu-marriott-resort-spa-malaysia/"
+      "visit":"https://everywhs.com/visits/whs-gunung-mulu-national-park-malaysia/",
+      "stay":"https://everywhs.com/hotels/hotel-mulu-marriott-resort-spa-malaysia/"
     },
     {  
       "whs":1012,
-      "visit":"https://everywhs.com/2017/08/29/whs-kinabalu-park-sabah-malaysia/",
-      "stay":"https://everywhs.com/2017/08/30/hotel-mile-36-lodge-kinabulu-park-malaysia/"
+      "visit":"https://everywhs.com/visits/whs-kinabalu-park-sabah-malaysia/",
+      "stay":"https://everywhs.com/hotels/hotel-mile-36-lodge-kinabulu-park-malaysia/"
     },
     {  
       "whs":1223,
-      "visit":"https://everywhs.com/2017/05/28/whs-george-town-malaysia/"
+      "visit":"https://everywhs.com/visits/whs-george-town-malaysia/"
     },
     {  
       "whs":1444,
-      "visit":"https://everywhs.com/2018/01/06/whs-pyu-ancient-cities-myanmar/",
-      "stay":"https://everywhs.com/2018/01/08/lucky-dragon-hotel-pyay-myanmar/"
+      "visit":"https://everywhs.com/visits/whs-pyu-ancient-cities-myanmar/",
+      "stay":"https://everywhs.com/hotels/lucky-dragon-hotel-pyay-myanmar/"
     },
     {  
       "whs":120
     },
     {  
       "whs":1386,
-      "visit":"https://everywhs.com/2018/05/13/whs-rock-islands-southern-lagoon-palau/"
+      "visit":"https://everywhs.com/visits/whs-rock-islands-southern-lagoon-palau/"
     },
     {  
       "whs":1483
@@ -1383,11 +1383,11 @@
     },
     {  
       "whs":1260,
-      "visit":"https://www.everywhs.com/2018/10/08/whs-mehmed-pasa-sokolovic-bridge-bosnia/"
+      "visit":"https://www.everywhs.com/visits/whs-mehmed-pasa-sokolovic-bridge-bosnia/"
     },
     {  
       "whs":946,
-      "visit":"https://www.everywhs.com/2018/10/10/whs-old-bridge-area-of-the-old-city-of-mostar/"
+      "visit":"https://www.everywhs.com/visits/whs-old-bridge-area-of-the-old-city-of-mostar/"
     },
     {  
       "whs":1504
@@ -1397,7 +1397,7 @@
     },
     {  
       "whs":810,
-      "visit":"https://www.everywhs.com/2018/10/23/whs-historic-city-of-trogir-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-historic-city-of-trogir-croatia/"
     },
     {  
       "whs":95,
@@ -1405,23 +1405,23 @@
     },
     {  
       "whs":97,
-      "visit":"https://www.everywhs.com/2018/10/20/whs-split-with-the-palace-of-diocletian-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-split-with-the-palace-of-diocletian-croatia/"
     },
     {  
       "whs":98,
-      "visit":"https://www.everywhs.com/2018/10/31/whs-plitvice-lakes-national-park-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-plitvice-lakes-national-park-croatia/"
     },
     {  
       "whs":1240,
-      "visit":"https://www.everywhs.com/2018/10/16/whs-stari-grad-plain-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-stari-grad-plain-croatia/"
     },
     {  
       "whs":963,
-      "visit":"https://www.everywhs.com/2018/10/27/whs-cathedral-of-st-james-in-sibenik-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-cathedral-of-st-james-in-sibenik-croatia/"
     },
     {  
       "whs":1533,
-      "visit":"https://www.everywhs.com/2018/10/27/whs-cathedral-of-st-james-in-sibenik-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-cathedral-of-st-james-in-sibenik-croatia/"
     },
     {  
       "whs":1149
@@ -1497,7 +1497,7 @@
     },
     {  
       "whs":99,
-      "visit":"https://www.everywhs.com/2018/09/17/whs-heritage-of-the-ohrid-region-macedonia/"
+      "visit":"https://www.everywhs.com/visits/whs-heritage-of-the-ohrid-region-macedonia/"
     },
     {  
       "whs":131
@@ -1510,7 +1510,7 @@
     },
     {  
       "whs":100,
-      "visit":"https://www.everywhs.com/2018/10/03/whs-durmitor-national-park-montenegro/"
+      "visit":"https://www.everywhs.com/visits/whs-durmitor-national-park-montenegro/"
     },
     {  
       "whs":125,
@@ -1599,7 +1599,7 @@
     },
     {  
       "whs":724,
-      "visit":"https://www.everywhs.com/2018/09/27/whs-medieval-monuments-in-kosovo/"
+      "visit":"https://www.everywhs.com/visits/whs-medieval-monuments-in-kosovo/"
     },
     {  
       "whs":898
@@ -1699,11 +1699,11 @@
     },
     {  
       "twhs":5695,
-      "visit":"https://everywhs.com/2017/08/22/twhs-dzongs-the-centre-of-temporal-and-religious-authorities-bhutan/"
+      "visit":"https://everywhs.com/visits/twhs-dzongs-the-centre-of-temporal-and-religious-authorities-bhutan/"
     },
     {  
       "twhs":5696,
-      "visit":"https://everywhs.com/2017/08/23/twhs-sacred-sites-associated-with-phajo-drugom-zhigpo-and-his-descendants-bhutan/"
+      "visit":"https://everywhs.com/visits/twhs-sacred-sites-associated-with-phajo-drugom-zhigpo-and-his-descendants-bhutan/"
     },
     {  
       "twhs":1813
@@ -1752,31 +1752,31 @@
     },
     {  
       "twhs":62,
-      "visit":"https://everywhs.com/2017/12/22/twhs-koh-ker-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-koh-ker-cambodia/"
     },
     {  
       "twhs":63,
-      "visit":"https://everywhs.com/2017/12/18/twhs-site-des-kulen-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-site-des-kulen-cambodia/"
     },
     {  
       "twhs":64,
-      "visit":"https://everywhs.com/2017/12/02/twhs-angkor-borei-et-phnom-da-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-angkor-borei-et-phnom-da-cambodia/"
     },
     {  
       "twhs":66,
-      "visit":"https://everywhs.com/2017/12/20/twhs-beng-mealea-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-beng-mealea-cambodia/"
     },
     {  
       "twhs":67,
-      "visit":"https://everywhs.com/2017/12/12/twhs-preah-khan-kompong-svay-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-preah-khan-kompong-svay-cambodia/"
     },
     {  
       "twhs":68,
-      "visit":"https://everywhs.com/2017/12/14/twhs-ensemble-de-banteay-chmar-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-ensemble-de-banteay-chmar-cambodia/"
     },
     {  
       "twhs":69,
-      "visit":"https://everywhs.com/2017/12/06/twhs-ensemble-de-banteay-prei-nokor-cambodia/"
+      "visit":"https://everywhs.com/visits/twhs-ensemble-de-banteay-prei-nokor-cambodia/"
     },
     {  
       "twhs":6341
@@ -1795,22 +1795,22 @@
     },
     {  
       "twhs":1624,
-      "visit":"https://everywhs.com/2018/01/24/twhs-jinfushan-scenic-spot-china/"
+      "visit":"https://everywhs.com/visits/twhs-jinfushan-scenic-spot-china/"
     },
     {  
       "twhs":5324,
-      "visit":"https://everywhs.com/2018/03/08/twhs-city-walls-of-the-ming-and-qing-dynasties-china/"
+      "visit":"https://everywhs.com/visits/twhs-city-walls-of-the-ming-and-qing-dynasties-china/"
     },
     {  
       "twhs":5335
     },
     {  
       "twhs":5341,
-      "visit":"https://everywhs.com/2018/01/26/twhs-baiheliang-ancient-hydrological-inscription-china/"
+      "visit":"https://everywhs.com/visits/twhs-baiheliang-ancient-hydrological-inscription-china/"
     },
     {  
       "twhs":5802,
-      "visit":"https://everywhs.com/2018/04/24/twhs-the-central-axis-of-beijing-china/"
+      "visit":"https://everywhs.com/visits/twhs-the-central-axis-of-beijing-china/"
     },
     {  
       "twhs":1634
@@ -1853,7 +1853,7 @@
     },
     {  
       "twhs":2015,
-      "visit":"https://www.everywhs.com/2018/10/20/whs-split-with-the-palace-of-diocletian-croatia/"
+      "visit":"https://www.everywhs.com/visits/whs-split-with-the-palace-of-diocletian-croatia/"
     },
     {  
       "twhs":1802
@@ -2112,32 +2112,32 @@
     },
     {  
       "twhs":6206,
-      "visit":"https://everywhs.com/2017/11/05/twhs-historical-city-centre-of-yogyakarta/"
+      "visit":"https://everywhs.com/visits/twhs-historical-city-centre-of-yogyakarta/"
     },
     {  
       "twhs":5464,
-      "visit":"https://everywhs.com/2017/10/26/twhs-muara-takus-compound-site/"
+      "visit":"https://everywhs.com/visits/twhs-muara-takus-compound-site/"
     },
     {  
       "twhs":5467,
-      "visit":"https://everywhs.com/2017/09/23/twhs-prehistoric-cave-sites-in-maros-pangkep-indonesia/"
+      "visit":"https://everywhs.com/visits/twhs-prehistoric-cave-sites-in-maros-pangkep-indonesia/"
     },
     {  
       "twhs":6057,
-      "visit":"https://everywhs.com/2017/10/22/twhs-sawahlunto-old-coal-mining-town/"
+      "visit":"https://everywhs.com/visits/twhs-sawahlunto-old-coal-mining-town/"
     },
     {  
       "twhs":6011,
-      "visit":"https://everywhs.com/2017/10/30/twhs-semarang-old-town/"
+      "visit":"https://everywhs.com/visits/twhs-semarang-old-town/"
     },
     {  
       "twhs":6010,
-      "visit":"https://everywhs.com/2017/08/08/twhs-old-town-of-jakarta-indonesia/",
-      "stay":"https://everywhs.com/2017/08/09/hotel-mercure-jakarta-sabang-indonesia/"
+      "visit":"https://everywhs.com/visits/twhs-old-town-of-jakarta-indonesia/",
+      "stay":"https://everywhs.com/hotels/hotel-mercure-jakarta-sabang-indonesia/"
     },
     {  
       "twhs":6059,
-      "visit":"https://everywhs.com/2017/10/24/twhs-traditional-settlement-at-nagari-sijunjung/"
+      "visit":"https://everywhs.com/visits/twhs-traditional-settlement-at-nagari-sijunjung/"
     },
     {  
       "twhs":5527
@@ -2258,15 +2258,15 @@
     },
     {  
       "twhs":1681,
-      "visit":"https://everywhs.com/2017/11/07/twhs-northern-tyan-shan-kazakhstan/"
+      "visit":"https://everywhs.com/visits/twhs-northern-tyan-shan-kazakhstan/"
     },
     {  
       "twhs":5754,
-      "visit":"https://everywhs.com/2017/11/24/twhs-silk-road-kazakhstan/"
+      "visit":"https://everywhs.com/visits/twhs-silk-road-kazakhstan/"
     },
     {  
       "twhs":1424,
-      "visit":"https://everywhs.com/2018/02/24/twhs-historical-relics-in-pyongyang-dprk/"
+      "visit":"https://everywhs.com/visits/twhs-historical-relics-in-pyongyang-dprk/"
     },
     {  
       "twhs":1346
@@ -2312,16 +2312,16 @@
     },
     {  
       "twhs":5927,
-      "visit":"https://everywhs.com/2017/05/21/twhs-taman-negara-malaysia/",
-      "stay":"https://everywhs.com/2017/05/22/hotel-gm-villa-gua-musang-malaysia/"
+      "visit":"https://everywhs.com/visits/twhs-taman-negara-malaysia/",
+      "stay":"https://everywhs.com/hotels/hotel-gm-villa-gua-musang-malaysia/"
     },
     {  
       "twhs":6174,
-      "visit":"https://everywhs.com/2017/11/29/twhs-frim-selangor-forest-park-malaysia/"
+      "visit":"https://everywhs.com/visits/twhs-frim-selangor-forest-park-malaysia/"
     },
     {  
       "twhs":6176,
-      "visit":"https://everywhs.com/2017/05/24/twhs-royal-belum-state-park-malaysia/"
+      "visit":"https://everywhs.com/visits/twhs-royal-belum-state-park-malaysia/"
     },
     {  
       "twhs":981
@@ -2397,19 +2397,19 @@
     },
     {  
       "twhs":1930,
-      "visit":"https://everywhs.com/2018/05/28/twhs-ouballang-ra-ngebedech-palau/"
+      "visit":"https://everywhs.com/visits/twhs-ouballang-ra-ngebedech-palau/"
     },
     {  
       "twhs":1931,
-      "visit":"https://everywhs.com/2018/05/23/twhs-imeong-conservation-area-palau/"
+      "visit":"https://everywhs.com/visits/twhs-imeong-conservation-area-palau/"
     },
     {  
       "twhs":1932,
-      "visit":"https://everywhs.com/2018/06/04/twhs-yapease-quarry-sites-palau/"
+      "visit":"https://everywhs.com/visits/twhs-yapease-quarry-sites-palau/"
     },
     {  
       "twhs":1933,
-      "visit":"https://everywhs.com/2018/05/19/twhs-tet-el-bad-palau/"
+      "visit":"https://everywhs.com/visits/twhs-tet-el-bad-palau/"
     },
     {  
       "twhs":5706
@@ -2440,35 +2440,35 @@
     },
     {  
       "twhs":2069,
-      "visit":"https://everywhs.com/2018/07/18/twhs-paleolithic-archaeological-sites-in-cagayan-valley-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-paleolithic-archaeological-sites-in-cagayan-valley-philippines/"
     },
     {  
       "twhs":2070,
-      "visit":"https://everywhs.com/2018/07/29/twhs-kabayan-mummy-burial-caves-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-kabayan-mummy-burial-caves-philippines/"
     },
     {  
       "twhs":3860,
-      "visit":"https://everywhs.com/2018/08/26/twhs-baroque-churches-of-the-philippines-extension"
+      "visit":"https://everywhs.com/visits/twhs-baroque-churches-of-the-philippines-extension"
     },
     {  
       "twhs":5018,
-      "visit":"https://everywhs.com/2018/08/18/twhs-petroglyphs-and-petrographs-of-the-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-petroglyphs-and-petrographs-of-the-philippines/"
     },
     {  
       "twhs":5019,
-      "visit":"https://everywhs.com/2018/07/23/twhs-neolithic-shell-midden-sites-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-neolithic-shell-midden-sites-philippines/"
     },
     {  
       "twhs":5024,
-      "visit":"https://everywhs.com/2018/07/02/twhs-chocolate-hills-natural-monument-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-chocolate-hills-natural-monument-philippines/"
     },
     {  
       "twhs":5030,
-      "visit":"https://everywhs.com/2018/08/05/twhs-mt-pulag-national-park-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-mt-pulag-national-park-philippines/"
     },
     {  
       "twhs":5034,
-      "visit":"https://everywhs.com/2018/07/05/twhs-el-nido-taytay-managed-resource-protected-area-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-el-nido-taytay-managed-resource-protected-area-philippines/"
     },
     {  
       "twhs":6212
@@ -2514,7 +2514,7 @@
     },
     {  
       "twhs":1185,
-      "visit":"https://everywhs.com/2017/11/14/twhs-rostov-kremlin/"
+      "visit":"https://everywhs.com/visits/twhs-rostov-kremlin/"
     },
     {  
       "twhs":1116
@@ -2662,7 +2662,7 @@
     },
     {  
       "twhs":6007,
-      "visit":"https://everywhs.com/2018/06/25/twhs-mayon-volcano-natural-park-philippines/"
+      "visit":"https://everywhs.com/visits/twhs-mayon-volcano-natural-park-philippines/"
     },
     {
        "twhs":5593

@@ -1,11 +1,11 @@
 [
     {
         "iso": "AF",
-        "file": "https://everywhs.com/2017/08/15/country-file-afghanistan/"
+        "file": "https://everywhs.com/info/country-file-afghanistan/"
     }, 
     {
         "iso": "AL",
-        "file": "https://everywhs.com/2018/09/03/country-file-albania/"
+        "file": "https://everywhs.com/info/country-file-albania/"
     }, 
     {
         "name": "Algeria", 
@@ -33,7 +33,7 @@
     }, 
     {
         "iso": "AU", 
-        "file": "https://everywhs.com/2018/01/13/country-file-australia/"
+        "file": "https://everywhs.com/info/country-file-australia/"
     }, 
     {
         "name": "Austria",
@@ -77,7 +77,7 @@
     }, 
     {
         "iso": "BT", 
-        "file": "https://everywhs.com/2017/08/21/country-file-bhutan/"
+        "file": "https://everywhs.com/info/country-file-bhutan/"
     }, 
     {
         "name": "Bolivia (Plurinational State of) (1)",
@@ -85,7 +85,7 @@
     }, 
     {
         "iso": "BA",
-        "file": "https://www.everywhs.com/2018/10/05/country-file-bosnia-and-herzegovina/"
+        "file": "https://www.everywhs.com/info/country-file-bosnia-and-herzegovina/"
     }, 
     {
         "name": "Botswana", 
@@ -97,7 +97,7 @@
     }, 
     {
         "iso": "BN", 
-        "file": "https://everywhs.com/2017/08/13/country-file-brunei/"
+        "file": "https://everywhs.com/info/country-file-brunei/"
     }, 
     {
         "name": "Bulgaria", 
@@ -117,7 +117,7 @@
     }, 
     {
         "iso": "KH", 
-        "file": "https://everywhs.com/2017/12/01/country-file-cambodia/"
+        "file": "https://everywhs.com/info/country-file-cambodia/"
     }, 
     {
         "name": "Cameroon",
@@ -141,7 +141,7 @@
     }, 
     {
         "iso": "CN", 
-        "file": "https://everywhs.com/2018/01/21/country-file-china/"
+        "file": "https://everywhs.com/info/country-file-china/"
     }, 
     {
         "name": "Colombia",
@@ -157,7 +157,7 @@
     }, 
     {
         "iso": "CK", 
-        "file": "https://everywhs.com/2018/01/16/country-file-cook-islands/"
+        "file": "https://everywhs.com/info/country-file-cook-islands/"
     }, 
     {
         "name": "Costa Rica",
@@ -169,7 +169,7 @@
     }, 
     {
         "iso": "HR",
-        "file": "https://www.everywhs.com/2018/10/14/country-file-croatia/"
+        "file": "https://www.everywhs.com/info/country-file-croatia/"
     },
     {
         "name": "Cuba",
@@ -185,7 +185,7 @@
     }, 
     {
         "iso": "KP", 
-        "file": "https://everywhs.com/2018/02/17/country-file-north-korea/"
+        "file": "https://everywhs.com/info/country-file-north-korea/"
     }, 
     {
         "name": "Democratic Republic of the Congo",
@@ -245,7 +245,7 @@
     }, 
     {
         "iso": "FR", 
-        "file": "https://everywhs.com/2018/01/15/country-file-france/"
+        "file": "https://everywhs.com/info/country-file-france/"
     }, 
     {
         "name": "Gabon",
@@ -293,7 +293,7 @@
     }, 
     {
         "iso": "HT", 
-        "file": "https://everywhs.com/2018/01/27/country-file-haiti/"
+        "file": "https://everywhs.com/info/country-file-haiti/"
     }, 
     {
         "name": "Honduras", 
@@ -313,7 +313,7 @@
     }, 
     {
         "iso": "ID", 
-        "file": "https://everywhs.com/2017/08/01/country-file-indonesia/"
+        "file": "https://everywhs.com/info/country-file-indonesia/"
     }, 
     {
         "name": "Iran (Islamic Republic of)", 
@@ -349,7 +349,7 @@
     }, 
     {
         "iso": "KZ", 
-        "file": "https://everywhs.com/2017/09/17/country-file-kazakhstan/"
+        "file": "https://everywhs.com/info/country-file-kazakhstan/"
     }, 
     {
         "name": "Kenya", 
@@ -365,11 +365,11 @@
     }, 
     {
         "iso": "KG", 
-        "file": "https://everywhs.com/2017/09/21/country-file-kyrgyzstan/"
+        "file": "https://everywhs.com/info/country-file-kyrgyzstan/"
     }, 
     {
         "iso": "LA", 
-        "file": "https://everywhs.com/2018/01/02/country-file-laos/"
+        "file": "https://everywhs.com/info/country-file-laos/"
     }, 
     {
         "name": "Latvia", 
@@ -409,7 +409,7 @@
     }, 
     {
         "iso": "MY", 
-        "file": "https://everywhs.com/2017/05/19/country-file-malaysia/"
+        "file": "https://everywhs.com/info/country-file-malaysia/"
     }, 
     {
         "name": "Maldives", 
@@ -453,7 +453,7 @@
     }, 
     {
         "iso": "ME",
-        "file": "https://www.everywhs.com/2018/10/01/country-file-montenegro/"
+        "file": "https://www.everywhs.com/info/country-file-montenegro/"
     }, 
     {
         "name": "Morocco", 
@@ -465,7 +465,7 @@
     }, 
     {
         "iso": "MM", 
-        "file": "https://everywhs.com/2018/01/05/country-file-myanmar/"
+        "file": "https://everywhs.com/info/country-file-myanmar/"
     }, 
     {
         "name": "Namibia", 
@@ -485,7 +485,7 @@
     }, 
     {
         "iso": "NZ", 
-        "file": "https://everywhs.com/2018/01/14/country-file-new-zealand/"
+        "file": "https://everywhs.com/info/country-file-new-zealand/"
     }, 
     {
         "name": "Nicaragua", 
@@ -501,7 +501,7 @@
     }, 
     {
         "iso": "NU", 
-        "file": "https://everywhs.com/2018/01/17/country-file-niue/"
+        "file": "https://everywhs.com/info/country-file-niue/"
     }, 
     {
         "name": "Norway", 
@@ -513,11 +513,11 @@
     }, 
     {
         "iso": "PK", 
-        "file": "https://everywhs.com/2017/10/08/country-file-pakistan/"
+        "file": "https://everywhs.com/info/country-file-pakistan/"
     }, 
     {
         "iso": "PW", 
-        "file": "https://everywhs.com/2018/03/05/country-file-palau/"
+        "file": "https://everywhs.com/info/country-file-palau/"
     }, 
     {
         "name": "Palestine", 
@@ -541,7 +541,7 @@
     }, 
     {
         "iso": "PH", 
-        "file": "https://everywhs.com/2018/03/16/country-file-philippines/"
+        "file": "https://everywhs.com/info/country-file-philippines/"
     }, 
     {
         "name": "Poland", 
@@ -557,7 +557,7 @@
     }, 
     {
         "iso": "KR", 
-        "file": "https://everywhs.com/2018/02/15/country-file-south-korea/"
+        "file": "https://everywhs.com/info/country-file-south-korea/"
     }, 
     {
         "name": "Republic of Moldova", 
@@ -569,7 +569,7 @@
     }, 
     {
         "iso": "RU", 
-        "file": "https://everywhs.com/2017/09/11/country-file-russia/"
+        "file": "https://everywhs.com/info/country-file-russia/"
     }, 
     {
         "name": "Rwanda", 
@@ -609,7 +609,7 @@
     }, 
     {
         "iso": "RS",
-        "file": "https://www.everywhs.com/2018/09/20/country-file-serbia/"
+        "file": "https://www.everywhs.com/info/country-file-serbia/"
     }, 
     {
         "name": "Seychelles", 
@@ -621,7 +621,7 @@
     }, 
     {
         "iso": "SG", 
-        "file": "https://everywhs.com/2018/01/12/country-file-singapore/"
+        "file": "https://everywhs.com/info/country-file-singapore/"
     }, 
     {
         "name": "Slovakia", 
@@ -681,7 +681,7 @@
     }, 
     {
         "iso": "TJ", 
-        "file": "https://everywhs.com/2017/10/06/country-file-tajikistan/"
+        "file": "https://everywhs.com/info/country-file-tajikistan/"
     }, 
     {
         "name": "Thailand", 
@@ -689,7 +689,7 @@
     }, 
     {
         "iso": "MK",
-        "file": "https://everywhs.com/2018/09/13/country-file-macedonia/"
+        "file": "https://everywhs.com/info/country-file-macedonia/"
     }, 
     {
         "name": "Timor-Leste", 
@@ -717,7 +717,7 @@
     }, 
     {
         "iso": "TM", 
-        "file": "https://everywhs.com/2017/09/30/country-file-turkmenistan/"
+        "file": "https://everywhs.com/info/country-file-turkmenistan/"
     }, 
     {
         "name": "Tuvalu", 
@@ -753,7 +753,7 @@
     }, 
     {
         "iso": "UZ", 
-        "file": "https://everywhs.com/2017/09/27/country-file-uzbekistan/"
+        "file": "https://everywhs.com/info/country-file-uzbekistan/"
     }, 
     {
         "name": "Vanuatu", 
@@ -765,7 +765,7 @@
     }, 
     {
         "iso": "VN", 
-        "file": "https://everywhs.com/2017/06/04/country-file-vietnam/"
+        "file": "https://everywhs.com/info/country-file-vietnam/"
     }, 
     {
         "name": "Yemen", 
