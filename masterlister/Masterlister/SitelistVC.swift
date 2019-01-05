@@ -272,8 +272,8 @@ final class SitelistVC: NSViewController {
     }
 
     private func writeFooter(for type: Document) {
-        assert(whsVisited.count == 485, "Should be 485 WHS visited not \(whsVisited.count) (2018.07.08)")
-        assert(twhsVisited.count == 338, "Should be 338 TWHS visited not \(twhsVisited.count) (2018.07.21)")
+        assert(whsVisited.count == 492, "Should be 492 WHS visited not \(whsVisited.count) (2019.01.05)")
+        assert(twhsVisited.count == 340, "Should be 340 TWHS visited not \(twhsVisited.count) (2019.01.05)")
         // swiftlint:disable:next line_length
         let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=07%2F07%2F2018&date_end=&order=year"
 

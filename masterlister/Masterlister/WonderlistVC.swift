@@ -199,7 +199,7 @@ final class WonderlistVC: NSViewController {
 
     func writeFooter(for type: Document) {
         assert(wondersVisited == 16, "Should be 16 wonders visited (2018.05.05)")
-        assert(finalistsVisited == 40, "Should be 40 finalists visited (2018.05.05)")
+        assert(finalistsVisited == 42, "Should be 42 finalists visited (2019.01.05)")
 
         let wondersPercent = String(format: "%.1f", Float(wondersVisited) / Float(wondersCount) * 100)
         let finalistsPercent = String(format: "%.1f", Float(finalistsVisited) / Float(finalistsCount) * 100)
