@@ -701,7 +701,8 @@
       "whs":1068
     },
     {  
-      "whs":1200
+      "whs":1200,
+      "visit":"https://www.everywhs.com/visits/whs-syracuse-and-the-rocky-necropolis-of-pantalica-italy/"
     },
     {  
       "whs":1237
@@ -1502,13 +1503,16 @@
       "visit":"https://www.everywhs.com/visits/whs-heritage-of-the-ohrid-region-macedonia/"
     },
     {  
-      "whs":131
+      "whs":131,
+      "visit":"https://www.everywhs.com/visits/whs-city-of-valetta-malta/"
     },
     {  
-      "whs":130
+      "whs":130,
+      "visit":"https://www.everywhs.com/visits/whs-hal-saflieni-hypogeum-malta/"
     },
     {  
-      "whs":132
+      "whs":132,
+      "visit":"https://www.everywhs.com/visits/whs-megalithic-temples-of-malta/"
     },
     {  
       "whs":100,
@@ -2567,7 +2571,8 @@
       "twhs":6169
     },
     {  
-      "twhs":1024
+      "twhs":1024,
+      "visit":"https://www.everywhs.com/visits/whs-late-baroque-towns-of-the-val-di-noto-italy/"
     },
     {  
       "twhs":6285
