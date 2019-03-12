@@ -1,12 +1,19 @@
 INSTRUCTIONS
 ============
 
+1A. Adding Dated Updates:
+
+Hit last checked link, add listed items manually to .csv
+
+1B. Matching From Scratch:
 
 On Tentative Lists By Country page
 http://whc.unesco.org/en/tentativelists/?action=listtentative&order=states
 
 manually match up with lines in tentative.csv, reverse filing order should match
 (while doing that, in visits.json switch twhs->whs numbers or remove if an extension)
+
+2. Export JSON
 
 csv2json -d tentative.csv tentative.json
 

@@ -60,7 +60,7 @@ struct TWHS: Codable {
         }
 
         // Should match http://whc.unesco.org/en/tentativelists/
-        assert(array.count == 1_695, "Should be 1695 TWHS on 2018.07.08")
+        assert(array.count == 1_716, "Should be 1716 TWHS on 2019.03.12")
 
         return array
     }
