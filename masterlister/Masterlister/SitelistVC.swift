@@ -84,6 +84,7 @@ final class SitelistVC: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //generate(for: .html)
         generate(for: .wordpress)
     }
 
@@ -114,11 +115,9 @@ final class SitelistVC: NSViewController {
         }
 
         let textHeader = NSAttributedString(string: """
-            <p><strong>The UNESCO World Heritage Site Master Sitelist</strong></p>
-
-            <p><small>Inscribed properties are in plain text<br />
-            <i>Tentative properties are in italic text</i></small></p>
-            \n
+            <p><strong>The UNESCO World Heritage Site Master Sitelist</strong><br>
+            <small>Inscribed properties are in plain text<br>
+            <i>Tentative properties are in italic text</i></small></p>\n
             """)
         output.textStorage?.append(textHeader)
     }
@@ -166,14 +165,13 @@ final class SitelistVC: NSViewController {
                 fileLink = " — <a href=\"\(file)\">Country File</a>"
             }
             // swiftlint:disable:next line_length
-            let countryStart = NSAttributedString(string: "<p><strong>\(unescoLink)</strong> <small>(\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)</small><br />\n")
+            let countryStart = NSAttributedString(string: "<p><strong>\(unescoLink)</strong> <small>(\(whsSites.count) WHS, \(twhsSites.count) TWHS)\(fileLink)</small><br>\n")
             output.textStorage?.append(countryStart)
 
             writeSites(in: country, whs: whsSites, twhs: twhsSites)
 
             let countryEnd = NSAttributedString(string: """
                 </p>
-                \n
                 """)
             output.textStorage?.append(countryEnd)
         }
@@ -184,7 +182,7 @@ final class SitelistVC: NSViewController {
                             twhs twhsSites: [TWHS]) {
         guard !whsSites.isEmpty || !twhsSites.isEmpty else {
             let countryStart = NSAttributedString(string: """
-                <i><small>no inscribed or tentative sites yet!</small></i><br />\n
+                <i><small>no inscribed or tentative sites yet!</small></i><br>\n
                 """)
             output.textStorage?.append(countryStart)
             return
@@ -234,7 +232,7 @@ final class SitelistVC: NSViewController {
             }
         }
 
-        let whsLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br />\n")
+        let whsLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br>\n")
         return whsLine
     }
 
@@ -267,15 +265,15 @@ final class SitelistVC: NSViewController {
             }
         }
 
-        let twhsLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br />\n")
+        let twhsLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br>\n")
         return twhsLine
     }
 
     private func writeFooter(for type: Document) {
-        assert(whsVisited.count == 492, "Should be 492 WHS visited not \(whsVisited.count) (2019.01.05)")
-        assert(twhsVisited.count == 340, "Should be 340 TWHS visited not \(twhsVisited.count) (2019.01.05)")
+        assert(whsVisited.count == 492, "Should be 492 WHS visited not \(whsVisited.count) (2019.03.12)")
+        assert(twhsVisited.count == 341, "Should be 341 TWHS visited not \(twhsVisited.count) (2019.03.12)")
         // swiftlint:disable:next line_length
-        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=07%2F07%2F2018&date_end=&order=year"
+        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=11%2F03%2F2018&date_end=&order=year"
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
         let twhsPercent = String(format: "%.1f", Float(twhsVisited.count) / Float(tentatives.count) * 100)
@@ -286,9 +284,9 @@ final class SitelistVC: NSViewController {
         let textFooter = NSAttributedString(string: """
             <p><small>WHS: \(whsVisited.count)/\(sites.count) \
             (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) \
-            (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)<br />\
-            <i>Last compiled 2018.07.08  — <a href=\"\(updatesURL)\">Check for updates</a></i>\
-            </small></p>\n
+            (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)<br>
+            <i>Last compiled 2019.03.12 — <a href=\"\(updatesURL)\">Check for updates</a></i>\
+            </small></p>
             """)
         output.textStorage?.append(textFooter)
 

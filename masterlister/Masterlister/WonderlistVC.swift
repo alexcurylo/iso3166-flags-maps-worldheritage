@@ -126,7 +126,7 @@ final class WonderlistVC: NSViewController {
         let textHeader = NSAttributedString(string: """
             <p><strong>The <a href="https://new7wonders.com">New7Wonders</a> Master Wonderlist</strong></p>
 
-            <p><small>Wonders are in plain text<br />
+            <p><small>Wonders are in plain text<br>
             <i>Finalists are in italic text</i></small></p>
             \n
             """)
@@ -189,7 +189,7 @@ final class WonderlistVC: NSViewController {
                     blogLinks = "<small>\(visitLink)\(stayLink)\(eatLink)</small>"
                 }
             }
-            let wonderLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br />\n")
+            let wonderLine = NSAttributedString(string: "\(mark) \(link)\(blogLinks)<br>\n")
             output.textStorage?.append(wonderLine)
         }
 
