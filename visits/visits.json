@@ -2683,7 +2683,8 @@
         "whs":154
     },
     {
-        "whs":630
+        "whs":630,
+        "visit":"https://www.everywhs.com/visits/whs-fraser-island-australia/"
     },
     {
         "whs":917
@@ -2698,7 +2699,8 @@
         "whs":1306
     },
     {
-        "twhs":5480
+        "twhs":5480,
+        "visit":"https://www.everywhs.com/visits/twhs-great-sandy-world-heritage-area-australia/"
     },
     {
         "twhs":5541
