@@ -12,5 +12,4 @@ final class MasterlisterTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
 }

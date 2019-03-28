@@ -14,5 +14,4 @@ final class MasterlisterUITests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
 }

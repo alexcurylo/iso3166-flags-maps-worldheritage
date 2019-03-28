@@ -117,5 +117,4 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         // If we got here, it is time to quit.
         return .terminateNow
     }
-
 }
