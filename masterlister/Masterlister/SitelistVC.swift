@@ -29,6 +29,8 @@ final class SitelistVC: NSViewController {
     let sites = WHS.sitelist
     let tentatives = TWHS.sitelist
 
+    let mtpChecker = MTPChecker()
+
     private lazy var visits: [Visit] = {
         let path = Bundle.main.path(forResource: "visits", ofType: "json")
         var array: [Visit] = []
@@ -212,6 +214,7 @@ final class SitelistVC: NSViewController {
         var blogLinks = ""
         if let visited = whsVisits.first(where: { $0.whs == whs.siteID }) {
             whsVisited.insert(whs.siteID)
+            mtpChecker.check(whs: whs.siteID)
 
             mark = Visited.yes.rawValue
 
@@ -272,6 +275,7 @@ final class SitelistVC: NSViewController {
     private func writeFooter(for type: Document) {
         assert(whsVisited.count == 492, "Should be 492 WHS visited not \(whsVisited.count) (2019.03.12)")
         assert(twhsVisited.count == 342, "Should be 342 TWHS visited not \(twhsVisited.count) (2019.04.03)")
+        mtpChecker.checkMissing()
         // swiftlint:disable:next line_length
         let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=11%2F03%2F2018&date_end=&order=year"
 
