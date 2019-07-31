@@ -50,7 +50,7 @@ final class SitelistVC: NSViewController {
         let ids = array.compactMap { $0.whs }
         let duplicates = Array(Set(ids.filter { (i: Int) in ids.filter { $0 == i }.count > 1 }))
         assert(duplicates.isEmpty, "Should not have duplicate WHS visits \(duplicates)")
-        let wrong = Set(ids).subtracting(Set(sites.map { $0.siteID }))
+        let wrong = Set(ids).subtracting(Set(sites.map { $0.siteId }))
         assert(wrong.isEmpty, "Should not have wrong WHS visits \(wrong)")
         return array
     }()
@@ -60,7 +60,7 @@ final class SitelistVC: NSViewController {
         let ids = visits.compactMap { $0.twhs }
         let duplicates = Array(Set(ids.filter { (i: Int) in ids.filter { $0 == i }.count > 1 }))
         assert(duplicates.isEmpty, "Should not have duplicate TWHS visits \(duplicates)")
-        let wrong = Set(ids).subtracting(Set(tentatives.map { $0.siteID }))
+        let wrong = Set(ids).subtracting(Set(tentatives.map { $0.siteId }))
         assert(wrong.isEmpty, "Should not have wrong TWHS visits \(wrong)")
         return array
     }()
@@ -207,14 +207,14 @@ final class SitelistVC: NSViewController {
 
     private func whsLine(whs: WHS) -> NSAttributedString {
         let link = """
-        <a href="http://whc.unesco.org/en/list/\(whs.siteID)">\(whs.name)</a>
+        <a href="http://whc.unesco.org/en/list/\(whs.siteId)">\(whs.name)</a>
         """
 
         var mark = Visited.no.rawValue
         var blogLinks = ""
-        if let visited = whsVisits.first(where: { $0.whs == whs.siteID }) {
-            whsVisited.insert(whs.siteID)
-            mtpChecker.check(whs: whs.siteID)
+        if let visited = whsVisits.first(where: { $0.whs == whs.siteId }) {
+            whsVisited.insert(whs.siteId)
+            mtpChecker.check(whs: whs.siteId)
 
             mark = Visited.yes.rawValue
 
@@ -241,13 +241,13 @@ final class SitelistVC: NSViewController {
 
     private func twhsLine(twhs: TWHS) -> NSAttributedString {
         let link = """
-        <a href="http://whc.unesco.org/en/tentativelists/\(twhs.siteID)">\(twhs.name)</a>
+        <a href="http://whc.unesco.org/en/tentativelists/\(twhs.siteId)">\(twhs.name)</a>
         """
 
         var mark = Visited.no.rawValue
         var blogLinks = ""
-        if let visited = twhsVisits.first(where: { $0.twhs == twhs.siteID }) {
-            twhsVisited.insert(twhs.siteID)
+        if let visited = twhsVisits.first(where: { $0.twhs == twhs.siteId }) {
+            twhsVisited.insert(twhs.siteId)
 
             mark = Visited.yes.rawValue
 
@@ -274,7 +274,8 @@ final class SitelistVC: NSViewController {
 
     private func writeFooter(for type: Document) {
         mtpChecker.checkMissing()
-        assert(whsVisited.count == 496, "Should be 496 WHS visited not \(whsVisited.count) (2019.04.27)")
+        assert(whsVisited.count == 508, "Should be 508 WHS visited not \(whsVisited.count) (2019.07.31)")
+        // TODO: Remove inscribed, add new ones, from post-Shanghai 355
         assert(twhsVisited.count == 351, "Should be 351 TWHS visited not \(twhsVisited.count) (2019.04.27)")
         // swiftlint:disable:next line_length
         let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=11%2F03%2F2018&date_end=&order=year"

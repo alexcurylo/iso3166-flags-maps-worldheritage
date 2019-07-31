@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C095B5322F035140017151E /* whc-en.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8C095B5222F035140017151E /* whc-en.xml */; };
 		8C5C6BE31F205525003DB6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE21F205525003DB6A3 /* AppDelegate.swift */; };
 		8C5C6BE51F205525003DB6A3 /* SitelistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE41F205525003DB6A3 /* SitelistVC.swift */; };
 		8C5C6BE81F205525003DB6A3 /* Masterlister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BE61F205525003DB6A3 /* Masterlister.xcdatamodeld */; };
@@ -15,12 +16,17 @@
 		8C5C6BF91F205525003DB6A3 /* MasterlisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6BF81F205525003DB6A3 /* MasterlisterTests.swift */; };
 		8C5C6C041F205525003DB6A3 /* MasterlisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */; };
 		8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9DDEA209FE92D00DA86FA /* Document.swift */; };
+		8CC0C28022F11BD70085C030 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C27E22F11BD70085C030 /* Cartfile */; };
+		8CC0C28122F11BD70085C030 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C27F22F11BD70085C030 /* Cartfile.resolved */; };
+		8CC0C28A22F11E170085C030 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC0C28922F11E150085C030 /* SWXMLHash.framework */; };
+		8CC0C28B22F11E170085C030 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC0C28922F11E150085C030 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC0C29122F11EAF0085C030 /* SWXMLHash.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */; };
+		8CC0C29222F11ED10085C030 /* SWXMLHash.framework.dSYM in Copy Carthage dSYMs */ = {isa = PBXBuildFile; fileRef = 8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */; };
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 		FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217920F0D82400DFCD55 /* WHS.swift */; };
 		FA91217E20F0FCEC00DFCD55 /* tentative.json in Resources */ = {isa = PBXBuildFile; fileRef = FA91217D20F0FCEC00DFCD55 /* tentative.json */; };
 		FA91218020F0FD6C00DFCD55 /* TWHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217F20F0FD6C00DFCD55 /* TWHS.swift */; };
-		FAAE29C720F0D31000B43BA9 /* whc-en.json in Resources */ = {isa = PBXBuildFile; fileRef = FAAE29C620F0D31000B43BA9 /* whc-en.json */; };
 		FAB344DA226932B500852B98 /* MTPChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB344D9226932B500852B98 /* MTPChecker.swift */; };
 		FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */; };
 		FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31BE209D8E2D006E55ED /* new7wonders.json */; };
@@ -45,7 +51,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8CC0C28C22F11E170085C030 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8CC0C28B22F11E170085C030 /* SWXMLHash.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CC0C28D22F11E790085C030 /* Copy Carthage dSYMs */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				8CC0C29222F11ED10085C030 /* SWXMLHash.framework.dSYM in Copy Carthage dSYMs */,
+			);
+			name = "Copy Carthage dSYMs";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8C095B5222F035140017151E /* whc-en.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "whc-en.xml"; path = "../../worldheritage/inscribed/whc-en.xml"; sourceTree = "<group>"; };
 		8C5C6BDF1F205525003DB6A3 /* Masterlister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterlister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5C6BE21F205525003DB6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5C6BE41F205525003DB6A3 /* SitelistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitelistVC.swift; sourceTree = "<group>"; };
@@ -61,6 +93,10 @@
 		8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterlisterUITests.swift; sourceTree = "<group>"; };
 		8C5C6C051F205525003DB6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CA9DDEA209FE92D00DA86FA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		8CC0C27E22F11BD70085C030 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = Masterlister/Cartfile; sourceTree = "<group>"; };
+		8CC0C27F22F11BD70085C030 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.resolved; path = Masterlister/Cartfile.resolved; sourceTree = "<group>"; };
+		8CC0C28922F11E150085C030 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Masterlister/Carthage/Build/Mac/SWXMLHash.framework; sourceTree = "<group>"; };
+		8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SWXMLHash.framework.dSYM; path = Masterlister/Carthage/Build/Mac/SWXMLHash.framework.dSYM; sourceTree = "<group>"; };
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 		FA3864FC214CA1EE00773554 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -68,7 +104,6 @@
 		FA91217920F0D82400DFCD55 /* WHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHS.swift; sourceTree = "<group>"; };
 		FA91217D20F0FCEC00DFCD55 /* tentative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tentative.json; path = ../../worldheritage/tentative/tentative.json; sourceTree = "<group>"; };
 		FA91217F20F0FD6C00DFCD55 /* TWHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWHS.swift; sourceTree = "<group>"; };
-		FAAE29C620F0D31000B43BA9 /* whc-en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "whc-en.json"; path = "../../worldheritage/inscribed/whc-en.json"; sourceTree = "<group>"; };
 		FAB344D9226932B500852B98 /* MTPChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPChecker.swift; sourceTree = "<group>"; };
 		FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonderlistVC.swift; sourceTree = "<group>"; };
 		FACF31BE209D8E2D006E55ED /* new7wonders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = new7wonders.json; path = ../../wonders/new7wonders.json; sourceTree = "<group>"; };
@@ -81,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC0C28A22F11E170085C030 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +144,7 @@
 				8C5C6BF71F205525003DB6A3 /* MasterlisterTests */,
 				8C5C6C021F205525003DB6A3 /* MasterlisterUITests */,
 				FA3864FB214CA1D200773554 /* metadata */,
+				8CC0C28222F11C3B0085C030 /* Libraries */,
 				8C5C6BE01F205525003DB6A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,17 +170,17 @@
 				FA91217920F0D82400DFCD55 /* WHS.swift */,
 				FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */,
 				8C5C6BE91F205525003DB6A3 /* Assets.xcassets */,
-				8C5C6BEB1F205525003DB6A3 /* Main.storyboard */,
 				8C5C6BEE1F205525003DB6A3 /* Info.plist */,
+				8C5C6BEB1F205525003DB6A3 /* Main.storyboard */,
 				8C5C6BEF1F205525003DB6A3 /* Masterlister.entitlements */,
 				8C5C6BE61F205525003DB6A3 /* Masterlister.xcdatamodeld */,
-				FAAE29C620F0D31000B43BA9 /* whc-en.json */,
-				FA91217D20F0FCEC00DFCD55 /* tentative.json */,
-				FA309CE21F36A02A002A543D /* iso_3166-1.json */,
-				FA309CE81F371A35002A543D /* unesco_members.json */,
-				FACF31BE209D8E2D006E55ED /* new7wonders.json */,
-				FACF31C0209DDA36006E55ED /* visits.json */,
 				FACF31C4209E89B1006E55ED /* country-files.json */,
+				FA309CE21F36A02A002A543D /* iso_3166-1.json */,
+				FACF31BE209D8E2D006E55ED /* new7wonders.json */,
+				FA91217D20F0FCEC00DFCD55 /* tentative.json */,
+				FA309CE81F371A35002A543D /* unesco_members.json */,
+				FACF31C0209DDA36006E55ED /* visits.json */,
+				8C095B5222F035140017151E /* whc-en.xml */,
 			);
 			path = Masterlister;
 			sourceTree = "<group>";
@@ -166,9 +203,20 @@
 			path = MasterlisterUITests;
 			sourceTree = "<group>";
 		};
+		8CC0C28222F11C3B0085C030 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8CC0C28922F11E150085C030 /* SWXMLHash.framework */,
+				8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		FA3864FB214CA1D200773554 /* metadata */ = {
 			isa = PBXGroup;
 			children = (
+				8CC0C27E22F11BD70085C030 /* Cartfile */,
+				8CC0C27F22F11BD70085C030 /* Cartfile.resolved */,
 				FA3864FC214CA1EE00773554 /* .swiftlint.yml */,
 				FA3864FE214CA1FE00773554 /* script_build_end.sh */,
 			);
@@ -186,6 +234,8 @@
 				8C5C6BDC1F205525003DB6A3 /* Frameworks */,
 				8C5C6BDD1F205525003DB6A3 /* Resources */,
 				FA386500214CA31E00773554 /* Run script_build_end.sh */,
+				8CC0C28C22F11E170085C030 /* Embed Frameworks */,
+				8CC0C28D22F11E790085C030 /* Copy Carthage dSYMs */,
 			);
 			buildRules = (
 			);
@@ -284,14 +334,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA309CE91F371A38002A543D /* unesco_members.json in Resources */,
-				FAAE29C720F0D31000B43BA9 /* whc-en.json in Resources */,
+				8CC0C28122F11BD70085C030 /* Cartfile.resolved in Resources */,
 				FA91217E20F0FCEC00DFCD55 /* tentative.json in Resources */,
 				8C5C6BEA1F205525003DB6A3 /* Assets.xcassets in Resources */,
+				8CC0C28022F11BD70085C030 /* Cartfile in Resources */,
 				8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */,
 				FACF31C1209DDA37006E55ED /* visits.json in Resources */,
 				FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */,
 				FACF31C5209E89B1006E55ED /* country-files.json in Resources */,
 				FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */,
+				8C095B5322F035140017151E /* whc-en.xml in Resources */,
+				8CC0C29122F11EAF0085C030 /* SWXMLHash.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +560,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Masterlister/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Masterlister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -522,6 +579,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Masterlister/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Masterlister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;

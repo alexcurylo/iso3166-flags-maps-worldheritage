@@ -10,13 +10,13 @@ struct TWHS: Codable {
     private let submitted: String
     private let category: String
 
-    var siteID: Int {
+    var siteId: Int {
         return id_no
     }
 
     var countries: String {
         guard !iso.isEmpty else {
-            print("no countries for TWHS \(siteID): \(name)")
+            print("no countries for TWHS \(siteId): \(name)")
             return ""
         }
         return iso

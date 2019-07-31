@@ -2,10 +2,13 @@ INSTRUCTIONS
 ============
 
 On World Heritage List page http://whc.unesco.org/en/list
+(Probably directs to TOS at http://whc.unesco.org/en/syndication )
 download XML -> whc-en.xml
 
-(This appears to be updated before the XLS format originally used.)
+In Masterlister, update count asserts for current year
 
-xml2json whc-en.xml --pretty --out whc-en.json
+sitesFromXML(file:)
+assert(rows == 1_121, "1121 inscribed WHS in July 2019")
 
-In Masterlister, update count assert for current year and export
+sorted(array:)
+assert(array.count == 1_121, "1121 inscribed WHS in July 2019")

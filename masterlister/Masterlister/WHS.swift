@@ -1,45 +1,71 @@
 // @copyright Trollwerks Inc.
 
-import Foundation
+import SWXMLHash
 
 struct WHS: Codable {
 
-    private let iso_code: String?
-    // XLS fields
-    private let id_no: String?
-    private let name_en: String?
-    // XML fields
     private let id_number: String?
+    private let iso_code: String?
     private let site: String?
+    /* all XML fields:
+    category
+    criteria_txt
+    danger
+    date_inscribed
+    extension
+    http_url
+    id_number
+    image_url
+    image_url
+    iso_code
+    justification
+    latitude
+    location
+    longitude
+    region
+    revision
+    secondary_dates
+    short_description
+    site
+    states
+    transboundary
+    unique_number
+    */
 
     var name: String {
-        guard let name = site ?? name_en  else {
-            assertionFailure("no valid WHS name field")
-            return "<unknown>"
+        guard let site = site,
+              !site.isEmpty else {
+            assertionFailure("invalid name field")
+            return "<missing>"
         }
-        return name
+        return site
     }
 
-    var siteID: Int {
-        guard let idString = id_number ?? id_no,
-            let id = Int(idString) else {
-                assertionFailure("no valid WHS ID field")
+    var siteId: Int {
+        guard let idString = id_number,
+              let id = Int(idString) else {
+                assertionFailure("invalid ID field")
                 return 0
         }
         return id
     }
 
     var countries: String {
-        guard let iso_code = iso_code, !iso_code.isEmpty else {
-            // expected for 148: Old City of Jerusalem and its Walls
-            //print("no countries for WHS \(siteID): \(name)")
+        guard let codes = iso_code,
+              !codes.isEmpty else {
+                switch siteId {
+                case 148: // Old City of Jerusalem and its Walls
+                    break
+                default:
+                    assertionFailure(("no countries for \(siteId): \(name)"))
+                }
             return ""
         }
-        return iso_code
+        return codes
     }
 
     static var sitelist: [WHS] = {
-         sitesFromJSON(file: "whc-en")
+         sitesFromXML(file: "whc-en")
     }()
 
     private static func sitesFromJSON(file: String) -> [WHS] {
@@ -53,7 +79,7 @@ struct WHS: Codable {
             let whsFile = try JSONDecoder().decode(WHSFile.self, from: data)
             let sites = whsFile.query.sites
             assert(sites.count == Int(whsFile.query.rows), "Inconsistent WHS count and rows")
-            return sorted(array: sites)
+            return sorted(sites: sites)
         } catch DecodingError.dataCorrupted(let context) {
             print(context.debugDescription)
         } catch DecodingError.keyNotFound(let key, let context) {
@@ -72,23 +98,39 @@ struct WHS: Codable {
         return []
     }
 
-    private static func sitesFromXLS(file: String) -> [WHS] {
-        guard let path = Bundle.main.path(forResource: file, ofType: "json"),
-            let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
-            let jsonArray = try? JSONDecoder().decode([WHS].self, from: data) else {
-                assertionFailure("missing WHS file: \(file).json")
+    private static func sitesFromXML(file: String) -> [WHS] {
+        guard let path = Bundle.main.path(forResource: file, ofType: "xml"),
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
+                assertionFailure("missing WHS file: \(file).xml")
                 return []
         }
 
-        return sorted(array: jsonArray)
+        let xml = SWXMLHash.parse(data)
+        let rows = xml["query"]["row"].all
+        assert(rows.count == 1_121, "1121 inscribed WHS in July 2019")
+
+        let sites: [WHS] = rows.compactMap { WHS(from: $0) }
+
+        return sorted(sites: sites)
     }
 
-    private static func sorted(array jsonArray: [WHS]) -> [WHS] {
-        let array = jsonArray.sorted { lhs, rhs in
+    private static func sorted(sites: [WHS]) -> [WHS] {
+        let sites = sites.sorted { lhs, rhs in
             lhs.name < rhs.name
         }
-        assert(array.count == 1_092, "Should be 1092 WHS in 2018")
-        return array
+        assert(sites.count == 1_121, "1121 inscribed WHS in July 2019")
+        return sites
+    }
+
+    init?(from xml: XMLIndexer) {
+        do {
+            id_number = try xml["id_number"].value()
+            iso_code = try xml["iso_code"].value()
+            site = try xml["site"].value()
+        } catch {
+            print("Failure \(error) parsing \(xml)")
+            return nil
+        }
     }
 }
 
@@ -109,4 +151,22 @@ private struct WHSFile: Codable {
     }
 
     let query: Query
+}
+
+extension XMLIndexer {
+
+    func enumerate() {
+        enumerate(indexer: self, level: 0)
+    }
+
+    // enumerate all child elements (procedurally)
+    func enumerate(indexer: XMLIndexer, level: Int) {
+        for child in indexer.children {
+            // swiftlint:disable:next force_unwrapping
+            let name = child.element!.name
+            print("\(level) \(name)")
+
+            enumerate(indexer: child, level: level + 1)
+        }
+    }
 }
