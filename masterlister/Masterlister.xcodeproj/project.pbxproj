@@ -22,10 +22,10 @@
 		8CC0C28B22F11E170085C030 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC0C28922F11E150085C030 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CC0C29122F11EAF0085C030 /* SWXMLHash.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */; };
 		8CC0C29222F11ED10085C030 /* SWXMLHash.framework.dSYM in Copy Carthage dSYMs */ = {isa = PBXBuildFile; fileRef = 8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */; };
+		8CED725C22F285BF00A0DDBD /* twhs.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CED725B22F285BF00A0DDBD /* twhs.html */; };
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 		FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217920F0D82400DFCD55 /* WHS.swift */; };
-		FA91217E20F0FCEC00DFCD55 /* tentative.json in Resources */ = {isa = PBXBuildFile; fileRef = FA91217D20F0FCEC00DFCD55 /* tentative.json */; };
 		FA91218020F0FD6C00DFCD55 /* TWHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217F20F0FD6C00DFCD55 /* TWHS.swift */; };
 		FAB344DA226932B500852B98 /* MTPChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB344D9226932B500852B98 /* MTPChecker.swift */; };
 		FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */; };
@@ -97,12 +97,12 @@
 		8CC0C27F22F11BD70085C030 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.resolved; path = Masterlister/Cartfile.resolved; sourceTree = "<group>"; };
 		8CC0C28922F11E150085C030 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Masterlister/Carthage/Build/Mac/SWXMLHash.framework; sourceTree = "<group>"; };
 		8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SWXMLHash.framework.dSYM; path = Masterlister/Carthage/Build/Mac/SWXMLHash.framework.dSYM; sourceTree = "<group>"; };
+		8CED725B22F285BF00A0DDBD /* twhs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = twhs.html; path = ../../worldheritage/tentative/twhs.html; sourceTree = "<group>"; };
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
 		FA3864FC214CA1EE00773554 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FA3864FE214CA1FE00773554 /* script_build_end.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = script_build_end.sh; sourceTree = "<group>"; };
 		FA91217920F0D82400DFCD55 /* WHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHS.swift; sourceTree = "<group>"; };
-		FA91217D20F0FCEC00DFCD55 /* tentative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tentative.json; path = ../../worldheritage/tentative/tentative.json; sourceTree = "<group>"; };
 		FA91217F20F0FD6C00DFCD55 /* TWHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWHS.swift; sourceTree = "<group>"; };
 		FAB344D9226932B500852B98 /* MTPChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPChecker.swift; sourceTree = "<group>"; };
 		FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonderlistVC.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 				FACF31C4209E89B1006E55ED /* country-files.json */,
 				FA309CE21F36A02A002A543D /* iso_3166-1.json */,
 				FACF31BE209D8E2D006E55ED /* new7wonders.json */,
-				FA91217D20F0FCEC00DFCD55 /* tentative.json */,
+				8CED725B22F285BF00A0DDBD /* twhs.html */,
 				FA309CE81F371A35002A543D /* unesco_members.json */,
 				FACF31C0209DDA36006E55ED /* visits.json */,
 				8C095B5222F035140017151E /* whc-en.xml */,
@@ -335,11 +335,11 @@
 			files = (
 				FA309CE91F371A38002A543D /* unesco_members.json in Resources */,
 				8CC0C28122F11BD70085C030 /* Cartfile.resolved in Resources */,
-				FA91217E20F0FCEC00DFCD55 /* tentative.json in Resources */,
 				8C5C6BEA1F205525003DB6A3 /* Assets.xcassets in Resources */,
 				8CC0C28022F11BD70085C030 /* Cartfile in Resources */,
 				8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */,
 				FACF31C1209DDA37006E55ED /* visits.json in Resources */,
+				8CED725C22F285BF00A0DDBD /* twhs.html in Resources */,
 				FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */,
 				FACF31C5209E89B1006E55ED /* country-files.json in Resources */,
 				FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */,
@@ -494,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -547,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -566,7 +566,6 @@
 				);
 				INFOPLIST_FILE = Masterlister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.Masterlister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -585,7 +584,6 @@
 				);
 				INFOPLIST_FILE = Masterlister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.Masterlister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

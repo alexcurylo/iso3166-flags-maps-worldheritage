@@ -8,7 +8,12 @@ download XML -> whc-en.xml
 In Masterlister, update count asserts for current year
 
 sitesFromXML(file:)
-assert(rows == 1_121, "1121 inscribed WHS in July 2019")
+assert(rows.count == 1_121, "1121 WHS on 2019.08.01")
 
 sorted(array:)
-assert(array.count == 1_121, "1121 inscribed WHS in July 2019")
+assert(sites.count == 1_121, "1121 WHS on 2019.08.01")
+
+And last compiled date in footer
+
+writeFooter(for:)
+<i>Last compiled 2019.03.12 — <a href=\"\(updatesURL)\">Check for updates</a></i>\

@@ -107,7 +107,7 @@ struct WHS: Codable {
 
         let xml = SWXMLHash.parse(data)
         let rows = xml["query"]["row"].all
-        assert(rows.count == 1_121, "1121 inscribed WHS in July 2019")
+        assert(rows.count == 1_121, "1121 WHS on 2019.08.01")
 
         let sites: [WHS] = rows.compactMap { WHS(from: $0) }
 
@@ -118,19 +118,26 @@ struct WHS: Codable {
         let sites = sites.sorted { lhs, rhs in
             lhs.name < rhs.name
         }
-        assert(sites.count == 1_121, "1121 inscribed WHS in July 2019")
+        assert(sites.count == 1_121, "1121 WHS on 2019.08.01")
         return sites
     }
 
     init?(from xml: XMLIndexer) {
-        do {
-            id_number = try xml["id_number"].value()
-            iso_code = try xml["iso_code"].value()
-            site = try xml["site"].value()
-        } catch {
-            print("Failure \(error) parsing \(xml)")
-            return nil
+        defer {
+            assert(!id_number.isNilOrEmpty, "Missing id_number")
+            assert(!site.isNilOrEmpty, "Missing site")
+            switch id_number {
+            case "148": // "Old City of Jerusalem and its Walls"
+                break
+            default:
+                // swiftlint:disable:next force_unwrapping
+                assert(!iso_code.isNilOrEmpty, "Missing iso_code for \(id_number!) - \(site!)")
+            }
         }
+
+        id_number = xml["id_number"].element?.text
+        iso_code = xml["iso_code"].element?.text
+        site = xml["site"].element?.text
     }
 }
 
@@ -168,5 +175,17 @@ extension XMLIndexer {
 
             enumerate(indexer: child, level: level + 1)
         }
+    }
+}
+
+extension Optional where Wrapped == String {
+    var isNilOrEmpty: Bool {
+        return self?.isEmpty ?? true
+    }
+}
+
+extension Optional where Wrapped: Collection {
+    var isNilOrEmpty: Bool {
+        return self?.isEmpty ?? true
     }
 }
