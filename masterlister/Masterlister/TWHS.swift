@@ -4,15 +4,15 @@ import SWXMLHash
 
 struct TWHS: Codable {
 
-    let site: String?
-    private let id: String?
-    private let iso: String?
+    private let id_number: String?
+    private let iso_code: String?
+    private let site: String?
     //private let submitted: String
     //private let category: String
 
     var name: String {
         guard let site = site,
-              !site.isEmpty else {
+            !site.isEmpty else {
                 assertionFailure("invalid name field")
                 return "<missing>"
         }
@@ -20,7 +20,7 @@ struct TWHS: Codable {
     }
 
     var siteId: Int {
-        guard let idString = id,
+        guard let idString = id_number,
             let id = Int(idString) else {
                 assertionFailure("invalid ID field")
                 return 0
@@ -29,11 +29,12 @@ struct TWHS: Codable {
     }
 
     var countries: String {
-        guard let iso = iso, !iso.isEmpty else {
+        guard let codes = iso_code,
+              !codes.isEmpty else {
             assertionFailure(("no countries for \(siteId): \(name)"))
             return ""
         }
-        return iso
+        return codes
     }
 
     static var sitelist: [TWHS] = {
@@ -65,15 +66,15 @@ struct TWHS: Codable {
                 guard let match = match else { return }
 
                 let site = TWHS(
-                    id: page.substring(with: match.range(withName: "id")),
-                    iso: iso(for: page.substring(with: match.range(withName: "state"))),
+                    id_number: page.substring(with: match.range(withName: "id")),
+                    iso_code: Country.iso(for: page.substring(with: match.range(withName: "state"))),
                     site: page.substring(with: match.range(withName: "site"))
                 )
                 sites.append(site)
             }
 
             if ids.count != sites.count {
-                let diff = ids.difference(from: sites.map { $0.id })
+                let diff = ids.difference(from: sites.map { $0.id_number })
                 assertionFailure("ids (\(ids.count)) != sites (\(sites.count)): \(diff)")
             }
 
@@ -140,27 +141,27 @@ struct TWHS: Codable {
         }
 
         // Should match http://whc.unesco.org/en/tentativelists/
-        assert(sites.count == 1_700, "Should be 1700 TWHS on 2019.08.01")
+        assert(sites.count == 1_700, "1700 TWHS on 2019.08.01")
         return sites
     }
 
     init?(from xml: XMLIndexer) {
         defer {
-            assert(!id.isNilOrEmpty, "Missing id")
+            assert(!id_number.isNilOrEmpty, "Missing id")
             assert(!site.isNilOrEmpty, "Missing name")
-            assert(!iso.isNilOrEmpty, "Missing iso")
+            assert(!iso_code.isNilOrEmpty, "Missing iso")
         }
 
-        id = xml["id"].element?.text
-        iso = xml["iso"].element?.text
+        id_number = xml["id"].element?.text
+        iso_code = xml["iso"].element?.text
         site = xml["site"].element?.text
     }
 
-    init(id: String?,
-         iso: String?,
+    init(id_number: String?,
+         iso_code: String?,
          site: String?) {
-        self.id = id
-        self.iso = iso
+        self.id_number = id_number
+        self.iso_code = iso_code
         self.site = site
     }
 }

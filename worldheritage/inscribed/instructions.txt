@@ -16,4 +16,5 @@ assert(sites.count == 1_121, "1121 WHS on 2019.08.01")
 And last compiled date in footer
 
 writeFooter(for:)
+        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=11%2F03%2F2018&date_end=&order=year"
 <i>Last compiled 2019.03.12 — <a href=\"\(updatesURL)\">Check for updates</a></i>\

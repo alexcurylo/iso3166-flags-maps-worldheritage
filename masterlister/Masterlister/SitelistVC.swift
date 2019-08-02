@@ -4,18 +4,6 @@ import Cocoa
 
 final class SitelistVC: NSViewController {
 
-    private let countries: [Country] = {
-        let path = Bundle.main.path(forResource: "iso_3166-1", ofType: "json")
-        // swiftlint:disable:next force_try force_unwrapping
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
-        // swiftlint:disable:next force_try
-        let dict = try! JSONDecoder().decode([String: Country].self, from: data)
-        let array = Array(dict.values).sorted { lhs, rhs in
-            lhs.name < rhs.name
-        }
-        return array
-    }()
-
     private let members: [Member] = {
         let path = Bundle.main.path(forResource: "unesco_members", ofType: "json")
         // swiftlint:disable:next force_try force_unwrapping
@@ -26,6 +14,7 @@ final class SitelistVC: NSViewController {
         return array
     }()
 
+    let countries = Country.countries
     let sites = WHS.sitelist
     let tentatives = TWHS.sitelist
 
@@ -139,15 +128,15 @@ final class SitelistVC: NSViewController {
 
     private func writeCountries() {
         for country in countries {
-            guard members.contains(where: { country.alpha2 == $0.iso }) else {
+            guard members.contains(where: { country.iso == $0.iso }) else {
                 continue
             }
 
             var whsSites = sites.filter {
-                $0.countries.contains(country.alpha2.lowercased())
+                $0.countries.contains(country.iso.lowercased())
             }
             // Special Jerusalem handling, put it in Israel
-            if country.alpha2 == "IL" {
+            if country.iso == Country.Code.israel.rawValue {
                 let countryless = sites.filter { $0.countries.isEmpty }
                 assert(countryless.count == 1, "Not exactly Jerusalem without a country?")
                 // swiftlint:disable:next force_unwrapping
@@ -155,15 +144,15 @@ final class SitelistVC: NSViewController {
             }
 
             let twhsSites = tentatives.filter {
-                $0.countries.contains(country.alpha2)
+                $0.countries.contains(country.iso)
             }
 
-            let unescoURL = "http://whc.unesco.org/en/statesparties/\(country.alpha2)/"
+            let unescoURL = "http://whc.unesco.org/en/statesparties/\(country.iso)/"
             let unescoLink = """
-            <a href="\(unescoURL)">\(country.name)</a>
+            <a href="\(unescoURL)">\(country.title)</a>
             """
             var fileLink = ""
-            if let file = countryFiles.first(where: { country.alpha2 == $0.iso })?.file {
+            if let file = countryFiles.first(where: { country.iso == $0.iso })?.file {
                 fileLink = " — <a href=\"\(file)\">Country File</a>"
             }
             // swiftlint:disable:next line_length
@@ -274,11 +263,10 @@ final class SitelistVC: NSViewController {
 
     private func writeFooter(for type: Document) {
         mtpChecker.checkMissing()
-        assert(whsVisited.count == 508, "Should be 508 WHS visited not \(whsVisited.count) (2019.07.31)")
-        // TODO: Remove inscribed, add new ones, from post-Shanghai 355 - last published 2019.03.12
-        assert(twhsVisited.count == 351, "Should be 351 TWHS visited not \(twhsVisited.count) (2019.04.27)")
+        assert(whsVisited.count == 509, "Should be 509 WHS visited not \(whsVisited.count) (2019.08.02)")
+        assert(twhsVisited.count == 347, "Should be 347 TWHS visited not \(twhsVisited.count) (2019.08.02)")
         // swiftlint:disable:next line_length
-        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=11%2F03%2F2018&date_end=&order=year"
+        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=02%2F08%2F2019&date_end=&order=year"
 
         let whsPercent = String(format: "%.1f", Float(whsVisited.count) / Float(sites.count) * 100)
         let twhsPercent = String(format: "%.1f", Float(twhsVisited.count) / Float(tentatives.count) * 100)
@@ -290,7 +278,7 @@ final class SitelistVC: NSViewController {
             <p><small>WHS: \(whsVisited.count)/\(sites.count) \
             (\(whsPercent)%) — TWHS: \(twhsVisited.count)/\(tentatives.count) \
             (\(twhsPercent)%) — TOTAL: \(totalVisits)/\(total) (\(totalPercent)%)<br>
-            <i>Last compiled 2019.03.12 — <a href=\"\(updatesURL)\">Check for updates</a></i>\
+            <i>Last compiled 2019.08.02 — <a href=\"\(updatesURL)\">Check for updates</a></i>\
             </small></p>
             """)
         output.textStorage?.append(textFooter)
@@ -309,20 +297,6 @@ private struct CountryFile: Codable {
     let iso: String
     let file: URL?
     let name: String? // for easily locating unfiled countries
-}
-
-private struct Country: Codable {
-    let alpha2: String
-    let alpha3: String
-    let name: String
-    let officialName: String
-    let numeric: String
-    // all except Kosovo
-    let wikiUrl: URL?
-    // Kosovo only
-    // swiftlint:disable:next discouraged_optional_boolean
-    let unofficial: Bool?
-    let wikiEntry: URL?
 }
 
 private struct Member: Codable {
