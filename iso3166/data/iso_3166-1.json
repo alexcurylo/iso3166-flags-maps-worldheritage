@@ -674,7 +674,7 @@
   "GM": {
     "alpha2": "GM",
     "alpha3": "GMB",
-    "name": "Gambia",
+    "name": "Gambia (the)",
     "numeric": "270",
     "officialName": "Gambia",
     "wikiUrl": "https://en.wikipedia.org/wiki/Gambia"
@@ -1146,10 +1146,10 @@
   "MK": {
     "alpha2": "MK",
     "alpha3": "MKD",
-    "name": "Macedonia (the former Yugoslav Republic of)",
+    "name": "North Macedonia",
     "numeric": "807",
-    "officialName": "Republic of Macedonia",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Republic_of_Macedonia"
+    "officialName": "Republic of North Macedonia",
+    "wikiUrl": "https://en.wikipedia.org/wiki/North_Macedonia"
   },
   "ML": {
     "alpha2": "ML",
@@ -1698,10 +1698,10 @@
   "SZ": {
     "alpha2": "SZ",
     "alpha3": "SWZ",
-    "name": "Swaziland",
+    "name": "Eswatini",
     "numeric": "748",
-    "officialName": "Swaziland",
-    "wikiUrl": "https://en.wikipedia.org/wiki/Swaziland"
+    "officialName": "Kingdom of Eswatini",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Eswatini"
   },
   "TC": {
     "alpha2": "TC",

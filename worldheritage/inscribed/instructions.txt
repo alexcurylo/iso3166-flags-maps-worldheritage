@@ -2,10 +2,19 @@ INSTRUCTIONS
 ============
 
 On World Heritage List page http://whc.unesco.org/en/list
+(Probably directs to TOS at http://whc.unesco.org/en/syndication )
 download XML -> whc-en.xml
 
-(This appears to be updated before the XLS format originally used.)
+In Masterlister, update count asserts for current year
 
-xml2json whc-en.xml --pretty --out whc-en.json
+sitesFromXML(file:)
+assert(rows.count == 1_121, "1121 WHS on 2019.08.01")
 
-In Masterlister, update count assert for current year and export
+sorted(array:)
+assert(sites.count == 1_121, "1121 WHS on 2019.08.01")
+
+And last compiled date in footer
+
+writeFooter(for:)
+        let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=11%2F03%2F2018&date_end=&order=year"
+<i>Last compiled 2019.03.12 — <a href=\"\(updatesURL)\">Check for updates</a></i>\
