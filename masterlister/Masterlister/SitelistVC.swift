@@ -263,8 +263,8 @@ final class SitelistVC: NSViewController {
 
     private func writeFooter(for type: Document) {
         mtpChecker.checkMissing()
-        assert(whsVisited.count == 509, "Should be 509 WHS visited not \(whsVisited.count) (2019.08.02)")
-        assert(twhsVisited.count == 347, "Should be 347 TWHS visited not \(twhsVisited.count) (2019.08.02)")
+        assert(whsVisited.count == 525, "Should be 525 WHS visited not \(whsVisited.count) (2019.10.30)")
+        assert(twhsVisited.count == 374, "Should be 374 TWHS visited not \(twhsVisited.count) (2019.10.30)")
         // swiftlint:disable:next line_length
         let updatesURL = "http://whc.unesco.org/en/tentativelists/?action=listtentative&pattern=&state=&theme=&criteria_restrication=&date_start=02%2F08%2F2019&date_end=&order=year"
 
