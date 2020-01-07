@@ -3,7 +3,7 @@
 import Foundation
 import SWXMLHash
 
-struct WHS: Codable {
+struct WHS: Codable, Hashable {
 
     private let id_number: String?
     private let iso_code: String?

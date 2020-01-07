@@ -21,9 +21,10 @@
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
 		FA35001F23C4B06800BFD493 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA35001E23C4B06800BFD493 /* SWXMLHash */; };
+		FA35002123C4B34400BFD493 /* MTPSiteChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35002023C4B34400BFD493 /* MTPSiteChecker.swift */; };
 		FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217920F0D82400DFCD55 /* WHS.swift */; };
 		FA91218020F0FD6C00DFCD55 /* TWHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217F20F0FD6C00DFCD55 /* TWHS.swift */; };
-		FAB344DA226932B500852B98 /* MTPChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB344D9226932B500852B98 /* MTPChecker.swift */; };
+		FAB344DA226932B500852B98 /* MTPVisitChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB344D9226932B500852B98 /* MTPVisitChecker.swift */; };
 		FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */; };
 		FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31BE209D8E2D006E55ED /* new7wonders.json */; };
 		FACF31C1209DDA37006E55ED /* visits.json in Resources */ = {isa = PBXBuildFile; fileRef = FACF31C0209DDA36006E55ED /* visits.json */; };
@@ -91,11 +92,12 @@
 		8CED725B22F285BF00A0DDBD /* twhs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = twhs.html; path = ../../worldheritage/tentative/twhs.html; sourceTree = "<group>"; };
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
+		FA35002023C4B34400BFD493 /* MTPSiteChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPSiteChecker.swift; sourceTree = "<group>"; };
 		FA3864FC214CA1EE00773554 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FA3864FE214CA1FE00773554 /* script_build_end.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = script_build_end.sh; sourceTree = "<group>"; };
 		FA91217920F0D82400DFCD55 /* WHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHS.swift; sourceTree = "<group>"; };
 		FA91217F20F0FD6C00DFCD55 /* TWHS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWHS.swift; sourceTree = "<group>"; };
-		FAB344D9226932B500852B98 /* MTPChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPChecker.swift; sourceTree = "<group>"; };
+		FAB344D9226932B500852B98 /* MTPVisitChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPVisitChecker.swift; sourceTree = "<group>"; };
 		FACF31BC209D5AAA006E55ED /* WonderlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonderlistVC.swift; sourceTree = "<group>"; };
 		FACF31BE209D8E2D006E55ED /* new7wonders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = new7wonders.json; path = ../../wonders/new7wonders.json; sourceTree = "<group>"; };
 		FACF31C0209DDA36006E55ED /* visits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = visits.json; path = ../../visits/visits.json; sourceTree = "<group>"; };
@@ -156,7 +158,8 @@
 				8C5C6BE21F205525003DB6A3 /* AppDelegate.swift */,
 				8C728C8A22F3AF6C00706653 /* Country.swift */,
 				8CA9DDEA209FE92D00DA86FA /* Document.swift */,
-				FAB344D9226932B500852B98 /* MTPChecker.swift */,
+				FA35002023C4B34400BFD493 /* MTPSiteChecker.swift */,
+				FAB344D9226932B500852B98 /* MTPVisitChecker.swift */,
 				8C5C6BE41F205525003DB6A3 /* SitelistVC.swift */,
 				FA91217F20F0FD6C00DFCD55 /* TWHS.swift */,
 				FA91217920F0D82400DFCD55 /* WHS.swift */,
@@ -387,7 +390,8 @@
 				FACF31BD209D5AAA006E55ED /* WonderlistVC.swift in Sources */,
 				FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */,
 				8C5C6BE31F205525003DB6A3 /* AppDelegate.swift in Sources */,
-				FAB344DA226932B500852B98 /* MTPChecker.swift in Sources */,
+				FA35002123C4B34400BFD493 /* MTPSiteChecker.swift in Sources */,
+				FAB344DA226932B500852B98 /* MTPVisitChecker.swift in Sources */,
 				8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */,
 				8C5C6BE81F205525003DB6A3 /* Masterlister.xcdatamodeld in Sources */,
 			);

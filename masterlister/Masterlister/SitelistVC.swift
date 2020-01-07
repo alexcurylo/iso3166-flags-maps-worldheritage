@@ -18,7 +18,7 @@ final class SitelistVC: NSViewController {
     let sites = WHS.sitelist
     let tentatives = TWHS.sitelist
 
-    let mtpChecker = MTPChecker()
+    let mtpVisitChecker = MTPVisitChecker()
 
     private lazy var visits: [Visit] = {
         let path = Bundle.main.path(forResource: "visits", ofType: "json")
@@ -74,6 +74,8 @@ final class SitelistVC: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        MTPSiteChecker().check(sites: sites)
 
         //generate(for: .html)
         generate(for: .wordpress)
@@ -203,7 +205,7 @@ final class SitelistVC: NSViewController {
         var blogLinks = ""
         if let visited = whsVisits.first(where: { $0.whs == whs.siteId }) {
             whsVisited.insert(whs.siteId)
-            mtpChecker.check(whs: whs.siteId)
+            mtpVisitChecker.check(whs: whs.siteId)
 
             mark = Visited.yes.rawValue
 
@@ -262,7 +264,7 @@ final class SitelistVC: NSViewController {
     }
 
     private func writeFooter(for type: Document) {
-        mtpChecker.checkMissing()
+        mtpVisitChecker.checkMissing()
         assert(whsVisited.count == 525, "Should be 525 WHS visited not \(whsVisited.count) (2019.10.30)")
         assert(twhsVisited.count == 374, "Should be 374 TWHS visited not \(twhsVisited.count) (2019.10.30)")
         // swiftlint:disable:next line_length

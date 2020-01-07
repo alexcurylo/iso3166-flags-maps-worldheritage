@@ -2,7 +2,7 @@
 
 import Foundation
 
-final class MTPChecker {
+final class MTPVisitChecker {
 
     #if CHECK_MTP
     var checked = Set<Int>()
