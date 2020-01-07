@@ -1,3 +1,0 @@
-# carthage update --platform macOS
-
-github "drmohundro/SWXMLHash" ~> 4.9

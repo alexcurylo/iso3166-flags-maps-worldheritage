@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,15 +17,10 @@
 		8C5C6C041F205525003DB6A3 /* MasterlisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C6C031F205525003DB6A3 /* MasterlisterUITests.swift */; };
 		8C728C8B22F3AF6C00706653 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C728C8A22F3AF6C00706653 /* Country.swift */; };
 		8CA9DDEB209FE92D00DA86FA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9DDEA209FE92D00DA86FA /* Document.swift */; };
-		8CC0C28022F11BD70085C030 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C27E22F11BD70085C030 /* Cartfile */; };
-		8CC0C28122F11BD70085C030 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C27F22F11BD70085C030 /* Cartfile.resolved */; };
-		8CC0C28A22F11E170085C030 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC0C28922F11E150085C030 /* SWXMLHash.framework */; };
-		8CC0C28B22F11E170085C030 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC0C28922F11E150085C030 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CC0C29122F11EAF0085C030 /* SWXMLHash.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */; };
-		8CC0C29222F11ED10085C030 /* SWXMLHash.framework.dSYM in Copy Carthage dSYMs */ = {isa = PBXBuildFile; fileRef = 8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */; };
 		8CED725C22F285BF00A0DDBD /* twhs.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CED725B22F285BF00A0DDBD /* twhs.html */; };
 		FA309CE31F36A437002A543D /* iso_3166-1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE21F36A02A002A543D /* iso_3166-1.json */; };
 		FA309CE91F371A38002A543D /* unesco_members.json in Resources */ = {isa = PBXBuildFile; fileRef = FA309CE81F371A35002A543D /* unesco_members.json */; };
+		FA35001F23C4B06800BFD493 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA35001E23C4B06800BFD493 /* SWXMLHash */; };
 		FA91217A20F0D82400DFCD55 /* WHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217920F0D82400DFCD55 /* WHS.swift */; };
 		FA91218020F0FD6C00DFCD55 /* TWHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91217F20F0FD6C00DFCD55 /* TWHS.swift */; };
 		FAB344DA226932B500852B98 /* MTPChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB344D9226932B500852B98 /* MTPChecker.swift */; };
@@ -59,7 +54,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8CC0C28B22F11E170085C030 /* SWXMLHash.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +64,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				8CC0C29222F11ED10085C030 /* SWXMLHash.framework.dSYM in Copy Carthage dSYMs */,
 			);
 			name = "Copy Carthage dSYMs";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,10 +88,6 @@
 		8C5C6C051F205525003DB6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C728C8A22F3AF6C00706653 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		8CA9DDEA209FE92D00DA86FA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		8CC0C27E22F11BD70085C030 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = Masterlister/Cartfile; sourceTree = "<group>"; };
-		8CC0C27F22F11BD70085C030 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile.resolved; path = Masterlister/Cartfile.resolved; sourceTree = "<group>"; };
-		8CC0C28922F11E150085C030 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Masterlister/Carthage/Build/Mac/SWXMLHash.framework; sourceTree = "<group>"; };
-		8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SWXMLHash.framework.dSYM; path = Masterlister/Carthage/Build/Mac/SWXMLHash.framework.dSYM; sourceTree = "<group>"; };
 		8CED725B22F285BF00A0DDBD /* twhs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = twhs.html; path = ../../worldheritage/tentative/twhs.html; sourceTree = "<group>"; };
 		FA309CE21F36A02A002A543D /* iso_3166-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "iso_3166-1.json"; path = "../../iso3166/data/iso_3166-1.json"; sourceTree = "<group>"; };
 		FA309CE81F371A35002A543D /* unesco_members.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = unesco_members.json; path = ../../worldheritage/unesco_members.json; sourceTree = "<group>"; };
@@ -118,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC0C28A22F11E170085C030 /* SWXMLHash.framework in Frameworks */,
+				FA35001F23C4B06800BFD493 /* SWXMLHash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +198,6 @@
 		8CC0C28222F11C3B0085C030 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				8CC0C28922F11E150085C030 /* SWXMLHash.framework */,
-				8CC0C29022F11EAF0085C030 /* SWXMLHash.framework.dSYM */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -218,8 +205,6 @@
 		FA3864FB214CA1D200773554 /* metadata */ = {
 			isa = PBXGroup;
 			children = (
-				8CC0C27E22F11BD70085C030 /* Cartfile */,
-				8CC0C27F22F11BD70085C030 /* Cartfile.resolved */,
 				FA3864FC214CA1EE00773554 /* .swiftlint.yml */,
 				FA3864FE214CA1FE00773554 /* script_build_end.sh */,
 			);
@@ -245,6 +230,9 @@
 			dependencies = (
 			);
 			name = Masterlister;
+			packageProductDependencies = (
+				FA35001E23C4B06800BFD493 /* SWXMLHash */,
+			);
 			productName = Masterlister;
 			productReference = 8C5C6BDF1F205525003DB6A3 /* Masterlister.app */;
 			productType = "com.apple.product-type.application";
@@ -292,7 +280,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Trollwerks Inc.";
 				TargetAttributes = {
 					8C5C6BDE1F205525003DB6A3 = {
@@ -320,6 +308,9 @@
 				Base,
 			);
 			mainGroup = 8C5C6BD61F205525003DB6A3;
+			packageReferences = (
+				FA35001D23C4B06800BFD493 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
+			);
 			productRefGroup = 8C5C6BE01F205525003DB6A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,9 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA309CE91F371A38002A543D /* unesco_members.json in Resources */,
-				8CC0C28122F11BD70085C030 /* Cartfile.resolved in Resources */,
 				8C5C6BEA1F205525003DB6A3 /* Assets.xcassets in Resources */,
-				8CC0C28022F11BD70085C030 /* Cartfile in Resources */,
 				8C5C6BED1F205525003DB6A3 /* Main.storyboard in Resources */,
 				FACF31C1209DDA37006E55ED /* visits.json in Resources */,
 				8CED725C22F285BF00A0DDBD /* twhs.html in Resources */,
@@ -347,7 +336,6 @@
 				FACF31C5209E89B1006E55ED /* country-files.json in Resources */,
 				FACF31BF209D8E2E006E55ED /* new7wonders.json in Resources */,
 				8C095B5322F035140017151E /* whc-en.xml in Resources */,
-				8CC0C29122F11EAF0085C030 /* SWXMLHash.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +542,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -562,14 +551,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Masterlister/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Masterlister/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.Masterlister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -580,14 +569,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Masterlister/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Masterlister/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.Masterlister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -602,7 +591,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
 				INFOPLIST_FILE = MasterlisterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -618,7 +611,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
 				INFOPLIST_FILE = MasterlisterTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -633,7 +630,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
 				INFOPLIST_FILE = MasterlisterUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -648,7 +649,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 556343DW3U;
 				INFOPLIST_FILE = MasterlisterUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.MasterlisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -696,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA35001D23C4B06800BFD493 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA35001E23C4B06800BFD493 /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA35001D23C4B06800BFD493 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8C5C6BE61F205525003DB6A3 /* Masterlister.xcdatamodeld */ = {

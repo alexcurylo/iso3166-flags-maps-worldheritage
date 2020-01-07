@@ -1,5 +1,6 @@
 // @copyright Trollwerks Inc.
 
+import Foundation
 import SWXMLHash
 
 struct WHS: Codable {
