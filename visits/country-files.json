@@ -685,8 +685,8 @@
     }, 
     {
         "name": "Thailand", 
-        "iso": "TH"
-    }, 
+        "file": "https://everywhs.com/info/country-file-thailand/"
+    },
     {
         "iso": "MK",
         "file": "https://everywhs.com/info/country-file-macedonia/"
